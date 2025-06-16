@@ -1,0 +1,19 @@
+
+
+.error_message {
+    color: red;
+    list-style-type: none;
+    padding: 0;
+}
+
+.pError {
+    color: red;
+    font-size: 17px;
+    margin: 0;
+}
+.pSuccess {
+    color: green;
+    font-weight: bold;
+    font-size: 17px;
+    margin: 0;
+}

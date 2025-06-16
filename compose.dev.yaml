@@ -1,0 +1,66 @@
+version: "3.8"
+
+services:
+  web:
+    image: nginx:latest
+    volumes:
+      - .:/var/www
+      - ./docker/development/nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - php-fpm
+    networks:
+      - laravel
+
+  php-fpm:
+    build:
+      context: .
+      dockerfile: ./docker/common/php-fpm/Dockerfile
+      target: development
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+        XDEBUG_ENABLED: true
+        XDEBUG_HOST: host.docker.internal
+    volumes:
+      - .:/var/www
+    networks:
+      - laravel
+
+  workspace:
+    build:
+      context: .
+      dockerfile: ./docker/development/workspace/Dockerfile
+      args:
+        UID: ${UID:-1000}
+        GID: ${GID:-1000}
+    tty: true
+    stdin_open: true
+    volumes:
+      - .:/var/www
+    networks:
+      - laravel
+
+  db:
+    build:
+      context: ../database/Docker/
+      dockerfile: Dockerfile_IDERun
+    image: vas_magician_mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: fLM1x4a1xYovVkA
+      TZ: Europe/Prague
+    ports:
+      - "3306:3306"
+    networks:
+      - laravel
+
+  adminer:
+    image: adminer
+    ports:
+      - "8080:8080"
+    networks:
+      - laravel
+
+networks:
+  laravel:

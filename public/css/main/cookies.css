@@ -1,0 +1,51 @@
+
+
+/*  MODAL - COOKIES  */
+
+/* Modální okno pevně dole */
+.cookie_modal_class {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 50;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 0;
+
+}
+
+/* Obsah modálního okna */
+.cookie_modal_class .modal-content-cookie {
+    background-color: white;
+    padding: 15px 45px 15px 25px;
+    border-radius: 5px;
+    width: 100%;
+    max-width: 980px;
+    position: relative;
+    text-align: center;
+    margin: 0 10px;
+}
+.cookie_modal_class .modal-content-cookie p {
+    margin: 0;
+}
+
+/* Styl pro tlačítko zavření */
+.cookie_modal_class .close-btn {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 468px) {
+    .cookie_modal_class .modal-content {
+        border-radius: 0;
+        /*width: 100%;*/
+    }
+}
