@@ -1,0 +1,288 @@
+
+
+/* left ASIDE panel */
+@media only screen and (min-width: 768px) {
+    .mainContent {
+        grid-template-columns: 290px 1fr;
+    }
+}
+.mySectionContainer > div {
+    max-width: 1300px!important;
+}
+
+aside {
+    /*background-color: #71d5c5;*/
+    background-color: #08598f;
+    color: white;
+}
+
+
+aside > .navbar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+section {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+ul li a {
+    color: white;
+}
+
+
+ul li a:hover {
+    color: white;
+    text-decoration: underline!important;
+}
+
+
+.formCreateUser {
+    width: 100%;
+}
+
+
+
+.linkBackToTable {
+    margin-bottom: 10px!important;
+}
+
+
+/* Fotografie - editace u produktu */
+.cardAddvertDiv * {
+    color: black;
+}
+.cardAddvertDiv:hover{
+    background-color: var(--main-bg-hover-color);
+    -webkit-box-shadow: 0px 10px 22px -10px rgba(0,0,0,0.7);
+    -moz-box-shadow: 0px 10px 22px -10px rgba(0,0,0,0.7);
+    box-shadow: 0px 10px 22px -10px rgba(0,0,0,0.7);
+
+}
+.cardAddvertDiv:hover img {
+    -webkit-filter: brightness(85%);
+    filter: brightness(85%);
+}
+.photoAddvertEditPhotos{
+    height: 180px !important;
+    object-fit: contain !important;
+    border-bottom: 1px solid grey !important;
+}
+.cardWithPdf {
+    height: 470px !important;
+    width: 450px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.cardWithPdf:hover {
+    background-color: unset;
+    -webkit-box-shadow: unset;
+    -moz-box-shadow: unset;
+    box-shadow: unset;
+}
+
+.cardAddvertDiv .objectPdf {
+    height: 290px !important;
+    width: 100% !important;
+}
+
+/*.cardWithPdf-big {*/
+/*    height: 440px !important;*/
+/*    width: 100% !important;*/
+/*}*/
+.objectPdf-big {
+    height: 400px!important;
+    width: 100% !important;
+}
+
+
+
+
+
+.divTable{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100% !important;
+    position: sticky !important;
+
+    overflow: auto !important;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+
+}
+table {
+    display: inline-table;
+    margin: 0px !important;
+
+
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    /* max-width: 100% !important; */
+    width: auto;
+    border-collapse: collapse;
+    white-space: nowrap;
+    overflow-x: auto;
+}
+.withoutBorder{
+    border: 0 !important;
+}
+
+.tableCategories > thead > tr > th {
+    cursor: unset !important;
+}
+.trMainCategory {
+    background-color: #d5d5d5 !important;
+}
+.trSubcategory {
+    background-color: white!important;
+}
+.trSubcategory:nth-child(even) {
+    background-color: #f3f3f3 !important;
+}
+.viewSubcategoriesImg {
+    box-sizing: content-box;
+    padding: 4px;
+}
+.tdName{
+    font-weight: bold;
+}
+
+/*.trColDescription {*/
+/*    background-color: white;*/
+/*}*/
+.trColDescription > td {
+    /*border-collapse: collapse;*/
+    text-align: center;
+    /*font-weight: normal;*/
+    /*border: 0 !important;*/
+}
+.nonBorder {
+    border: 0 !important;
+}
+.nonBorderBottom {
+    border-bottom: 0 !important;
+}
+.customBorderRight {
+    border-right: grey 1px solid!important;
+}
+.customBorderLeft {
+    border-left: grey 1px solid!important;
+}
+.customBorderTop {
+    border-top: grey 1px solid!important;
+}
+
+
+
+
+
+/* MODAL WINDOW - Are you sure deleting? */
+.modal {
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.close-btn {
+    color: #aaa;
+    position: absolute;
+    right: 18px;
+    top: 5px;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-icon {
+    margin-bottom: 15px;
+}
+
+.modal-icon img {
+    width: 50px;
+}
+
+.delete-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+.cancel-btn {
+    background-color: #ccc;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.cancel-btn:hover {
+    background-color: #bbb;
+}
+
+
+/* FLATPICKER */
+/* Styl pro input s ikonkou kalendáře */
+.flatpickr-input {
+    background-color: white!important;
+    background-image: url('/img/icons/calendar.png');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    padding-right: 35px !important;
+    background-size: 20px 20px;
+}
+.flatpickr-input-time {
+    background-color: white!important;
+    background-image: url('/img/icons/clock.png');
+    background-position: right 10px center;
+    background-repeat: no-repeat;
+    padding-right: 35px !important;
+    background-size: 20px 20px;
+}
+
+/* Změna pozadí, když je input zaostřený */
+.flatpickr-input:focus, .flatpickr-input-time:focus {
+    background-color: #f0f0f0;        /* Světle šedé pozadí při zaostření */
+}

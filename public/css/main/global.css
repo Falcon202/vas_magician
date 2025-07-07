@@ -1,9 +1,104 @@
+:root {
+    --main-bg-color: rgb(253, 249, 244);
+    --main-bg-hover-color: rgb(228, 228, 228);
+    --hover-color: rgb(121, 121, 121);
 
+}
+body, html{
+     /*overflow: hidden;*/
+    max-width: 100vw;
+}
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+.divBody {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    max-width: 100vw;
+    width: 100%;
+    min-height: 100vh;
+}
+.mainContent{
+    display: grid;
+    height: 100%;
+    /*margin-top: 75px;*/
+}
+
+/* Main div, left ASIDE navigation */
+
+@media only screen and (min-width: 992px) {    /* 768px = Medium (md) in Bootstrap */
+    aside {
+        min-width: 200px;
+        border-width: 0;
+    }
+}
+.mySectionContainer{
+    margin: 10px 30px 20px;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.mySectionContainer > div {
+    width: 100%;
+}
+
+
+
+
+.footerLink {
+    color: black;
+    text-decoration: underline;
+    text-decoration-color: gray;
+    text-underline-offset: 2px;
+}
+
+p, strong, li {
+    font-size: 15px;
+}
+
+@media only screen and (max-width: 992px) {
+    .formFlex{
+        flex-direction: column;
+    }
+    .formFlex div{
+        width: 75% !important;
+    }
+
+}
 
 .error_message {
     color: red;
     list-style-type: none;
     padding: 0;
+}
+.error_message_files {
+    margin: 0!important;
+}
+.error_message_files > li {
+    color: red!important;
+}
+
+.icon{
+    height: 20px;
+}
+.iconMedium {
+    height: 25px;
+}
+.iconMediumBigger {
+    height: 35px;
+    max-width: 70px;
+    object-fit: contain !important;
+}
+.iconBigger {
+    height: 60px;
+    max-width: 100px;
+    object-fit: contain !important;
 }
 
 .pError {
@@ -17,3 +112,67 @@
     font-size: 17px;
     margin: 0;
 }
+
+.linkInButton{
+    padding: 6px 12px;
+}
+
+.ck-file-dialog-button{
+    display: none;
+}
+
+.hidden {
+    display: none!important;
+}
+
+.button-hover{
+    transition-duration: 0s!important;
+}
+.button-hover:hover{
+    color: #dfdfdf!important;
+}
+
+button a{
+    color: black;
+}
+button a:hover {
+    text-decoration: none;
+}
+
+
+.nav-link{
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*  CHECK BOX  */
+.checkBox-enormous {
+    width: 23px !important;
+    height: 23px !important;
+}
+.checkBoxIsCompany, .checkBox-both_addresses_same {
+    width: 19px !important;
+    height: 19px !important;
+}
+
+.checkBoxPermission {
+    width: 15px !important;
+    height: 15px !important;
+}
+
+
+.nonUnderlineHover:hover {
+    text-decoration: none;
+}
+
+.defaultLink{
+    color: #007bff!important;
+}
+
+
+
+
+
+
+
+

@@ -10,13 +10,16 @@ class HomeContr extends Controller
 {
     public function home()
     {
-        if (Auth::check()){
-            return Redirect::route('admin_panel');
-        } else {
-            return view('home', [
-                'users' => User::all(),
-            ]);
-        }
+        return view('home', [
+            'users' => User::all(),
+        ]);
+//        if (Auth::check()){
+//            return Redirect::route('admin_panel');
+//        } else {
+//            return view('home', [
+//                'users' => User::all(),
+//            ]);
+//        }
 
     }
 }

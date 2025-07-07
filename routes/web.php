@@ -24,7 +24,7 @@ Route::middleware([IsLoggedIn::class])->prefix('/admin_panel')->group(function (
 
     // Category ???
 
-    // Blog
+    // blog
     Route::prefix('/blog')->group(function () {
         Route::get('', [AdminPBlogContr::class, 'blog'])->name('ap_blog');
         Route::get('/create', [AdminPBlogContr::class, 'create'])->name('ap_blog_create');
@@ -32,8 +32,8 @@ Route::middleware([IsLoggedIn::class])->prefix('/admin_panel')->group(function (
         Route::get('/edit/{id}', [AdminPBlogContr::class, 'edit'])->name('ap_blog_edit');
         Route::post('/do_edit', [AdminPBlogContr::class, 'do_edit'])->name('ap_blog_do_edit');
         Route::post('/do_delete', [AdminPBlogContr::class, 'do_delete'])->name('ap_blog_do_delete');
-        // Blog - photos
-        Route::get('/photos', [AdminPBlogPhotosContr::class, 'photos'])->name('ap_blog_photos');
+        // blog - photos
+        Route::get('/photos/{id}', [AdminPBlogPhotosContr::class, 'photos'])->name('ap_blog_photos');
         Route::post('/add_photo', [AdminPBlogPhotosContr::class, 'add_photo'])->name('ap_blog_add_photo');
         Route::post('/delete_photo', [AdminPBlogPhotosContr::class, 'delete_photo'])->name('ap_blog_delete_photo');
     });
