@@ -45,10 +45,15 @@
                         {{ __('Blog byl úspěšně vytvořen.') }}
                     </p>
                 @endif
+                @if (session('status') === 'blog_deleted')
+                    <p class="pSuccess my-1 mx-3">
+                        {{ __('Blog byl úspěšně odstraněn společně s jeho fotografiemi.') }}
+                    </p>
+                @endif
 
                 @foreach($blogViews AS $oneBlogView)
                     <div class="w-100 mt-3">
-                        <div class="cart-item row align-items-center border-bottom py-3"
+                        <div class="cart-item row align-items-center border-bottom py-2"
                              onclick="window.location.href = '{{route('ap_blog_edit', ['id' => $oneBlogView->id]) }}'"
                              style="cursor: pointer">
                             <div class="col-xl-1 mb-2 mb-xl-0">
@@ -82,17 +87,22 @@
                                 <h3 class="h6 text-muted" title="{{ $oneBlogView->text }}">{{ Str::limit($oneBlogView->text, 25) }}</h3>
                             </div>
                             <div class="col-xl-4">
-        {{--                        @foreach($oneSimpleOrder->getPhotos() as $onePhoto)--}}
-                                    <a class="nonUnderlineHover" href="{{ route('ap_blog_photos', ['id' => $oneBlogView->id]) }}">
-        {{--                                @if($onePhoto == null)--}}
-                                            <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/img/icons/img_not_found.png') }}"
-                                                 alt="Žádný obrázek nenastaven">
-        {{--                                @else--}}
-                                            <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/api/blog_photo/' . 0) }}"
-                                                 alt="Obrázek blogu">
-        {{--                                @endif--}}
+                                <a class="nonUnderlineHover" href="{{ route('ap_blog_photos', ['id' => $oneBlogView->id]) }}" title="Hlavní fotografie">
+                                    @if($oneBlogView->main_photo == null)
+                                        <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/img/icons/img_not_found.png') }}"
+                                             alt="Žádný obrázek nenastaven">
+                                    @else
+                                        <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/api/blog_photo/' . $oneBlogView->main_photo->id) }}"
+                                         alt="Obrázek blogu">
+                                    @endif
+                                </a>
+
+                                @foreach($oneBlogView->other_photos->take(2) as $onePhoto)
+                                    <a class="nonUnderlineHover" href="{{ route('ap_blog_photos', ['id' => $onePhoto->id]) }}" title="Vedlejší fotografie">
+                                        <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/api/blog_photo/' . $onePhoto->id) }}"
+                                             alt="Obrázek blogu">
                                     </a>
-        {{--                        @endforeach--}}
+                                @endforeach
                             </div>
                         </div>
                     </div>

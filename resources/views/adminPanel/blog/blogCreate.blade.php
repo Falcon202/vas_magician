@@ -55,7 +55,7 @@
                             <div data-mdb-input-init class="form-outline">
                                 <label for="product_name"><b>Název</b></label>
                                 <x-text-input id="product_name" name="name" type="text" class="form-control"
-                                              placeholder="Zadejte název příspěvku"
+                                              placeholder="Zadejte název příspěvku" autocomplete="name"
                                               :value="old('name', $blog?->name ?? '')"/>
                                 <x-input-error :messages="$errors->get('name')"
                                                class="mt-2 error_message"/>
@@ -127,7 +127,7 @@
                         <div class="col-12 col-sm-12 mb-3 mb-sm-0">
                             <div data-mdb-input-init class="form-outline">
                                 <label for="text" class="form-label"><b>Text příspěvku</b></label>
-                                <textarea name="text" id="editor" class="form-control" placeholder="Sem zadejte informace o příspěvku"
+                                <textarea name="text" id="text" class="form-control" placeholder="Sem zadejte informace o příspěvku"
                                           rows="4">{{ old('text', $blog?->text ?? '') }}</textarea>
                                 <x-input-error :messages="$errors->get('text')" class="mt-2 error_message"/>
                             </div>
