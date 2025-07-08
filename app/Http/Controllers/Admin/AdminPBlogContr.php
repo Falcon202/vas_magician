@@ -15,7 +15,7 @@ class AdminPBlogContr
 {
     public function blog(): View
     {
-        $blogViews = BlogView::all();
+        $blogViews = BlogView::all()->sortByDesc('created_at');
 
         return view('adminPanel.blog.blog', [
             'blogViews' => $blogViews,

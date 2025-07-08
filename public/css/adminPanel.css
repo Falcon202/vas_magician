@@ -68,7 +68,7 @@ ul li a:hover {
     filter: brightness(85%);
 }
 .photoAddvertEditPhotos{
-    height: 180px !important;
+    height: 180px;
     object-fit: contain !important;
     border-bottom: 1px solid grey !important;
 }

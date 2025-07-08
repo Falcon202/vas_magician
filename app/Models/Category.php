@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed $name
  * @property mixed $created_at
  * @property mixed $updated_at
+ * @method static where(string $string, $id)
  */
 class Category extends Model
 {

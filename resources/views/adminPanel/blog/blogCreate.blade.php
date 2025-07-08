@@ -87,7 +87,7 @@
                                 <div class="input-group">
                                     <input id="date" name="date" type="text" class="form-control flatpickr-input"
                                            placeholder="Vyberte datum události"
-                                           value="{{ old('date', \Carbon\Carbon::parse($blog?->$date ?? '')->format('d. m. Y') ) }}"/>
+                                           value="{{ old('date', \Carbon\Carbon::parse($blog?->date ?? '')->format('d. m. Y') ) }}"/>
                                     <span class="input-group-text">/</span>
                                 </div>
 

@@ -13,6 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeContr::class, 'home']);
 Route::get('/home', [HomeContr::class, 'home'])->name('home');
+Route::get('/category/{id}', [HomeContr::class, 'category'])->name('category');
 
 // API for photos
 Route::get('/api/blog_photo/{id}', [BlogPhotoContr::class, 'show_photo'])->name('api_blog_photo');
@@ -35,6 +36,7 @@ Route::middleware([IsLoggedIn::class])->prefix('/admin_panel')->group(function (
         // blog - photos
         Route::get('/photos/{id}', [AdminPBlogPhotosContr::class, 'photos'])->name('ap_blog_photos');
         Route::post('/add_photo', [AdminPBlogPhotosContr::class, 'add_photo'])->name('ap_blog_add_photo');
+        Route::post('/add_main_photo', [AdminPBlogPhotosContr::class, 'add_main_photo'])->name('ap_blog_add_main_photo');
         Route::post('/delete_photo', [AdminPBlogPhotosContr::class, 'delete_photo'])->name('ap_blog_delete_photo');
     });
 });

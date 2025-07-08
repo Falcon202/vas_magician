@@ -2,24 +2,35 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogView;
+use App\Models\Category;
 use App\Models\User;
 use Auth;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\View\View;
 
 class HomeContr extends Controller
 {
     public function home()
     {
         return view('home', [
-            'users' => User::all(),
+            'categories' => Category::all(),
+            'blogViews' => BlogView::all(),
         ]);
-//        if (Auth::check()){
-//            return Redirect::route('admin_panel');
-//        } else {
-//            return view('home', [
-//                'users' => User::all(),
-//            ]);
-//        }
+    }
+    public function category($id): View
+    {
+        $category = Category::where('id', $id)->first();
+        if( ! $category){
+            abort(404, 'KATEGORIE NEEXISTUJE');
+        }
 
+        $blogViews = BlogView::where('category_id', $id)->get();
+
+        return view('home', [
+            'categories' => Category::all(),
+            'category' => $category,
+            'blogViews' => $blogViews,
+        ]);
     }
 }
