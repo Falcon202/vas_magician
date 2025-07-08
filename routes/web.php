@@ -5,8 +5,8 @@ use App\Http\Controllers\Admin\AdminPanelContr;
 use App\Http\Controllers\Admin\AdminPBlogContr;
 use App\Http\Controllers\Admin\AdminPBlogPhotosContr;
 use App\Http\Controllers\APIs\BlogPhotoContr;
+use App\Http\Controllers\BlogContr;
 use App\Http\Controllers\HomeContr;
-use App\Http\Controllers\UserProfile\UserProfile;
 use App\Http\Middleware\IsLoggedIn;
 use Illuminate\Support\Facades\Route;
 
@@ -15,11 +15,12 @@ Route::get('/', [HomeContr::class, 'home']);
 Route::get('/home', [HomeContr::class, 'home'])->name('home');
 Route::get('/category/{id}', [HomeContr::class, 'category'])->name('category');
 
+Route::get('/blog/{id}', [BlogContr::class, 'blog'])->name('blog');
+
 // API for photos
 Route::get('/api/blog_photo/{id}', [BlogPhotoContr::class, 'show_photo'])->name('api_blog_photo');
 
-// Must be logged in
-// Admin panel
+// Must be logged in - Admin panel
 Route::middleware([IsLoggedIn::class])->prefix('/admin_panel')->group(function () {
     Route::get('', [AdminPanelContr::class, 'admin_panel'])->name('admin_panel');
 
@@ -42,10 +43,10 @@ Route::middleware([IsLoggedIn::class])->prefix('/admin_panel')->group(function (
 });
 
 // Change password ???
-Route::middleware([IsLoggedIn::class])->prefix('/profile')->group(function () {
-    Route::get('/change_password', [UserProfile::class, 'change_password'])->name('profile_change_password');
-    Route::post('/do_change_password', [UserProfile::class, 'do_change_password'])->name('profile_do_change_password');
-});
+//Route::middleware([IsLoggedIn::class])->prefix('/profile')->group(function () {
+//    Route::get('/change_password', [UserProfile::class, 'change_password'])->name('profile_change_password');
+//    Route::post('/do_change_password', [UserProfile::class, 'do_change_password'])->name('profile_do_change_password');
+//});
 
 
 

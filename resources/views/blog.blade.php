@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="cs-CZ">
 <head>
@@ -12,27 +13,29 @@
     @include('_partials.main.head')
 
 
-    <title>Domovská stránka</title>
+    <title>{{ $blogView->name }}</title>
 
 </head>
 <body>
 
-<h1>Vítáme Vás na stránkách kouzelníka pro děti! Jmenuji se Martin Kellman a přináším zábavu plnou smíchu, magie a
-    nezapomenutelných zážitků pro malé i větší diváky. Ať už plánujete dětskou oslavu, školní akci nebo jinou veselou
-    událost, připravím kouzelnické vystoupení, které rozjasní oči každého dítěte. Vstupte do světa fantazie a nechte se
-    unést kouzly, která baví i překvapují!</h1>
-<a href="{{ route('login') }}">Přihlásit se</a>
+<h1 class="h3">{{ $blogView->name }}</h1>
+<h2 class="h4">{{ $blogView->category_name }}</h2>
+<h2 class="h4">{{ \Carbon\Carbon::parse($blogView->date)->format('d.m.Y') . " / "
+                                    . $blogView->location . " / " . $blogView->location2}}</h2>
+<img src="{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }}" alt="Hlavní fotografie" style="max-height: 250px">
 
-<nav>
-    <ul>
-        @foreach($categories as $category)
-            <li>{{ $category->name }}</li>
-        @endforeach
-    </ul>
-</nav>
+<p>{{ $blogView->text }}</p>
 
 <div>
-    @foreach($blogViews as $blogView)
+    @foreach($blogPhotos as $blogPhoto)
+        <img src="{{ asset('/api/blog_photo/' . $blogPhoto->id) }}" alt="Fotografie" style="max-height: 150px">
+    @endforeach
+
+</div>
+
+<div>
+    <h3 class="h5 mt-4">Další náhodné akce</h3>
+    @foreach($nextBlogViews as $blogView)
         <a href="{{ route('blog', ['id' => $blogView->id]) }}">
             <h2 class="h4">{{ $blogView->name }}</h2>
             <h3 class="h5">{{ \Carbon\Carbon::parse($blogView->date)->format('d.m.Y') . " / "
@@ -45,4 +48,5 @@
 
 </body>
 </html>
+
 

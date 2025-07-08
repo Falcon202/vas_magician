@@ -15,7 +15,7 @@ class HomeContr extends Controller
     {
         return view('home', [
             'categories' => Category::all(),
-            'blogViews' => BlogView::all(),
+            'blogViews' => BlogView::where('is_disabled', false)->get(),
         ]);
     }
     public function category($id): View

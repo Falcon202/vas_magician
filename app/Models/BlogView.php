@@ -15,6 +15,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property mixed $category_id
  * @property mixed $category_name
  * @property mixed $is_disabled
+ * @property mixed $main_photo_id
  * @method static where(string $string, $id)
  */
 class BlogView extends Model

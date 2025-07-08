@@ -89,20 +89,26 @@
                             <div class="col-xl-4">
                                 <a class="nonUnderlineHover" href="{{ route('ap_blog_photos', ['id' => $oneBlogView->id]) }}" title="Hlavní fotografie">
                                     @if($oneBlogView->main_photo == null)
-                                        <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/img/icons/img_not_found.png') }}"
+                                        <img class="img-fluid mx-1 imageInOrder" src="{{ asset('/img/icons/img_not_found.png') }}"
                                              alt="Žádný obrázek nenastaven">
                                     @else
-                                        <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/api/blog_photo/' . $oneBlogView->main_photo->id) }}"
+                                        <img class="img-fluid mx-1 imageInOrder" src="{{ asset('/api/blog_photo/' . $oneBlogView->main_photo->id) }}"
                                          alt="Obrázek blogu">
                                     @endif
                                 </a>
 
                                 @foreach($oneBlogView->other_photos->take(2) as $onePhoto)
-                                    <a class="nonUnderlineHover" href="{{ route('ap_blog_photos', ['id' => $onePhoto->id]) }}" title="Vedlejší fotografie">
-                                        <img class="img-fluid mx-2 imageInOrder" src="{{ asset('/api/blog_photo/' . $onePhoto->id) }}"
+                                    <a class="nonUnderlineHover" href="{{ route('ap_blog_photos', ['id' => $oneBlogView->id]) }}" title="Vedlejší fotografie">
+                                        <img class="img-fluid mx-1 imageInOrder" src="{{ asset('/api/blog_photo/' . $onePhoto->id) }}"
                                              alt="Obrázek blogu">
                                     </a>
                                 @endforeach
+                                @if($oneBlogView->other_photos->count() > 2)
+                                    <a class="nonUnderlineHover" href="{{ route('ap_blog_photos', ['id' => $oneBlogView->id]) }}">
+                                        <img class="img-fluid mx-1 iconMediumBigger" src="{{ asset('/img/icons/more_horiz.png') }}"
+                                             alt="Ikona další">
+                                    </a>
+                                @endif
                             </div>
                         </div>
                     </div>

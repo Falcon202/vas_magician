@@ -15,4 +15,13 @@
             </a>
         </button>
     </div>
+    @if( ! $blog->is_disabled)
+        <div class="mr-3" title="Zobrazit blog na nové stránce">
+            <button type="button" class="btn btn-light buttonCreateNew mb-3 px-0">
+                <a class="linkInButton" href="{{ route('blog', ['id' => $blog->id]) }}" target="_blank">Zobrazit
+                    <img class="icon" src="{{ asset('/img/icons/bookmarks.png') }}" alt="Ikona záložek">
+                </a>
+            </button>
+        </div>
+    @endif
 </div>
