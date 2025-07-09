@@ -18,7 +18,7 @@ class AdminPBlogContr
 {
     public function blog(): View
     {
-        $blogViews = BlogView::all()->sortByDesc('created_at');
+        $blogViews = BlogView::orderBy('id', 'asc')->get();
         $blogPhotos = BlogPhoto::select('id', 'blog_id', 'is_main_photo', 'name', 'original_name')->get();
 
         foreach ($blogViews as $blog) {

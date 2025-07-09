@@ -20,9 +20,9 @@ class BlogContr extends Controller
 
         $blogPhotos = BlogPhoto::where('blog_id', $id)->where('is_main_photo', false)->get();
 
-        $nextBlogViews = BlogView::where('id', '!=', $id)->get()->shuffle()->take(3);
+        $nextBlogViews = BlogView::where('id', '!=', $id)->get()->shuffle();
 
-        return view('blog', [
+        return view('singleBlog', [
             'blogView' => $blogView,
             'blogPhotos' => $blogPhotos,
             'nextBlogViews' => $nextBlogViews,

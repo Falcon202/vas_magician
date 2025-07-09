@@ -13,9 +13,9 @@ class HomeContr extends Controller
 {
     public function home()
     {
-        return view('home', [
+        return view('blog', [
             'categories' => Category::all(),
-            'blogViews' => BlogView::where('is_disabled', false)->get(),
+            'blogViews' => BlogView::where('is_disabled', false)->orderBy('id', 'asc')->get(),
         ]);
     }
     public function category($id): View
@@ -25,9 +25,9 @@ class HomeContr extends Controller
             abort(404, 'KATEGORIE NEEXISTUJE');
         }
 
-        $blogViews = BlogView::where('category_id', $id)->get();
+        $blogViews = BlogView::where('category_id', $id)->orderBy('id', 'asc')->get();
 
-        return view('home', [
+        return view('blog', [
             'categories' => Category::all(),
             'category' => $category,
             'blogViews' => $blogViews,
