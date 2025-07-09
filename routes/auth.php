@@ -3,9 +3,10 @@
 
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
 use App\Http\Controllers\Auth\PasswordController;
+use App\Http\Middleware\LoginMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::middleware('guest')->group(function () {
+Route::middleware(LoginMiddleware::class)->group(function () {
 
     Route::get('login', [AuthenticatedSessionController::class, 'create'])
         ->name('login');
