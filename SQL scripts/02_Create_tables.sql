@@ -1,9 +1,7 @@
 
-USE vas_magician_db
-;
+USE vas_magician_db;
 
-SET foreign_key_checks = 0
-;
+SET foreign_key_checks = 0;
 
 /* Smazání tabulek, pokud existují */
 
@@ -30,12 +28,13 @@ CREATE TABLE `User` (
 
 CREATE TABLE `Blog` (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `name` NVARCHAR(100) NOT NULL,
+    `name` NVARCHAR(100) NOT NULL UNIQUE,
+    `category_id` INT NOT NULL,
     `date` DATE NOT NULL,
     `location` NVARCHAR(100) NOT NULL,
     `location2` NVARCHAR(100) NOT NULL,
     `text` BLOB NOT NULL,
-    `category_id` INT NOT NULL,
+    `is_disabled` BOOL NOT NULL,
 
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` DATETIME NULL,
@@ -45,11 +44,16 @@ CREATE TABLE `Blog` (
 
 CREATE TABLE `BlogPhoto` (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `name` NVARCHAR(100) NOT NULL,
-    `original_name` NVARCHAR(255) NOT NULL,
-    `data` LONGBLOB NOT NULL,
+    `name` NVARCHAR(100) NULL,
+    `original_name` NVARCHAR(255) NOT NULL UNIQUE,
+    `file` LONGBLOB NOT NULL,
     `is_main_photo` BOOL NOT NULL,
     `blog_id` INT NOT NULL,
+
+    `uniq_key` VARCHAR(255) GENERATED ALWAYS AS (
+		IF(`is_main_photo` = TRUE, `blog_id`, NULL)
+	) STORED,
+    UNIQUE KEY `UQ_BlogPhoto_only_one_main_photo` (`uniq_key`),
 
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` DATETIME NULL,
@@ -59,7 +63,7 @@ CREATE TABLE `BlogPhoto` (
 
 CREATE TABLE `Category` (
     `id` INT NOT NULL AUTO_INCREMENT,
-    `name` NVARCHAR(100) NOT NULL,
+    `name` NVARCHAR(100) NOT NULL UNIQUE,
 
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` DATETIME NULL,
