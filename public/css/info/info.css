@@ -1,0 +1,223 @@
+
+
+.article_1 {
+    width: 100%!important;
+    height: calc(100vh - 50px - 30px);     /* minus výška headeru minus margin .article_2 */
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.article_1 .side-text-left, .article_1 .side-text-right {
+    font-weight: bold;
+    font-size: 16px;
+    color: black;
+
+    width: 50px;
+
+    transform-origin: center center;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.article_1 .side-text-left > span, .article_1 .side-text-right > span {
+
+}
+@media only screen and (max-width: 767px) {
+    .article_1 .side-text-left, .article_1 .side-text-right {
+        width: 25px;
+    }
+
+    .article_1 {
+        justify-content: center;
+    }
+}
+
+.article_1 .main-text {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    flex-direction: column;
+
+    width: unset;
+    background-color: unset;
+}
+.article_1 .main-text h2, .article_1 .main-text h3 {
+    font-size: clamp(70px, 9vw, 120px);
+    font-weight: bold;
+    margin: 30px 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .article_1 .side-text-left, .article_1 .side-text-right {
+        display: none;
+    }
+}
+
+
+
+
+
+.article_2, .article_4, .article_5, .article_6, .article_7, .article_8, .article_9 {
+    margin: 30px 50px;
+}
+@media only screen and (max-width: 767px) {
+    .article_2, .article_4, .article_5, .article_6, .article_7, .article_8, .article_9 {
+        margin: 30px 25px;
+    }
+}
+
+.article_2 span, .article_4 span {
+    font-size: 60px;
+    line-height: 70px;
+}
+
+.article_5 > h2, .article_7 > h2 {
+    font-size: 100px;
+    margin: 0;
+}
+
+
+.article_6 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /*gap: 30px;*/
+    flex-wrap: wrap; /* umožní zalomení na menších obrazovkách */
+
+    margin-bottom: 10px!important;
+}
+.article_6 > div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: max(30%, 370px); /* šířka jednoho bloku */
+    gap: 10px;
+
+    margin-bottom: 20px;
+}
+.article_6 span {
+    font-size: 18px;
+}
+.article_6 h3 {
+    margin: 0;
+    font-size: 22px;
+}
+
+.article_6 .photo {
+    object-fit: cover;
+    height: 250px;
+    width: 350px;
+}
+.article_6 .logo {
+    height: 25px;
+}
+
+
+.article_9 {
+    .white-top {
+        /*opacity: 0;*/
+        width: 100%;
+        height: 600px;
+    }
+
+    .image-bottom {
+        width: 100%;
+        height: 600px;
+        /*object-fit: cover;*/
+        background-size: cover;
+    }
+    .image-bottom > .vertical-texts {
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+        padding: 0 20px;
+    }
+    .image-bottom > .vertical-texts > .word {
+        font-size: 80px;
+        font-weight: bold;
+
+        transform-origin: center top;
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+
+        font-family: 'Consolas', Courier, monospace;
+        position: relative;
+        top: 1.1em;
+
+        line-height: 1;
+
+        /*height: 100px;*/
+        /*line-height: 12vw;*/
+        /*top: 500px;*/
+    }
+    @media only screen and (max-width: 991px) {
+        .image-bottom > .vertical-texts {
+            padding: 0;
+        }
+
+        .image-bottom > .vertical-texts > .word {
+            font-size: 55px;
+        }
+    }
+    .image-bottom .word::first-letter {
+        color: white;
+    }
+    .white {
+        color: white;
+    }
+
+    /*.image-bottom > img {*/
+    /*    width: 100%;*/
+    /*    height: 100%;*/
+    /*    object-fit: cover;*/
+    /*}*/
+}
+
+/*.article_3 {*/
+/*    width: 100%;*/
+/*}*/
+/*.article_3 > div {*/
+/*    display: grid;*/
+/*    grid-template-columns: repeat(12, 2fr); !* 12 sloupců pro lepší rozvržení *!*/
+/*    grid-auto-rows: 250px; !* výchozí výška řádků *!*/
+/*    gap: 50px;*/
+/*    margin: 0 50px 50px;*/
+/*}*/
+/*.article_3 > .photo {*/
+/*    background-size: cover;*/
+/*    background-position: center;*/
+/*    color: white;*/
+/*    position: relative;*/
+/*    display: flex;*/
+/*    align-items: end;*/
+/*    font-weight: bold;*/
+/*    font-size: 18px;*/
+/*    overflow: hidden;*/
+/*}*/
+
+/*@media only screen and (max-width: 991px) {*/
+/*    .article_3 > div {*/
+/*        display: flex;*/
+/*        flex-direction: column;*/
+/*        gap: 20px;*/
+/*        margin: 0 20px 30px;*/
+/*    }*/
+
+/*    .article_3 > .photo {*/
+/*        height: 300px;*/
+/*        width: 100%;*/
+/*    }*/
+
+/*    .tall,*/
+/*    .small {*/
+/*        grid-column: unset;*/
+/*        grid-row: unset;*/
+/*        height: auto;*/
+/*    }*/
+/*}*/

@@ -7,6 +7,7 @@ use App\Http\Controllers\Admin\AdminPBlogPhotosContr;
 use App\Http\Controllers\APIs\BlogPhotoContr;
 use App\Http\Controllers\BlogContr;
 use App\Http\Controllers\HomeContr;
+use App\Http\Controllers\InfoContr;
 use App\Http\Middleware\IsLoggedIn;
 use Illuminate\Support\Facades\Route;
 
@@ -16,6 +17,8 @@ Route::get('/home', [HomeContr::class, 'home'])->name('home');
 Route::get('/category/{id}', [HomeContr::class, 'category'])->name('category');
 
 Route::get('/blog/{id}', [BlogContr::class, 'blog'])->name('blog');
+
+Route::get('/info', [InfoContr::class, 'info'])->name('info');
 
 // API for photos
 Route::get('/api/blog_photo/{id}', [BlogPhotoContr::class, 'show_photo'])->name('api_blog_photo');
