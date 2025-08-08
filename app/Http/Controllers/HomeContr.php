@@ -11,26 +11,22 @@ use Illuminate\View\View;
 
 class HomeContr extends Controller
 {
-    public function home()
+    public function index(): View
     {
-        return view('blog', [
-            'categories' => Category::all(),
-            'blogViews' => BlogView::where('is_disabled', false)->orderBy('id', 'asc')->get(),
+        return view('index', [
+
         ]);
     }
-    public function category($id): View
+    public function contact(): View
     {
-        $category = Category::where('id', $id)->first();
-        if( ! $category){
-            abort(404, 'KATEGORIE NEEXISTUJE');
-        }
+        return view('otherSites.contact', [
 
-        $blogViews = BlogView::where('category_id', $id)->orderBy('id', 'asc')->get();
+        ]);
+    }
+    public function references(): View
+    {
+        return view('otherSites.references', [
 
-        return view('blog', [
-            'categories' => Category::all(),
-            'category' => $category,
-            'blogViews' => $blogViews,
         ]);
     }
 }

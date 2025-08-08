@@ -1,0 +1,1180 @@
+/* DM Sans Regular 400 */
+@font-face {
+    font-family: 'DM Sans'; /* Název, který budeš používat v CSS */
+    src: url('/fonts/DMSans-Regular.ttf') format('truetype'); /* Cesta k souboru s písmem */
+    font-weight: 400; /* Tloušťka písma */
+    font-style: normal; /* Styl písma (normální) */
+    font-display: swap; /* Jak se má písmo zobrazit během načítání */
+  }
+
+  /* DM Sans Bold 700 */
+  @font-face {
+    font-family: 'DM Sans'; /* Stejný název rodiny pro seskupení variant */
+    src: url('/fonts/DMSans-Bold.ttf') format('truetype'); /* Cesta k souboru s písmem */
+    font-weight: 700; /* Tloušťka písma */
+    font-style: normal; /* Styl písma (normální) */
+    font-display: swap; /* Jak se má písmo zobrazit během načítání */
+  }
+
+
+body {
+    font-family: 'DM Sans';
+    font-size: 16px;
+    line-height: 1.5;
+    color: #000000;
+    background-color: rgb(243, 241, 241);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Zahrnutí paddingu a borderu do šířky a výšky elementu */
+  }
+
+
+  h1 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+  }
+
+  h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    line-height: 1.1;
+    color: #222;
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+  }
+
+  h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 1.5em;
+    line-height: 1.2;
+    color: #222;
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+  }
+
+  a:hover {
+    color: #0056b3;
+  }
+
+  a:active {
+    color: #00308f;
+  }
+
+  a:visited {
+    color: #551a8b;
+  }
+
+
+  p {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 1em;
+  }
+
+
+  /* Hlavička */
+
+  header {
+    width: 100%;
+  }
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  nav .navbar {
+    padding: 5px 30px;
+    color: black;
+    list-style-type: none;
+    text-decoration: none;
+  }
+
+.mobile-menu {
+  position: absolute; /* Aby se mohl vysunout z horní části */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #f8f9fa; /* Barva pozadí menu */
+  padding: 20px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Stín pro efekt vysunutí */
+  transform: translateY(-100%); /* Skryje menu mimo horní okraj */
+  transition: transform 0.3s ease-in-out; /* Animace pro vysunutí */
+  z-index: 10; /* Zajistí, že menu bude nad ostatním obsahem */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.mobile-menu.open {
+  transform: translateY(0); /* Vysune menu dolů */
+}
+
+.mobile-menu a {
+  display: block; /* Každý odkaz na samostatném řádku */
+  padding: 10px 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 1.2em;
+}
+
+.main-text {
+    background-color: white;
+    color: black;
+    width: 4%;
+}
+
+
+.main-text p {
+    font-weight: 700;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px auto;
+    align-items: center;
+    width: 92%;
+    padding: 0;
+}
+
+.main-container h1 {
+    color: white;
+    font-size: 150px;
+    font-family: 'DM SANS';
+}
+
+.main-container p {
+    color: white;
+    font-size: 48px;
+    font-family: 'DM SANS';
+}
+
+
+.promo-container {
+  width: 100%;
+}
+
+.promo-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+
+}
+
+.promo-info-container button {
+  margin-right: 50px;
+}
+
+.promo-info-container-text {
+  width: 66%;
+}
+
+.promo-info-container-text h1 {
+  font-family: 'DM Sans';
+  font-size: 42px;
+  font-weight: 700;
+  margin-left: 50px;
+}
+
+.promo-programme {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 50px 0px;
+  align-items: center;
+  gap: 0;
+}
+
+.promo-programme-container {
+  display: flex;
+  flex-direction: column;
+  width: 33.3%;
+  margin: 0px 75px;
+  padding: 25px;
+  align-items: flex-start;
+  position: relative; /* Stále potřeba pro absolutní pozicování, i když ho budeme mít jen na jednom */
+  overflow: hidden; /* Stále potřeba pro oříznutí obrázku */
+  cursor: pointer;
+
+}
+
+#animated-promo-container::before { /* ZDE JE ZMĚNA: Cílíme na ID */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%; /* Počáteční pozice mimo obrazovku vlevo */
+  width: 100%;
+  height: 100%;
+  background-image: url('/images/akce-pro-deti-kouzelník-martin-kellman.webp');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: left 0.4s ease-out; /* Animace pro vysunutí */
+  z-index: 1; /* Pod textem, ale nad pozadím kontejneru */
+}
+
+#animated-promo-container:hover::before { /* ZDE JE ZMĚNA: Cílíme na ID */
+  left: 0; /* Vysune obrázek na pozici 0 (viditelný) */
+}
+
+/* Když najedeme myší na #animated-promo-container, změní se barva SVG */
+#animated-promo-container:hover .promo-svg {
+  fill: white; /* Změna barvy SVG na bílou */
+  transition: 0.4s ease-out;;
+}
+
+/* Když najedeme myší na #animated-promo-container, změní se barva H3 */
+#animated-promo-container:hover h3 {
+  color: white; /* Změna barvy textu H3 na bílou */
+  transition: 0.4s ease-out;;
+}
+
+.promo-svg {
+  width: 50px;
+  height: auto;
+  margin-bottom: 0px;
+  fill: black;
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+.promo-programme-container h3 {
+  margin: 0; /* Zaručí nulový horní i dolní margin */
+  padding: 0; /* Zaručí nulový padding */
+  color: black;
+  text-align: center;
+  line-height: 1.2; /* Může ovlivnit vizuální odsazení, zkus si s tím pohrát */
+  position: relative;
+  z-index: 2;
+}
+
+.magic-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.magic-box-black {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: black;
+  padding: 10px 0px;
+}
+
+.magic-svg-black {
+  width: 50px;
+  fill: white;
+  margin-left: 100px;
+}
+
+.magic-box-black h3 {
+  color: white;
+  margin-left: 25px;
+  width: 275px;
+}
+
+.magic-box-black p {
+  color: white;
+}
+
+.magic-box-white {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  padding: 10px 0px;
+  border: 1px solid;
+}
+
+.magic-svg-white {
+  width: 50px;
+  fill: black;
+  margin-left: 100px;
+}
+
+.magic-box-white h3 {
+  color: black;
+  margin-left: 25px;
+  width: 275px;
+}
+
+.magic-p {
+  color: black;
+  margin-top: 0;
+  margin-left: 150px;
+  margin-bottom: 0;
+}
+
+.magic-h {
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 25px;
+}
+
+
+.index-photogalery {
+  width: 100%;
+  height: 100%;
+  margin-top: 75px;
+}
+
+.photogalery-title {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.photogalery-title-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.photogalery-title-row h1 {
+  font-family: 'DM Sans';
+  font-size: 42px;
+  font-weight: 600;
+  width: 30%;
+  margin-left: 50px;
+  line-height: 1;
+}
+
+.photogalery-title-row img {
+  width: 70px;
+}
+
+.photogalery-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.photogalery-container-image {
+  display: flex;
+  justify-items: center;
+  width: 45%;
+  align-items: center;
+}
+
+
+.photogalery-container img {
+  width: 550px;
+  margin-left: 50px;
+}
+
+.photogalery-container-title {
+  width: 55%;
+}
+
+.photogalery-container-title p {
+  line-height: 1.2;
+  font-family: 'DM Sans';
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.photogalery-container-title-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+}
+
+.photogalery-container-text {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0;
+}
+
+.photogalery-container-text p {
+  line-height: 0.7;
+  font-family: 'DM Sans';
+  font-weight: 600;
+}
+
+.photogalery-container-button button {
+  margin-right: 50px;
+}
+
+
+
+.video-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  aspect-ratio: 16 / 9; /* Zachovává poměr stran jako u videa */
+  border-radius: 25px; /* Zaoblené rohy */
+  overflow: hidden; /* Ořízne vše, co přesahuje zaoblené rohy */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+/* Společné styly pro oba video oddíly */
+.video-pane {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+}
+
+/* Levý video oddíl (spodní vrstva) */
+.video-levy {
+  /* !! VYMĚŇTE ZA VÁŠ OBRÁZEK !! */
+  background-image: url('URL_PRO_LEVY_OBRAZEK.jpg');
+  justify-content: flex-start; /* Umístí tlačítko doleva */
+  align-items: flex-start; /* Umístí tlačítko nahoru */
+}
+
+/* Pravý video oddíl (horní vrstva, oříznutý) */
+.video-pravy {
+  /* !! VYMĚŇTE ZA VÁŠ OBRÁZEK !! */
+  background-image: url('URL_PRO_PRAVY_OBRAZEK.jpg');
+
+  /* Tento klíčový řádek vytvoří diagonální ořez.
+    polygon(X1 Y1, X2 Y2, X3 Y3, X4 Y4)
+    Začíná na 55 % šířky nahoře, jde do pravého horního rohu,
+    pak do pravého dolního rohu a končí na 45 % šířky dole.
+  */
+  clip-path: polygon(55% 0, 100% 0, 100% 100%, 45% 100%);
+
+  justify-content: flex-end;
+  align-items: flex-end; /* Umístí tlačítko dolů */
+}
+
+
+
+.play-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  padding: 12px 24px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  margin: 35px;
+}
+
+.play-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.play-icon {
+  width: 18px;
+  height: 18px;
+}
+
+/* Responzivita pro menší obrazovky (např. mobily) */
+@media (max-width: 768px) {
+  .video-container {
+
+      display: flex;
+      flex-direction: column;
+      aspect-ratio: 1 / 1.1;
+  }
+
+  .video-pane {
+      position: relative;
+      width: 100%;
+      height: 50%;
+  }
+
+  .video-pravy {
+      clip-path: none;
+  }
+
+  .video-levy, .video-pravy {
+      justify-content: center;
+      align-items: center;
+  }
+
+  .play-button {
+      margin: 20px;
+      padding: 10px 20px;
+      font-size: 14px;
+  }
+}
+
+
+.arrow-container {
+  display: flex; /* Pro snadné zarovnání šipek */
+  justify-content: flex-start; /* Umístí šipky na opačné strany kontejneru */
+  width: 300px; /* Nastav šířku kontejneru podle potřeby */
+  margin-top: 30px;
+  padding: 10px;
+}
+
+.arrow-container a {
+  margin-left: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  height: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.arrow {
+  display: inline-block; /* Aby šlo nastavit rozměry a transformovat */
+  width: 5px; /* Šířka šipky */
+  height: 5px; /* Výška šipky */
+  border: solid black; /* Styl a barva čáry šipky */
+  border-width: 0 3px 3px 0; /* Vytvoří jen pravý a spodní okraj */
+  padding: 3px; /* Velikost hlavičky šipky */
+}
+
+.left-arrow {
+  transform: rotate(135deg); /* Otočí šipku doleva */
+}
+
+.right-arrow {
+  transform: rotate(-45deg); /* Otočí šipku doprava */
+  margin-left: 20px;
+}
+
+.citation {
+  width: 100%;
+}
+
+.citation-title {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: left;
+}
+
+.citation-title h2 {
+  width: 65%;
+  margin-left: 50px;
+  font-family: 'DM Sans';
+  font-weight: 500;
+  font-size: 96px;
+  letter-spacing: 1.3px;
+}
+
+.purple-text {
+  color: purple;
+}
+
+.purple-line {
+  text-decoration-line: underline;
+  text-decoration-color: purple;
+  text-decoration-thickness: 3px; /* Tloušťku můžete upravit podle potřeby */
+  transform: rotate(-1deg);
+
+}
+
+
+.references-container {
+  width: 100%;
+}
+
+.references-info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  width: 100%;
+
+}
+
+.references-info-container-text {
+  width: 66%;
+}
+
+.references-info-container-text h1 {
+  font-family: 'DM Sans';
+  font-size: 42px;
+  font-weight: 600;
+  margin-left: 50px;
+  line-height: 1;
+}
+
+
+
+
+
+
+
+.social-media {
+  width: 100%;
+  height: auto;
+}
+
+.social-media-title-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.social-media-title {
+ width: 35%;
+}
+
+
+.social-media-title h1 {
+  font-family: 'DM Sans';
+  font-weight: 600;
+  font-size: 42px;
+  line-height: 1;
+  margin-left: 50px;
+  letter-spacing: 2px;
+}
+
+.social-media-instagram {
+  width: 65%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-media-instagram a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 50px;
+  width: 50px;
+  height: 50px;
+
+  background-color: black;
+  border-radius: 50%;
+
+  text-decoration: none;
+  transition: background-color 0.3s;
+}
+
+.social-media-instagram .fa-instagram {
+  color: white;
+  font-size: 28px;
+}
+
+
+.social-media-instagram a:hover {
+  background-color: #333;
+}
+
+.social-medi-container {
+  width: 100%;
+  height: auto;
+}
+
+.social-media-images {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.social-media-images img {
+  width: 425px;
+  padding: 20px;
+  margin: 0px 0px;
+}
+
+
+
+
+
+  .faq {
+    width: 100%;
+    padding: 40px 0px;
+    position: relative; /* Abychom mohli absolutně позиционировать .faq-expandable-text uvnitř */
+  }
+
+  .faq-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-left: 50px;
+  }
+
+  .faq h1 {
+    font-size: 42px;
+    text-align: left;
+    margin: 0;
+  }
+
+  .faq-image-container {
+    cursor: pointer;
+    /* Volitelné styly */
+  }
+
+  .faq-toggle-image {
+    width: 50px;
+    height: auto;
+  }
+
+  .faq-expandable-text {
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #ccc; /* Indikátor vysunutí */
+    position: absolute; /* Absolutní pozicování vzhledem k .faq */
+    top: 50%; /* Vertikální střed */
+    right: 20px; /* Zarovnání k pravému okraji (stejně jako obrázek) */
+    transform: translateY(-50%) translateX(110%); /* Vertikální vycentrování a skrytí vpravo */
+    opacity: 0;
+    width: 50%; /* Nastav šířku vysouvacího textu */
+    z-index: 10; /* Zajistí, že text bude nad ostatním obsahem */
+    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    align-items: center; /* Zkusíme vertikální zarovnání obsahu */
+    display: flex; /* Abychom mohli použít align-items */
+    height: auto; /* Automatická výška podle obsahu */
+  }
+
+  .faq-expandable-text.open {
+    transform: translateY(-50%) translateX(0); /* Vysune text na svou pozici */
+    opacity: 1;
+  }
+
+  .faq-container {
+    max-width: 1250px;
+    margin: 0 auto;
+    display: flex; /* Stále používáme flexbox pro centrování a rozložení otázek */
+    flex-direction: column; /* Uspořádáme otázky pod sebou */
+  }
+
+  .faq-item {
+    background-color: white;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex; /* Pro zarovnání čísla, otázky a šipky na jeden řádek */
+    align-items: center;
+    box-shadow: 2px -1px 2px -1px rgba(140, 134, 134, 0.5);
+  }
+
+  .faq-number {
+    font-weight: bold;
+    margin-right: 15px;
+    color: #333;
+  }
+
+  .faq-question {
+    margin: 0;
+    flex-grow: 1;
+    color: #333;
+    text-align: left;
+    font-weight: bold;
+  }
+
+  .faq-arrow {
+    font-size: 1.5em;
+    color: #636262;
+    margin-left: 15px;
+  }
+
+
+
+
+
+
+
+
+
+
+
+/* Patička */
+
+  footer {
+    width: 100%;
+    background-image: url("/images/pattern_ikony_footer_martin_kellman.svg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 75px 75px 0px 0px;
+    text-align: left;
+    box-shadow: 0px -2px 5px 0px rgba(140, 134, 134, 0.5);
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+
+  }
+
+
+  .contact-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 30%;
+    padding: 50px;
+  }
+
+  .contact-text h2 {
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 700;
+    font-size: 2em;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  .contact-text p {
+    margin-top: 0;
+    margin-bottom: 1em; /* Nebo podle potřeby */
+  }
+
+  .contact-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: right;
+  }
+
+  .contact-info a {
+    color: black;
+    font-size: 22px;
+    text-align: right;
+  }
+
+  .contact-info button {
+    margin-left: auto;
+  }
+
+
+  .copyright {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+  }
+
+
+
+
+  /* Blog */
+
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 250px;
+    gap: 50px;
+    margin: 0px 50px;
+    margin-bottom: 50px;
+  }
+
+  .item {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: end;
+    font-weight: bold;
+    font-size: 18px;
+  }
+
+  .item .text {
+    background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+    padding: 10px;
+    width: 100%;
+  }
+
+  /* První fotka přes 3 sloupce */
+  .large {
+    grid-column: span 3;
+  }
+
+  /* Druhá fotka přes 2 sloupce */
+  .item:nth-child(2) {
+    grid-column: span 2;
+  }
+
+  /* Třetí fotka přes 2 sloupce (původní třída .tall) */
+  .tall {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+
+  /* Čtvrtá fotka (původní třída .wide) - nyní na dalším řádku */
+  .wide {
+    /* Roztáhne se přes všechny sloupce na novém řádku */
+    grid-column: span 5;
+  }
+
+  .text h3 {
+    font-size: 18px;
+  }
+
+  .text p {
+    font-size: 14px;
+  }
+
+  .text h3,
+  .text p {
+    color: white;
+    line-height: 0.8;
+    margin-left: 20px;
+  }
+
+  .gallery-2 {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr); /* 12 sloupců pro lepší rozvržení */
+    grid-auto-rows: 170px; /* výchozí výška řádků */
+    gap: 50px;
+    margin: 0 50px 50px;
+  }
+
+  .item-2 {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: end;
+    font-weight: bold;
+    font-size: 18px;
+    overflow: hidden;
+  }
+
+  .item-2 .text-2 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    padding: 15px 20px;
+    width: 100%;
+  }
+
+  .text-2 h3 {
+    font-size: 18px;
+  }
+
+  .text-2 p {
+    font-size: 14px;
+  }
+
+  .text-2 h3,
+  .text-2 p {
+    color: white;
+    line-height: 1.1;
+    margin: 0;
+  }
+
+  /* Individuální velikosti a rozvržení (přesně dle obrázku) */
+  .item-2:nth-child(1) {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+  .item-2:nth-child(2) {
+    grid-column: span 4;
+    grid-row: span 3;
+  }
+
+  .item-2:nth-child(3) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .item-2:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 2;
+  }
+
+  .item-2:nth-child(5) {
+    grid-column: span 4;
+    grid-row: span 1;
+  }
+
+
+  /* Blog - jeden */
+
+  .single-blog {
+    width: 100%;
+  }
+
+  .blog-header {
+    /*background-image: url('../images/akce-pro-deti-kouzelník-martin-kellman.webp');*/
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 90vh;
+  }
+
+
+  .blog-header h3 {
+    font-size: 92px;
+  }
+
+  .blog-header p {
+    font-size: 36px;
+
+  }
+
+  .blog-header h3,
+  .blog-header p {
+    color: white;
+    line-height: 0.5;
+    margin-left: 50px;
+    margin-bottom: 50px;
+  }
+
+
+  .single-blog-photogalery {
+    width: 100%;
+  }
+
+  .single-blog-text {
+    width: 100%;
+
+  }
+
+  .single-blog-text h4 {
+    font-size: 72px;
+    margin: 50px 50px;
+  }
+
+
+  .single-blog-galery {
+    display: grid;
+    grid-template-columns: repeat(12, 2fr); /* 12 sloupců pro lepší rozvržení */
+    grid-auto-rows: 250px; /* výchozí výška řádků */
+    gap: 50px;
+    margin: 0 50px 50px;
+    }
+
+    .item-2 {
+      background-size: cover;
+      background-position: center;
+      color: white;
+      position: relative;
+      display: flex;
+      align-items: end;
+      font-weight: bold;
+      font-size: 18px;
+      overflow: hidden;
+    }
+
+    .item-2 .text-2 {
+      background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+      padding: 15px 20px;
+      width: 100%;
+    }
+
+
+    /* Individuální velikosti a rozvržení (přesně dle obrázku) */
+    .item-2:nth-child(1) {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+
+    .item-2:nth-child(2) {
+      grid-column: span 4;
+      grid-row: span 1;
+    }
+
+    .item-2:nth-child(3) {
+      grid-column: span 4;
+      grid-row: span 2;
+    }
+
+    .item-2:nth-child(4) {
+      grid-column: span 4;
+      grid-row: span 1;
+    }
+
+    .single-blog-btn {
+      display: flex;
+      justify-content: center;
+      width: 100%;
+      margin-bottom: 50px;
+    }
+
+    .single-blog-btn button {
+      background-color: none;
+      color: black;
+      border: 1px solid;
+      padding: 10px;
+    }
+
+    .another-blog {
+      width: 100%;
+    }
+
+    .another-blog-text {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+    }
+
+    .references-info-container-text h2 {
+      font-family: 'DM Sans';
+      font-size: 42px;
+      font-weight: 600;
+      margin-left: 50px;
+      line-height: 1;
+    }
+
+    .another-blog-galery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr); /* 12 sloupců pro lepší rozvržení */
+      grid-auto-rows: 300px; /* výchozí výška řádků */
+      gap: 50px;
+      margin: 0 50px 50px;
+      }
+
+      .item .mid {
+        background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
+        padding: 10px;
+        width: 100%;
+      }
+
+      .mid {
+        grid-column: span 2;
+      }
+
+      .mid h3 {
+        font-size: 18px;
+      }
+
+      .mid p {
+        font-size: 14px;
+      }
+
+      .mid h3,
+      .mid p {
+        color: white;
+        line-height: 0.8;
+        margin-left: 20px;
+      }

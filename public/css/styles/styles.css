@@ -1,19 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
 /* DM Sans Regular 400 */
 @font-face {
-    font-family: 'DM Sans'; /* Název, který budeš používat v CSS */
-    src: url('/fonts/DMSans-Regular.ttf') format('truetype'); /* Cesta k souboru s písmem */
-    font-weight: 400; /* Tloušťka písma */
-    font-style: normal; /* Styl písma (normální) */
-    font-display: swap; /* Jak se má písmo zobrazit během načítání */
+    font-family: 'DM Sans';
+    src: url('/fonts/DMSans-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
   }
 
   /* DM Sans Bold 700 */
   @font-face {
-    font-family: 'DM Sans'; /* Stejný název rodiny pro seskupení variant */
-    src: url('/fonts/DMSans-Bold.ttf') format('truetype'); /* Cesta k souboru s písmem */
-    font-weight: 700; /* Tloušťka písma */
-    font-style: normal; /* Styl písma (normální) */
-    font-display: swap; /* Jak se má písmo zobrazit během načítání */
+    font-family: 'DM Sans';
+    src: url('/fonts/DMSans-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
   }
 
 
@@ -25,7 +29,8 @@ body {
     background-color: rgb(243, 241, 241);
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Zahrnutí paddingu a borderu do šířky a výšky elementu */
+    box-sizing: border-box;
+    overflow-x: hidden; /* Skryje horizontální posuvník */
   }
 
 
@@ -80,84 +85,61 @@ body {
 
   /* Hlavička */
 
-  header {
-    width: 100%;
-  }
+header {
+  width: 100%;
+}
 
-  nav {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    margin-bottom: 10px;
-  }
+nav {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
 
-  nav .navbar {
-    padding: 5px 30px;
-    color: black;
-    list-style-type: none;
-    text-decoration: none;
-  }
+.nav-btn {
+  margin: 5px 0px 5px 50px;
+}
 
-.mobile-menu {
-  position: absolute; /* Aby se mohl vysunout z horní části */
+.nav-logo {
+  position: relative; /* Důležité: Rodičovský prvek pro absolutní pozicování */
+  width: 70px; /* Pevná šířka kontejneru */
+  height: 70px; /* Pevná výška kontejneru */
+  margin: 5px 0px 5px 0px;
+  cursor: pointer;
+}
+
+.nav-logo img {
+  position: absolute; /* Umožní překrytí obrázků */
   top: 0;
   left: 0;
-  width: 100%;
-  background-color: #f8f9fa; /* Barva pozadí menu */
-  padding: 20px;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Stín pro efekt vysunutí */
-  transform: translateY(-100%); /* Skryje menu mimo horní okraj */
-  transition: transform 0.3s ease-in-out; /* Animace pro vysunutí */
-  z-index: 10; /* Zajistí, že menu bude nad ostatním obsahem */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  width: 70px;
+  transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
-.mobile-menu.open {
-  transform: translateY(0); /* Vysune menu dolů */
+.logo-main {
+  transform: translateX(0); /* Výchozí pozice hlavního loga */
 }
 
-.mobile-menu a {
-  display: block; /* Každý odkaz na samostatném řádku */
-  padding: 10px 0;
-  color: #333;
-  text-decoration: none;
-  font-size: 1.2em;
+.logo-hover {
+  opacity: 0; /* Druhý obrázek je na začátku neviditelný */
+  transform: translateX(20px); /* Výchozí pozice druhého obrázku mimo viditelnou oblast */
 }
 
-.main-text {
-    background-color: white;
-    color: black;
-    width: 4%;
+.nav-logo:hover .logo-main {
+  transform: translateX(-20px); /* Při najetí se hlavní logo posune doleva */
+  opacity: 0; /* Hlavní logo zmizí */
 }
 
-
-.main-text p {
-    font-weight: 700;
+.nav-logo:hover .logo-hover {
+  transform: translateX(0); /* Druhý obrázek se posune na původní pozici */
+  opacity: 1; /* Druhý obrázek se objeví */
 }
 
-.main-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0px auto;
-    align-items: center;
-    width: 92%;
-    padding: 0;
-}
-
-.main-container h1 {
-    color: white;
-    font-size: 150px;
-    font-family: 'DM SANS';
-}
-
-.main-container p {
-    color: white;
-    font-size: 48px;
-    font-family: 'DM SANS';
+.hamburger-menu {
+  margin: 5px 50px 5px 0px;
 }
 
 
@@ -204,44 +186,62 @@ body {
   display: flex;
   flex-direction: column;
   width: 33.3%;
-  margin: 0px 75px;
+  margin: 0px 50px;
   padding: 25px;
   align-items: flex-start;
-  position: relative; /* Stále potřeba pro absolutní pozicování, i když ho budeme mít jen na jednom */
-  overflow: hidden; /* Stále potřeba pro oříznutí obrázku */
+  position: relative;
+  overflow: hidden;
   cursor: pointer;
 
 }
 
-#animated-promo-container::before { /* ZDE JE ZMĚNA: Cílíme na ID */
+#animated-promo-container::before {
   content: '';
   position: absolute;
   top: 0;
-  left: -100%; /* Počáteční pozice mimo obrazovku vlevo */
+  left: -100%;
   width: 100%;
   height: 100%;
-  background-image: url('/images/akce-pro-deti-kouzelník-martin-kellman.webp');
+  background-image: url("/images/akce-pro-deti-kouzelník-martin-kellman.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  transition: left 0.4s ease-out; /* Animace pro vysunutí */
-  z-index: 1; /* Pod textem, ale nad pozadím kontejneru */
+  z-index: 1;
+
+  /* Počáteční stav: skryto a velmi rozmazáno */
+  opacity: 0;
+  filter: blur(20px); /* Zvýšené rozmazání na začátku */
+  transition: opacity 0.4s ease-out;
 }
 
-#animated-promo-container:hover::before { /* ZDE JE ZMĚNA: Cílíme na ID */
-  left: 0; /* Vysune obrázek na pozici 0 (viditelný) */
+#animated-promo-container:hover::before {
+  left: 0;
+  opacity: 1; /* Zviditelníme obrázek */
+  animation: appear-and-focus 0.8s forwards; /* Spustíme animaci zaostření */
 }
 
-/* Když najedeme myší na #animated-promo-container, změní se barva SVG */
+/* Klíčové snímky pro animaci s rychlým zaostřením */
+@keyframes appear-and-focus {
+  0% {
+    filter: blur(20px); /* Na začátku je obrázek velmi rozmazaný */
+  }
+  20% {
+    filter: blur(10px); /* Během 20 % animace se rozmazání rychle sníží */
+  }
+  100% {
+    filter: blur(0px); /* Na konci je obrázek ostrý */
+  }
+}
+
+/* Ostatní styly pro :hover */
 #animated-promo-container:hover .promo-svg {
-  fill: white; /* Změna barvy SVG na bílou */
-  transition: 0.4s ease-out;;
+  fill: white;
+  transition: 0.4s ease-out;
 }
 
-/* Když najedeme myší na #animated-promo-container, změní se barva H3 */
 #animated-promo-container:hover h3 {
-  color: white; /* Změna barvy textu H3 na bílou */
-  transition: 0.4s ease-out;;
+  color: white;
+  transition: 0.4s ease-out;
 }
 
 .promo-svg {
@@ -258,7 +258,7 @@ body {
   margin: 0; /* Zaručí nulový horní i dolní margin */
   padding: 0; /* Zaručí nulový padding */
   color: black;
-  text-align: center;
+  text-align: left;
   line-height: 1.2; /* Může ovlivnit vizuální odsazení, zkus si s tím pohrát */
   position: relative;
   z-index: 2;
@@ -283,7 +283,7 @@ body {
 .magic-svg-black {
   width: 50px;
   fill: white;
-  margin-left: 100px;
+  margin-left: 75px;
 }
 
 .magic-box-black h3 {
@@ -310,7 +310,7 @@ body {
 .magic-svg-white {
   width: 50px;
   fill: black;
-  margin-left: 100px;
+  margin-left: 75px;
 }
 
 .magic-box-white h3 {
@@ -322,8 +322,9 @@ body {
 .magic-p {
   color: black;
   margin-top: 0;
-  margin-left: 150px;
+  margin-left: 30px;
   margin-bottom: 0;
+  font-size: 16px;
 }
 
 .magic-h {
@@ -333,10 +334,11 @@ body {
 }
 
 
+
 .index-photogalery {
   width: 100%;
   height: 100%;
-  margin-top: 75px;
+  margin: 75px 0px;
 }
 
 .photogalery-title {
@@ -370,37 +372,44 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: flex-start; /* KLÍČOVÁ ZMĚNA: Zarovná obsah na začátek (nahoru) */
+  gap: 50px; /* Přidáno: Mezera mezi obrázkem a textem pro lepší přehlednost */
+  margin-top: 50px;
 }
 
 .photogalery-container-image {
   display: flex;
-  justify-items: center;
+  justify-content: center;
+  align-items: center; /* Změněno z 'justify-items' na 'justify-content' a 'align-items' */
   width: 45%;
-  align-items: center;
+  margin-left: 50px;
 }
 
-
 .photogalery-container img {
-  width: 550px;
-  margin-left: 50px;
+  width: 600px;
+  height: 270px;
+  object-fit: cover;
+  object-position: 25% 25%;
+  margin: 0; /* Změněno: Odstraněn levý okraj, aby to bylo součástí kontejneru */
 }
 
 .photogalery-container-title {
   width: 55%;
+  margin-right: 100px;
 }
 
 .photogalery-container-title p {
-  line-height: 1.2;
+  line-height: 1.1; /* Změněno pro lepší čitelnost */
   font-family: 'DM Sans';
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .photogalery-container-title-row {
   display: flex;
   flex-direction: row;
   width: 100%;
-  align-items: center;
+  align-items: flex-start; /* Změněno: Zarovná nadpis a tlačítko na začátek */
 }
 
 .photogalery-container-text {
@@ -410,33 +419,36 @@ body {
   padding: 0;
 }
 
+.photogalery-container-text h1 {
+  margin: 0; /* Přidáno: Odstraněn výchozí okraj h1 */
+}
+
 .photogalery-container-text p {
-  line-height: 0.7;
+  line-height: 1; /* Upraveno pro lepší zarovnání */
   font-family: 'DM Sans';
-  font-weight: 600;
+  font-weight: 500;
+  margin-top: 0; /* Změněno: Odstraněn záporný okraj */
 }
 
-.photogalery-container-button button {
-  margin-right: 50px;
+.vide-camera {
+  width: 100%;
 }
-
-
 
 .video-container {
-  position: relative;
-  width: 100%;
-  max-width: 900px;
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  width: 92%;
+  height: 600px;
   aspect-ratio: 16 / 9; /* Zachovává poměr stran jako u videa */
-  border-radius: 25px; /* Zaoblené rohy */
+  border-radius: 50px; /* Zaoblené rohy */
   overflow: hidden; /* Ořízne vše, co přesahuje zaoblené rohy */
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 /* Společné styly pro oba video oddíly */
 .video-pane {
-  position: absolute;
-  top: 0;
-  left: 0;
+  display: flex;
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -484,7 +496,8 @@ body {
   cursor: pointer;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
-  margin: 35px;
+  margin-right: 150px;
+  margin-left: 150px;
 }
 
 .play-button:hover {
@@ -544,7 +557,6 @@ body {
   text-align: center;
   align-items: center;
   height: 10px;
-  text-decoration: none;
   color: black;
 }
 
@@ -614,7 +626,7 @@ body {
 }
 
 .references-info-container-text {
-  width: 66%;
+  width: 80%;
 }
 
 .references-info-container-text h1 {
@@ -625,8 +637,230 @@ body {
   line-height: 1;
 }
 
+.review-container {
+  display: flex;
+  flex-wrap: wrap; /* Umožní přechod na další řádek na menších obrazovkách, pokud je potřeba */
+  gap: 30px; /* Mezera mezi jednotlivými položkami (Google, Facebook, Seznam) */
+  align-items: center; /* Svislé zarovnání na střed */
+  height: 50px; /* Celková výška kontejneru */
+  width: 70%;
+}
+
+.references-arrow-container {
+  display: flex; /* Pro snadné zarovnání šipek */
+  justify-content: center; /* Umístí šipky na opačné strany kontejneru */
+  width: 100%; /* Nastav šířku kontejneru podle potřeby */
+  padding: 20px;
+  margin-top: 10px;
+}
+
+.ref-left-arrow {
+  transform: rotate(135deg); /* Otočí šipku doleva */
+  margin-right: 50px;
+}
+
+.ref-right-arrow {
+  transform: rotate(-45deg); /* Otočí šipku doprava */
+  margin-left: 50px;
+}
+
+.references-brands {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0px 50px;
+}
+
+.button-brand {
+  display: flex;
+  justify-content: flex-end;
+  width: 25%;
+}
+
+.review-item {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Mezera mezi logem a hodnocením */
+  padding: 0px 50px 0px 0px;
+}
+
+.logo-circle {
+  width: 32px; /* Velikost kolečka */
+  height: 32px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-circle img {
+  width: 70%; /* Velikost obrázku loga uvnitř kolečka */
+  height: auto;
+  object-fit: contain;
+}
+
+.rating-info {
+  display: flex;
+  align-items: center;
+  gap: 5px; /* Mezera mezi hvězdou, hodnocením a recenzemi */
+  font-size: 16px;
+}
+
+.star {
+  font-size: 16px; /* Velikost hvězdy */
+}
+
+.rating {
+  font-weight: bold;
+}
+
+.reviews {
+  color: #666;
+}
+
+/* Styl pro kontejner všech recenzí */
+.reviews-container {
+  display: flex;
+  justify-content: space-around; /* Rozloží recenze rovnoměrně s mezerami */
+  gap: 20px; /* Přidá mezeru mezi recenzemi */
+  flex-wrap: wrap; /* Zajistí, že na menších obrazovkách se recenze zalomí pod sebe */
+  margin-top: 10px;
+}
+
+/* Styl pro celou recenzi */
+.review-block {
+  width: calc(28.00% - 20px); /* Každá recenze zabere třetinu šířky mínus mezery */
+  padding: 25px;
+  background-color: rgb(233, 232, 232);
+  color: #333;
+}
+
+/* Styl pro hlavičku recenze s fotkou a jménem */
+.review-info-top {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+/* Styl pro kontejner profilové fotky */
+.avatar-holder {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 15px;
+  border: 2px solid #ddd;
+}
+
+/* Styl pro profilovou fotku */
+.profile-pic {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Styl pro autora a počet recenzí */
+.author-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.author-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.review-count-text {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Styl pro hodnocení a datum */
+.rating-and-time {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Styl pro hvězdičky */
+.star-group {
+  color: gold;
+  font-size: 16px;
+  line-height: 1;
+  margin-right: 10px;
+}
+
+.star-icon {
+  /* Hvězda je v tomto případě textový znak ★ */
+}
+
+.timestamp {
+  font-size: 14px;
+  color: #888;
+}
+
+/* Styl pro text recenze */
+.review-content {
+  line-height: 1.4;
+  font-size: 14px;
+  color: black;
+}
 
 
+.logo-slider {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 90%;
+  margin: 50px auto;
+}
+
+/* Kontejner, který skrývá neviditelná loga */
+.slider-content-wrapper {
+  overflow: hidden;
+  flex-grow: 1; /* KLÍČOVÁ ZMĚNA: Umožní wrapperu zabrat veškeré dostupné místo */
+  white-space: nowrap;
+}
+
+/* Kontejner pro samotná loga, který se bude posouvat */
+.slider-content {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  gap: 20px; /* Mezera mezi logy */
+}
+
+/* Styly pro jednotlivá loga */
+.logo-image {
+  flex-shrink: 0;
+  width: calc((100% - 100px) / 6); /* Šířka pro 6 log + mezery */
+  height: auto;
+  object-fit: contain;
+}
+
+/* Styly pro navigační šipky */
+.slider-arrow {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  z-index: 10;
+}
+
+.slider-arrow svg {
+  fill: #333;
+  width: 30px;
+  height: 30px;
+}
+
+.logo-arrow-left {
+  left: -50px; /* Posunutí šipky vlevo mimo kontejner */
+}
+
+.logo-arrow-right {
+  right: -50px; /* Posunutí šipky vpravo mimo kontejner */
+}
 
 
 
@@ -683,123 +917,30 @@ body {
   font-size: 28px;
 }
 
-
-.social-media-instagram a:hover {
-  background-color: #333;
-}
-
-.social-medi-container {
-  width: 100%;
-  height: auto;
-}
-
-.social-media-images {
+.social-media-container {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
+  flex-wrap: wrap; /* Umožní obrázkům zalomení na další řádek */
+  justify-content: center; /* Vycentruje řádky */
+  gap: 20px; /* Mezera mezi obrázky a řádky */
   width: 100%;
+  max-width: 1400px; /* Omezení maximální šířky kontejneru */
+  margin: 0 auto;
+
 }
 
-.social-media-images img {
-  width: 425px;
-  padding: 20px;
-  margin: 0px 0px;
+.social-media-container img {
+  width: calc(30%); /* Vypočítá šířku pro tři obrázky s mezerami */
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1; /* Volitelné: Udrží obrázky čtvercové */
+  padding: 10px;
 }
 
 
 
 
 
-  .faq {
-    width: 100%;
-    padding: 40px 0px;
-    position: relative; /* Abychom mohli absolutně позиционировать .faq-expandable-text uvnitř */
-  }
 
-  .faq-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    margin-left: 50px;
-  }
-
-  .faq h1 {
-    font-size: 42px;
-    text-align: left;
-    margin: 0;
-  }
-
-  .faq-image-container {
-    cursor: pointer;
-    /* Volitelné styly */
-  }
-
-  .faq-toggle-image {
-    width: 50px;
-    height: auto;
-  }
-
-  .faq-expandable-text {
-    background-color: #f9f9f9;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-left: 5px solid #ccc; /* Indikátor vysunutí */
-    position: absolute; /* Absolutní pozicování vzhledem k .faq */
-    top: 50%; /* Vertikální střed */
-    right: 20px; /* Zarovnání k pravému okraji (stejně jako obrázek) */
-    transform: translateY(-50%) translateX(110%); /* Vertikální vycentrování a skrytí vpravo */
-    opacity: 0;
-    width: 50%; /* Nastav šířku vysouvacího textu */
-    z-index: 10; /* Zajistí, že text bude nad ostatním obsahem */
-    transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
-    align-items: center; /* Zkusíme vertikální zarovnání obsahu */
-    display: flex; /* Abychom mohli použít align-items */
-    height: auto; /* Automatická výška podle obsahu */
-  }
-
-  .faq-expandable-text.open {
-    transform: translateY(-50%) translateX(0); /* Vysune text na svou pozici */
-    opacity: 1;
-  }
-
-  .faq-container {
-    max-width: 1250px;
-    margin: 0 auto;
-    display: flex; /* Stále používáme flexbox pro centrování a rozložení otázek */
-    flex-direction: column; /* Uspořádáme otázky pod sebou */
-  }
-
-  .faq-item {
-    background-color: white;
-    padding: 10px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    display: flex; /* Pro zarovnání čísla, otázky a šipky na jeden řádek */
-    align-items: center;
-    box-shadow: 2px -1px 2px -1px rgba(140, 134, 134, 0.5);
-  }
-
-  .faq-number {
-    font-weight: bold;
-    margin-right: 15px;
-    color: #333;
-  }
-
-  .faq-question {
-    margin: 0;
-    flex-grow: 1;
-    color: #333;
-    text-align: left;
-    font-weight: bold;
-  }
-
-  .faq-arrow {
-    font-size: 1.5em;
-    color: #636262;
-    margin-left: 15px;
-  }
 
 
 
@@ -820,15 +961,14 @@ body {
     background-position: center;
     border-radius: 75px 75px 0px 0px;
     text-align: left;
-    box-shadow: 0px -2px 5px 0px rgba(140, 134, 134, 0.5);
+    box-shadow: 0 -30px 30px -20px rgba(0, 0, 0, 0.2);
   }
 
   .contact {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    width: 100%;
     padding: 20px;
 
   }
@@ -845,14 +985,14 @@ body {
   .contact-text h2 {
     font-family: 'DM Sans', sans-serif;
     font-weight: 700;
-    font-size: 2em;
+    font-size: 48px;
     margin-top: 0;
     margin-bottom: 0;
   }
 
   .contact-text p {
     margin-top: 0;
-    margin-bottom: 1em; /* Nebo podle potřeby */
+    margin-bottom: 20px; /* Nebo podle potřeby */
   }
 
   .contact-info {
@@ -860,12 +1000,17 @@ body {
     flex-direction: column;
     justify-content: center;
     text-align: right;
+    padding: 75px;
   }
 
   .contact-info a {
     color: black;
-    font-size: 22px;
+    font-size: 24px;
+    font-weight: 500;
     text-align: right;
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 1;
   }
 
   .contact-info button {
@@ -902,6 +1047,7 @@ body {
     align-items: end;
     font-weight: bold;
     font-size: 18px;
+    height: 200px;
   }
 
   .item .text {
@@ -1022,7 +1168,7 @@ body {
   }
 
   .blog-header {
-    /*background-image: url('../images/akce-pro-deti-kouzelník-martin-kellman.webp');*/
+    background-image: url('/images/akce-pro-deti-kouzelník-martin-kellman.webp');
     background-position: center;
     background-size: cover;
     width: 100%;
@@ -1062,7 +1208,9 @@ body {
 
   .single-blog-text h4 {
     font-size: 72px;
+    font-weight: 500;
     margin: 50px 50px;
+    line-height: 1.1;
   }
 
 
@@ -1114,20 +1262,6 @@ body {
       grid-row: span 1;
     }
 
-    .single-blog-btn {
-      display: flex;
-      justify-content: center;
-      width: 100%;
-      margin-bottom: 50px;
-    }
-
-    .single-blog-btn button {
-      background-color: none;
-      color: black;
-      border: 1px solid;
-      padding: 10px;
-    }
-
     .another-blog {
       width: 100%;
     }
@@ -1140,41 +1274,607 @@ body {
 
     .references-info-container-text h2 {
       font-family: 'DM Sans';
-      font-size: 42px;
+      font-size: 106px;
       font-weight: 600;
       margin-left: 50px;
-      line-height: 1;
+      line-height: 0.5;
     }
 
     .another-blog-galery {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr); /* 12 sloupců pro lepší rozvržení */
-      grid-auto-rows: 300px; /* výchozí výška řádků */
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: center;
       gap: 50px;
-      margin: 0 50px 50px;
+      margin-bottom: 75px;
+    }
+
+    .random-blog {
+      width: 45%;
+      height: 200px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px 30px;
+      box-sizing: border-box;
+    }
+
+    .random-blog h3,
+    .random-blog p {
+      color: white;
+      line-height: 0.8;
+    }
+
+    .random-blog p {
+      font-size: 12px;
+    }
+
+
+
+
+      .faq {
+        font-family: 'DM Sans';
+        padding: 0px 50px 50px;
+        margin-top: -50px;
       }
 
-      .item .mid {
-        background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
-        padding: 10px;
+      .faq-title {
+        display: flex;
+        justify-content: flex-start;
+      }
+
+      .faq-title h2 {
+        font-size: 48px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      .faq-item {
+        padding: 15px 0;
+        margin-top: 20px;
+        background-color: white;
+      }
+
+      .faq-question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+      }
+
+      .faq-number {
+        font-size: 16px;
+        margin: 5px 15px;
+        flex-shrink: 0;
+        color: black;
+      }
+
+      .faq-text {
+        flex-grow: 1;
+        font-size: 18px;
+        font-weight: 700;
+      }
+
+      .faq-toggle {
+        font-size: 18px;
+        margin-right: 15px;
+        transition: transform 0.3s ease;
+        color: black;
+      }
+
+      .faq-answer {
+        display: none;
+        margin-top: 10px;
+        margin-left: 40px;
+        font-size: 16px;
+        color: #333;
+        line-height: 1.4;
+      }
+
+      /* Aktivní stav (přes JS) */
+      .faq-item.active .faq-answer {
+        display: block;
+      }
+
+      .faq-item.active .faq-toggle {
+        transform: rotate(180deg); /* otočení šipky */
+      }
+
+
+      .FAQ-button {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin: 40px auto;
+      }
+
+      .faq-hidden-items {
+        display: none; /* KLÍČOVÉ: Skryje celý blok s dalšími položkami */
+      }
+
+      /* Třída, kterou přidáme JavaScriptem pro zobrazení položek */
+      .faq-hidden-items.show {
+        display: block;
+      }
+
+
+      .image-purple {
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        margin-top: 25px;
+        cursor: pointer;
+        position: relative; /* Důležité: Rodičovský kontejner pro absolutně pozicovaný text */
+        /* Můžeme nastavit pevnou výšku, aby se obrázek neposouval */
+        height: 70px; /* Stejná výška jako obrázek, pokud je to fixní výška, kterou chceš */
+        overflow: hidden; /* Skryje text, když je mimo tento kontejner */
+    }
+
+    .image-purple img {
+        width: 70px;
+        height: 70px; /* Udržujeme stejnou výšku, pokud není již definována */
+        margin-left: 10px;
+        /* Zajistíme, že obrázek je nad textem */
+        position: relative;
+        z-index: 2;
+    }
+
+    /* Styly pro skrytý text */
+    .hidden-text {
+        position: absolute; /* Absolutní pozicování vzhledem k .image-purple */
+        top: 0;
+        /* Důležité: Nyní chceme, aby text "vyjel" pod obrázek, proto ho umístíme přímo pod něj. */
+        /* Spočítáme pozici, aby se objevil vpravo (kde je obrázek) */
+        right: 0; /* Začíná na pravé straně rodiče */
+
+        width: 70px; /* Začne se šířkou obrázku */
+        height: 0; /* Zpočátku je výška nulová (skrytý) */
+        overflow: hidden; /* Skryje přetékající obsah */
+        opacity: 0; /* Zpočátku neviditelný */
+
+        background-color: #f0f0f0; /* Barva pozadí textu, aby vynikl */
+        border: 1px solid #ccc; /* Volitelný rámeček */
+        padding: 0px; /* Zpočátku žádný padding */
+
+        /* Plynulé animace pro výšku, šířku a průhlednost */
+        transition: height 0.4s ease-out, opacity 0.4s ease-out, padding 0.4s ease-out, width 0.4s ease-out;
+
+        z-index: 1; /* Pod obrázkem */
+        box-sizing: border-box; /* Zahrnuje padding a border do celkové šířky/výšky */
+    }
+
+    /* Třída, která se přidá JavaScriptem pro zobrazení textu */
+    .hidden-text.show {
+        height: auto; /* Výška se přizpůsobí obsahu */
+        max-height: 200px; /* Omezíme maximální výšku pro animaci */
+        width: 450px; /* Nová šířka textového boxu, nastav podle potřeby */
+        opacity: 1; /* Zobrazí text */
+        padding: 15px; /* Přidáme padding, aby text nebyl nalepen na okraje */
+        /* Posunutí, aby text vyjel zpod obrázku */
+        right: auto; /* Resetujeme right */
+        left: 85%; /* Umístíme střed k původnímu středu */
+        transform: translateX(-50%); /* Posuneme zpět o polovinu šířky */
+        /* Toto by se muselo doladit podle šířky kontejneru image-purple a umístění obrázku */
+        /* Místo toho zkusíme jen posunout nahoru od spodního okraje image-purple */
+        top: 0; /* Zůstane na stejném top jako obrázek */
+    }
+
+      .contactus {
+        background-image: url('/images/pattern_ikony_footer_martin_kellman.svg');
+        width: 100%;
+        height: 630px; /* Zkontroluj, zda tato výška není příliš omezující */
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative; /* Klíčové pro absolutní pozicování vertikálních textů */
+      }
+
+      .vertical-text-ref {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 12px;
+        color: black;
+        font-weight: 700;
+        z-index: 10;
+      }
+
+      .vertical-text-l {
+        position: absolute;
+        top: 75%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        color: #555;
+        z-index: 10;
+      }
+
+      .vertical-text-l-ref {
+        position: absolute;
+        top: 100%;
+        transform: translateY(-50%);
+        white-space: nowrap;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 14px;
+        color: #555;
+        z-index: 10;
+      }
+
+      .left-side-text {
+        left: 30px;
+        transform: translateY(-50%) rotate(270deg);
+        transform-origin: left center;
+      }
+
+      .right-side-text {
+        right: 20px;
+        transform: translateY(-50%) rotate(270deg);
+        transform-origin: right center;
+      }
+
+      .contactus-image {
+        display: flex;
+        justify-content: flex-end;
+        margin-right: 50px;
+        width: 55%;
+        margin-bottom: 0;
+        padding-top: 0;
+        margin-top: 0;
+      }
+
+      .contactus-image img {
+        width: 85%;        /* Šířka obrázku je relativní k rodiči */
+        height: 550px;     /* Daná, pevná výška obrázku */
+        object-fit: cover; /* KLÍČOVÉ: Zajistí, že se obrázek přizpůsobí rozměrům, ale NEZDEFORUMUJE se */
+        display: block;
+        padding: 0;
+        margin: 0;
+    }
+
+      .contactus-form {
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+        width: 45%;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        height: 100%;
+        justify-content: flex-start;
+        padding: 0;
+      }
+
+      .contactus-form h2 {
+        font-size: 62px;
+        margin-top: 0;
+        margin-bottom: 2px;
+      }
+
+      .contactus-form h4 {
+        margin-top: 0;
+        margin-bottom: 0px;
+        font-size: 18px;
+        color: black;
+      }
+
+      .contactus-tel {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+      }
+
+      .contactus-tel a {
+        text-decoration: none;
+        color: #333;
+        font-size: 28px;
+        line-height: 1;
+      }
+
+      form {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 5px;
+        color: black;
+        margin-top: 10px;
+        width: 80%;
+      }
+
+      .form-group {
+        flex: 1 1 calc(50% - 20px);
+        display: flex;
+        flex-direction: column;
+      }
+
+      .form-group.full-width {
+        flex: 1 1 100%;
+      }
+
+      input, textarea {
+        border: none;
+        padding: 6px;
+        font-size: 14px;
+        margin-top: 8px;
+        resize: none;
+        background-color: #edecec;
+        color: black;
+      }
+
+      input {
+        width: 200px;
+      }
+
+      textarea {
+        width: 463px;
+      }
+
+      input:focus, textarea:focus {
+        outline: none;
+      }
+
+      input::placeholder {
+        color: black;
+        font-size: 12px;
+      }
+
+      textarea::placeholder {
+        color: black;
+        font-size: 12px;
+        padding-left: 5px;
+      }
+
+      .underline {
+        border-bottom: 2px solid black;
+        margin-top: 0;
+        width: 12%;
+      }
+
+      .form-footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: nowrap;
+        margin-top: 10px;
         width: 100%;
       }
 
-      .mid {
-        grid-column: span 2;
+      .gdpr-text {
+        font-size: 11px;
+        margin: 0;
+        flex: 1;
+        color: black;
       }
 
-      .mid h3 {
-        font-size: 18px;
-      }
-
-      .mid p {
-        font-size: 14px;
-      }
-
-      .mid h3,
-      .mid p {
+      .submit-btn {
+        background-color: black;
         color: white;
-        line-height: 0.8;
-        margin-left: 20px;
+        border: none;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        border-radius: 30px;
+        white-space: nowrap;
       }
+
+
+
+
+
+
+
+
+
+
+
+  .towns {
+    max-width: 1600px;
+    margin: -200px 100px 200px 100px;
+  }
+
+  .towns-text h2 {
+    font-size: 96px;
+    font-weight: 500;
+    font-family: 'DM Sans';
+  }
+
+
+.towns-item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  transition: all 0.3s ease;
+  z-index: 999;
+  padding-bottom: 0;
+  margin-top: 2px;
+}
+
+
+.towns-item:hover {
+  margin-bottom: 50px; /* přechodný prostor pro rozbalený text */
+}
+
+.towns-item::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom: 2px solid black;
+  transform-origin: top;
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.towns-item:hover::before {
+  transform: scaleY(1.3);
+}
+
+/* Vrchní řádek město + obrázek */
+.towns-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  gap: 30px;
+}
+
+/* Textový blok – město + odpověď */
+.towns-text {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Název města */
+.towns-city {
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.towns-answer {
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease, opacity 0.2s ease;
+  font-size: 18px;
+  color: #333;
+}
+
+.towns-item:hover .towns-answer {
+  max-height: 500px;
+  opacity: 1;
+}
+
+.towns-top img {
+  width: 500px;
+  height: 150px;
+  transition: transform 0.3s ease;
+  transform-origin: top;
+}
+
+.towns-item:hover .towns-top img {
+  transform: scaleY(1.3);
+}
+
+.fotogalery-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin-bottom: 100px;
+}
+
+.fotogalery-image {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  margin: 0px auto;
+  width: 93%;
+  background-image: url("/images/akce-pro-deti-kouzelník-martin-kellman.webp");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fotogalery-text {
+  display: flex;
+  justify-content: center; /* Centruje horizontálně (na ose X) */
+  align-items: center;   /* Klíčová změna: Centruje vertikálně (na ose Y) */
+  width: 100%;
+  height: 84vh;
+}
+
+.fotogalery-text h2 {
+  color: white;
+  font-size: 150px;
+  /* Zkontroluj, jestli zde nejsou nějaké marginy, které by bránily centrování. */
+  /* Pro jistotu je můžeš resetovat: */
+  margin: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar a {
+  text-decoration: none; /* Odstraní podtržení */
+  color: black;          /* Výchozí barva textu */
+  padding: 5px 25px;    /* Nějaké odsazení pro lepší klikatelnost */
+  transition: color 0.3s ease; /* Plynulý přechod barvy */
+}
+
+.navbar a.active {
+  color: rgb(165, 1, 165); /* Fialová barva pro aktivní odkaz */
+  font-weight: bold; /* Můžeš přidat i tučné písmo pro zvýraznění */
+}
+
+/* Volitelně: Styl pro najetí myší (hover) */
+.navbar a:hover {
+  color: #8A2BE2; /* Trochu jiná fialová nebo jiná barva při najetí myší */
+}
+
+
+
+
+.main-reference {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  position: relative;
+}
+
+.main-reference-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: auto;
+  align-items: center;
+  text-align: center;
+}
+
+.main-reference-container h2 {
+  font-size: 150px;
+  margin: 0px;
+}
+
+.main-review-container {
+  display: flex;
+  justify-content: center;
+  margin: 0px auto;
+  gap: 30px; /* Mezera mezi jednotlivými položkami (Google, Facebook, Seznam) */
+  align-items: center; /* Svislé zarovnání na střed */
+  height: 50px; /* Celková výška kontejneru */
+  width: 100%;
+}
+
+
+/* Responsivita */
+@media (max-width: 768px) {
+  .towns-top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .towns-city {
+    font-size: 32px;
+  }
+
+  .towns-top img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+

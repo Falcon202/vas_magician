@@ -22,7 +22,7 @@
 <body>
 
     <nav>
-        <a href="{{ route('home') }}" class="navbar">vše</a>
+        <a href="{{ route('blog') }}" class="navbar">vše</a>
         @foreach($categories as $category)
             <a href="{{ route('category', ['id' => $category->id]) }}" class="navbar">{{ $category->name }}</a>
         @endforeach
@@ -73,7 +73,7 @@
                     @endphp
                     <div class="{{ $class }}"
                          style="cursor: pointer; background-image: url('{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }}')"
-                         onclick="window.location.href='{{ route('blog', ['id' => $blogView->id]) }}'">
+                         onclick="window.location.href='{{ route('single_blog', ['id' => $blogView->id]) }}'">
                         <div class="text">
                             <h3>{{ $blogView->name }}</h3>
                             <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
@@ -138,23 +138,7 @@
 {{--        @endforeach--}}
 {{--    </div>--}}
 
-    <footer>
-        <div class="contact">
-            <div class="contact-text">
-                <h2>Kouzlo na vaši akci,<br> nebo jen tak?</h2>
-                <p>
-                    Těším se na naší budoucí spolupráci!
-                </p>
-            </div>
-            <div class="contact-info">
-                <a href="tel:+420777879704">+420 777 879 704</a>
-                <a href="mailto:martin@vaskouzelnik.cz">martin@vaskouzelnik.cz</a>
-            </div>
-        </div>
-        <div class="copyright">
-            © 2025 SKYBERT graphic studio & production. Všechna práva vyhrazena.
-        </div>
-    </footer>
+    @include('_partials.main.footer')
 
 </body>
 </html>

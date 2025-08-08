@@ -6,19 +6,26 @@ use App\Http\Controllers\Admin\AdminPBlogContr;
 use App\Http\Controllers\Admin\AdminPBlogPhotosContr;
 use App\Http\Controllers\APIs\BlogPhotoContr;
 use App\Http\Controllers\BlogContr;
+use App\Http\Controllers\GaleriesContr;
 use App\Http\Controllers\HomeContr;
 use App\Http\Controllers\InfoContr;
 use App\Http\Middleware\IsLoggedIn;
 use Illuminate\Support\Facades\Route;
 
 
-Route::get('/', [HomeContr::class, 'home']);
-Route::get('/home', [HomeContr::class, 'home'])->name('home');
-Route::get('/category/{id}', [HomeContr::class, 'category'])->name('category');
+Route::get('/', [HomeContr::class, 'index']);
+Route::get('/index', [HomeContr::class, 'index'])->name('index');
+Route::get('/contact', [HomeContr::class, 'contact'])->name('contact');
+Route::get('/references', [HomeContr::class, 'references'])->name('references');
+Route::get('/fotogalery', [GaleriesContr::class, 'fotogalery'])->name('fotogalery');
+Route::get('/videogalery', [GaleriesContr::class, 'videogalery'])->name('videogalery');
 
-Route::get('/blog/{id}', [BlogContr::class, 'blog'])->name('blog');
+Route::get('/blog', [BlogContr::class, 'blog'])->name('blog');
+Route::get('/category/{id}', [BlogContr::class, 'category'])->name('category');
+Route::get('/single_blog/{id}', [BlogContr::class, 'single_blog'])->name('single_blog');
 
 Route::get('/info', [InfoContr::class, 'info'])->name('info');
+
 
 // API for photos
 Route::get('/api/blog_photo/{id}', [BlogPhotoContr::class, 'show_photo'])->name('api_blog_photo');
