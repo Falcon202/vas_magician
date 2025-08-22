@@ -88,16 +88,16 @@
 
         <article class="single-blog-photogalery">
             <div class="single-blog-galery">
-                <div class="item-2 tall" style="background-image: url('{{ asset('/api/blog_photo/1') }}');">
+                <div class="item-2 tall" style="background-image: url('{{ asset('/api/blog_photo/2') }}');">
 
                 </div>
-                <div class="item-2 small" style="background-image: url('{{ asset('/api/blog_photo/1') }}');">
+                <div class="item-2 small" style="background-image: url('{{ asset('/api/blog_photo/2') }}');">
 
                 </div>
-                <div class="item-2 tall" style="background-image: url('{{ asset('/api/blog_photo/1') }}');">
+                <div class="item-2 tall" style="background-image: url('{{ asset('/api/blog_photo/2') }}');">
 
                 </div>
-                <div class="item-2 small" style="background-image: url('{{ asset('/api/blog_photo/1') }}');">
+                <div class="item-2 small" style="background-image: url('{{ asset('/api/blog_photo/2') }}');">
 
                 </div>
             </div>
@@ -149,7 +149,7 @@
                 @foreach($nextBlogViews->take(2) as $blogView)
                     <div class="item mid"
                          style=" cursor: pointer; background-image: url('{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }}');"
-                         onclick="window.location.href='{{ route('blog', ['id' => $blogView->id]) }}'">
+                         onclick="window.location.href='{{ route('single_blog', ['id' => $blogView->id]) }}'">
                         <h3>{{ $blogView->name }}</h3>
                         <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
                     </div>

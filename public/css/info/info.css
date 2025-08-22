@@ -61,6 +61,113 @@
 
 
 
+.single-blog-galery {
+    display: grid;
+    grid-template-columns: repeat(12, 2fr); /* 12 sloupců pro lepší rozvržení */
+    grid-auto-rows: 250px; /* výchozí výška řádků */
+    gap: 50px;
+    margin: 0 50px 50px;
+}
+
+.item-2 {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: end;
+    font-weight: bold;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.item-2 .text-2 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    padding: 15px 20px;
+    width: 100%;
+}
+.item-2:nth-child(1) {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.item-2:nth-child(2) {
+    grid-column: span 4;
+    grid-row: span 3;
+}
+
+.item-2:nth-child(3) {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.item-2:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.item-2:nth-child(5) {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+.item-2 {
+    background-size: cover;
+    background-position: center;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: end;
+    font-weight: bold;
+    font-size: 18px;
+    overflow: hidden;
+}
+
+.item-2 .text-2 {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+    padding: 15px 20px;
+    width: 100%;
+}
+
+
+/* Individuální velikosti a rozvržení (přesně dle obrázku) */
+.item-2:nth-child(1) {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.item-2:nth-child(2) {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.item-2:nth-child(3) {
+    grid-column: span 4;
+    grid-row: span 2;
+}
+
+.item-2:nth-child(4) {
+    grid-column: span 4;
+    grid-row: span 1;
+}
+
+.tall {
+    grid-column: span 2;
+    grid-row: span 2;
+}
+.single-blog-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.single-blog-btn button {
+    background-color: none;
+    color: black;
+    border: 1px solid;
+    padding: 10px;
+}
+
 
 
 .article_2, .article_4, .article_5, .article_6, .article_7, .article_8, .article_9 {
