@@ -366,5 +366,5 @@
 
     @include('_partials.main.footer')
 
-    <script src="{{ asset('js/javascript.js') }}" defer></script>
+    <script src="{{ asset('js/javascript-OLD.js') }}" defer></script>
 </body>
