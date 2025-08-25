@@ -87,7 +87,7 @@
                      onclick="window.location.href='{{ route('single_blog', ['id' => $blogView->id]) }}'">
                     <div class="text">
                         <h3>{{ $blogView->name }}</h3>
-                        <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
+                        <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->city_name }} / {{ $blogView->location2 }}</p>
                     </div>
                 </div>
             @endforeach
@@ -103,7 +103,7 @@
                      onclick="window.location.href='{{ route('blog', ['id' => $blogView->id]) }}'">
                     <div class="reference-text">
                         <h3>{{ $blogView->name }}</h3>
-                        <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
+                        <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->city_name }} / {{ $blogView->location2 }}</p>
                     </div>
                 </div>
             @endforeach

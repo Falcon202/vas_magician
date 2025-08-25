@@ -10,6 +10,9 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ route('ap_blog')}}">Blogy</a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ route('ap_city')}}">Města</a>
+            </li>
 
             <li class="nav-item">
                 <form method="POST" action="{{ route('logout') }}">

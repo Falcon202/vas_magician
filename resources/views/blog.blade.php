@@ -76,7 +76,7 @@
                          onclick="window.location.href='{{ route('single_blog', ['id' => $blogView->id]) }}'">
                         <div class="text">
                             <h3>{{ $blogView->name }}</h3>
-                            <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
+                            <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->city_name }} / {{ $blogView->location2 }}</p>
                         </div>
                     </div>
                 @endforeach
@@ -92,7 +92,7 @@
                          onclick="window.location.href='{{ route('blog', ['id' => $blogView->id]) }}'">
                         <div class="text-2">
                             <h3>{{ $blogView->name }}</h3>
-                            <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
+                            <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->city_name }} / {{ $blogView->location2 }}</p>
                         </div>
                     </div>
                 @endforeach
@@ -104,39 +104,6 @@
         @endphp
     @endwhile
 
-{{--    <div class="gallery">--}}
-{{--        @foreach($blogViews->take(4) as $index => $blogView)--}}
-{{--            @php--}}
-{{--                $classes = ['item large', 'item', 'item tall', 'item wide'];--}}
-{{--                $class = $classes[$index] ?? 'item';--}}
-{{--            @endphp--}}
-{{--            <div class="{{ $class }}"--}}
-{{--                 style="cursor: pointer; background-image: url('{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }}')"--}}
-{{--                 onclick="window.location.href='{{ route('blog', ['id' => $blogView->id]) }}'">--}}
-{{--                <div class="text">--}}
-{{--                    <h3>{{ $blogView->name }}</h3>--}}
-{{--                    <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        @endforeach--}}
-{{--    </div>--}}
-
-{{--    <div class="gallery-2">--}}
-{{--        @php--}}
-{{--            $classes = ['item-2 wide-2', 'item-2 tall-2', 'item-2 large-2', 'item-2 large-2', 'item-2 wide-2'];--}}
-{{--        @endphp--}}
-
-{{--        @foreach($blogViews->slice(4, 5)->values() as $index => $blogView)--}}
-{{--            <div class="{{ $classes[$index] }}"--}}
-{{--                 style="cursor: pointer; background-image: url('{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }}')"--}}
-{{--                 onclick="window.location.href='{{ route('blog', ['id' => $blogView->id]) }}'">--}}
-{{--                <div class="text-2">--}}
-{{--                    <h3>{{ $blogView->name }}</h3>--}}
-{{--                    <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>--}}
-{{--                </div>--}}
-{{--            </div>--}}
-{{--        @endforeach--}}
-{{--    </div>--}}
 
     @include('_partials.main.footer')
 

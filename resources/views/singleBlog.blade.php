@@ -61,7 +61,7 @@
     </div>
     <div class="blog-header" style="background-image: url('{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }} ')">
         <h3>{{ $blogView->name }}</h3>
-        <p>{{ $blogView->category_name . " " . \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
+        <p>{{ $blogView->category_name . " " . \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->city_name }} / {{ $blogView->location2 }}</p>
     </div>
     <div class="vertical-text-l right-side-text">
         <p>#MARTINKELLMAN</p>
@@ -152,7 +152,7 @@
                  style=" cursor: pointer; background-image: url('{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }}');"
                  onclick="window.location.href='{{ route('single_blog', ['id' => $blogView->id]) }}'">
                 <h3>{{ $blogView->name }}</h3>
-                <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
+                <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->city_name }} / {{ $blogView->location2 }}</p>
             </div>
         @endforeach
     </div>

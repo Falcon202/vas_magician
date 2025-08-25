@@ -4,6 +4,7 @@
 use App\Http\Controllers\Admin\AdminPanelContr;
 use App\Http\Controllers\Admin\AdminPBlogContr;
 use App\Http\Controllers\Admin\AdminPBlogPhotosContr;
+use App\Http\Controllers\Admin\City\AdminPCityContr;
 use App\Http\Controllers\APIs\BlogPhotoContr;
 use App\Http\Controllers\BlogContr;
 use App\Http\Controllers\GaleriesContr;
@@ -54,6 +55,16 @@ Route::middleware([IsLoggedIn::class])->prefix('/admin_panel')->group(function (
         Route::post('/add_photo', [AdminPBlogPhotosContr::class, 'add_photo'])->name('ap_blog_add_photo');
         Route::post('/add_main_photo', [AdminPBlogPhotosContr::class, 'add_main_photo'])->name('ap_blog_add_main_photo');
         Route::post('/delete_photo', [AdminPBlogPhotosContr::class, 'delete_photo'])->name('ap_blog_delete_photo');
+    });
+
+    // City
+    Route::prefix('/city')->group(function () {
+        Route::get('', [AdminPCityContr::class, 'city'])->name('ap_city');
+        Route::get('/create', [AdminPCityContr::class, 'create'])->name('ap_city_create');
+        Route::post('/do_create', [AdminPCityContr::class, 'do_create'])->name('ap_city_do_create');
+        Route::get('/edit/{id}', [AdminPCityContr::class, 'edit'])->name('ap_city_edit');
+        Route::post('/do_edit', [AdminPCityContr::class, 'do_edit'])->name('ap_city_do_edit');
+        Route::post('/do_delete', [AdminPCityContr::class, 'do_delete'])->name('ap_city_do_delete');
     });
 });
 

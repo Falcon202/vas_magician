@@ -73,14 +73,14 @@
                             </div>
                             <div class="col-xl-4 mb-1 mb-xl-0">
                                 <h2 class="h5"><a class="linkWithoutFormat" href="{{route('ap_blog_edit', ['id' => $oneBlogView->id]) }}"
-                                    title="{{ $oneBlogView->name }}">
+                                                  title="{{ $oneBlogView->name }}">
                                         {{ Str::limit($oneBlogView->name, 25) }}</a>
                                 </h2>
                                 <h3 class="h6 text-muted" title="{{ \Carbon\Carbon::parse($oneBlogView->date)->format('d.m.Y') . " / "
-                                    . $oneBlogView->city_name . " / " . $oneBlogView->location2 }}">
+                                    . $oneBlogView->location . " / " . $oneBlogView->location2 }}">
 
                                     {{ \Carbon\Carbon::parse($oneBlogView->date)->format('d.m.Y') . " / "
-                                    . Str::limit($oneBlogView->city_name, 15) . " / " . Str::limit($oneBlogView->location2, 20) }}</h3>
+                                    . Str::limit($oneBlogView->location, 15) . " / " . Str::limit($oneBlogView->location2, 20) }}</h3>
                             </div>
                             <div class="col-xl-3 mb-1 mb-xl-0">
                                 <h2 class="h5" title="{{ $oneBlogView->category_name }}">{{ Str::limit($oneBlogView->category_name, 20) }}</h2>
@@ -93,7 +93,7 @@
                                              alt="Žádný obrázek nenastaven">
                                     @else
                                         <img class="img-fluid mx-1 imageInOrder" src="{{ asset('/api/blog_photo/' . $oneBlogView->main_photo->id) }}"
-                                         alt="Obrázek blogu">
+                                             alt="Obrázek blogu">
                                     @endif
                                 </a>
 
@@ -121,4 +121,5 @@
 </div>
 </body>
 </html>
+
 
