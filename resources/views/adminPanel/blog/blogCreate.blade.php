@@ -10,7 +10,7 @@
     @include('_partials.main.head')
 
     <!-- Moje styly -->
-    <link rel="stylesheet" href="{{URL::asset('/css/adminPanel.css')}}">
+    <link rel="stylesheet" href="{{  asset('/css/adminPanel.css') }}">
     {{--    <link rel="stylesheet" href="{{URL::asset('/css/sortable-table.css')}}">--}}
 
     <!-- Flatpickr CSS -->
