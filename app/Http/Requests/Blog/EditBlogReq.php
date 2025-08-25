@@ -4,6 +4,7 @@ namespace App\Http\Requests\Blog;
 
 use App\Models\Blog;
 use App\Models\Category;
+use App\Models\City;
 use Illuminate\Foundation\Http\FormRequest;
 use Illuminate\Validation\Rule;
 
@@ -25,7 +26,7 @@ class EditBlogReq extends FormRequest
             'name' => ['required', 'string', 'max:100', Rule::unique(Blog::class, 'name')->ignore($this->id)],
             'category_id' => ['required', 'integer', Rule::exists(Category::class, 'id')],
             'date' => ['required', 'string', 'regex:/^(0?[1-9]|[12][0-9]|3[01])\. (0?[1-9]|1[0-2])\. \d{4}$/'],
-            'location' => ['required', 'string', 'max:100'],
+            'city_id' => ['required', 'integer', Rule::exists(City::class, 'id')],
             'location2' => ['required', 'string', 'max:100'],
             'text' => ['required', 'string', 'max:10000'],
             'is_disabled' => ['nullable', 'in:on'],
@@ -45,8 +46,7 @@ class EditBlogReq extends FormRequest
 
             'date' => 'Vyberte datem z kalendáře.',
 
-            'location.required' => 'Lokalita akce je povinný údaj.',
-            'location.max' => 'Lokalita akce nesmí být delší než 100 znaků.',
+            'city_id' => 'Vyberte město ze seznamu.',
 
             'location2.required' => 'Místo konání akce je povinný údaj.',
             'location2.max' => 'Místo konání akce nesmí být delší než 100 znaků.',

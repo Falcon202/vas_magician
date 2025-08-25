@@ -8,6 +8,7 @@ use App\Models\Blog;
 use App\Models\BlogPhoto;
 use App\Models\BlogView;
 use App\Models\Category;
+use App\Models\City;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -36,9 +37,9 @@ class AdminPBlogContr
     }
     public function create(): View
     {
-        $categories = Category::all();
         return view('adminPanel.blog.blogCreate', [
-            'categories' => $categories,
+            'categories' => Category::all(),
+            'cities' => City::all(),
         ]);
     }
     public function do_create(CreateBlogReq $request): RedirectResponse
@@ -49,7 +50,7 @@ class AdminPBlogContr
             'name' => $request->name,
             'category_id' => $request->category_id,
             'date' => Carbon::createFromFormat('d. m. Y', $request->date)->format('Y-m-d'),
-            'location' => $request->location,
+            'city_id' => $request->city_id,
             'location2' => $request->location2,
             'text' => $request->text,
             'is_disabled' => ($request->is_disabled == 'on'),
@@ -67,6 +68,7 @@ class AdminPBlogContr
         return view('adminPanel.blog.blogEdit', [
             'blog' => $blog,
             'categories' => Category::all(),
+            'cities' => City::all(),
         ]);
     }
     public function do_edit(EditBlogReq $request): RedirectResponse
@@ -79,7 +81,7 @@ class AdminPBlogContr
             'name' => $request->name,
             'category_id' => $request->category_id,
             'date' => Carbon::createFromFormat('d. m. Y', $request->date)->format('Y-m-d'),
-            'location' => $request->location,
+            'city_id' => $request->city_id,
             'location2' => $request->location2,
             'text' => $request->text,
             'is_disabled' => ($request->is_disabled == 'on'),

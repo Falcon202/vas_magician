@@ -42,6 +42,8 @@
                     </p>
                 @endif
 
+                <p>Toto město je používáno <span style="font-weight: bold;">{{ $cityView->blog_count }}</span> blogy(ů)</p>
+
                 <form class="form-card formCreateUser" action="{{ route('ap_city_do_edit') }}" method="post">
                     @csrf
 

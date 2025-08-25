@@ -96,17 +96,22 @@
                         </div>
                     </div>
                     <div class="row mb-0 mb-sm-3 d-flex flex-wrap">
-                        {{--    Location            --}}
+                        {{--    City            --}}
                         <div class="col-12 col-sm-6 mb-3 mb-sm-0">
                             <div data-mdb-input-init class="form-outline">
-                                <label for="location"><b>Lokalita akce</b></label>
+                                <label for="city_id"><b>Město</b></label>
                                 <div class="input-group">
-                                    <x-text-input id="location" name="location" type="text" class="form-control"
-                                                  placeholder="Zadejte město"
-                                                  :value="old('location', $blog?->location ?? '')" />
+                                    <select id="city_id" name="city_id" required
+                                            class="form-control" autocomplete="city_id">
+                                        <option value="">Vyberte město</option>
+                                        @foreach($cities as $oneCity)
+                                            <option
+                                                value={{$oneCity->id}} @if(old('city_id') == $oneCity->id) selected @endif >{{$oneCity->name}}</option>
+                                        @endforeach
+                                    </select>
                                     <span class="input-group-text">/</span>
                                 </div>
-                                <x-input-error :messages="$errors->get('location')"
+                                <x-input-error :messages="$errors->get('city_id')"
                                                class="mt-2 error_message"/>
                             </div>
                         </div>
