@@ -29,4 +29,16 @@ class HomeContr extends Controller
 
         ]);
     }
+    public function akceprodeti(): View
+    {
+        return view('otherSites.akceProDeti', [
+
+        ]);
+    }
+    public function kouzelnikprodeti(): View
+    {
+        return view('otherSites.kouzelnikProDeti', [
+
+        ]);
+    }
 }

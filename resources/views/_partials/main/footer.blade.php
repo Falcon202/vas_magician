@@ -8,8 +8,8 @@
             </p>
         </div>
         <div class="contact-info">
-            <a href="tel:+420777879704">+420 777 879 704</a>
-            <a href="mailto:martin@vaskouzelnik.cz">martin@vaskouzelnik.cz</a>
+            <a href="">+420 777 879 704</a>
+            <a href="">martin@vaskouzelnik.cz</a>
         </div>
     </div>
     <div class="copyright">

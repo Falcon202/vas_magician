@@ -1,149 +1,194 @@
 <!DOCTYPE html>
-<html lang="cs-CZ">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    @include('_partials.main.head')
-
     <link rel="stylesheet" href="{{ asset('/css/styles/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/styles/components.css') }}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-          integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="stylesheet" href="{{ asset('/css/styles/layout.css') }}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Domů - VASkouzelnik</title>
 </head>
 <body>
 
-    <header>
-        <nav>
-            <div class="nav-btn">
-                <button class="first-button">poptávka</button>
-            </div>
-            <div class="nav-logo">
-                <img src="{{ asset('images/kouzelník-martin-kellman-symbol.svg') }}" alt="">
-            </div>
-            <div class="hamburger-menu">
-                <img src="images/" alt="">
-                menu
-            </div>
-        </nav>
-    </header>
-    <div class="image-purple">
-        <img class="faq-toggle-image" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
-    </div>
-    <section class="contactus">
-        <!-- Nový textový sloupec vlevo -->
-        <div class="vertical-text-l left-side-text">
-            <p>Děkuji všem svým klientům, že mohu být kouzelníkem na plný úvazek.</p>
-        </div>
-
-        <div class="contactus-image">
-            <img src="{{ asset('images/DSC00017-2-Enhanced-NR.jpg') }}" alt="">
-        </div>
-        <div class="contactus-form">
-            <h2>Kouzlo na vaši akci, nebo jen tak?</h2>
-            <h4>Těším se na naší budoucí spolupráci!</h4>
-
-            <div class="contactus-tel">
-                <a href="tel:+420777879704">+420 777 879 704</a>
-                <a href="mailto:martin@vaskouzelnik.cz">martin@vaskouzelnik.cz</a>
-            </div>
-
-            <form action="" method="post">
-                <div class="form-group">
-                    <input type="text" name="name" placeholder="jméno a příjmení"/>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="form-group">
-                    <input type="email" name="email" placeholder="e-mailová adresa"/>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="form-group">
-                    <input type="tel" name="phone" placeholder="telefonní číslo"/>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="form-group">
-                    <input type="text" name="magic" placeholder="chcete čarovat?"/>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="form-group full-width">
-                    <textarea name="message" placeholder="okouzlete mě vaší zprávou!" rows="4"></textarea>
-                    <div class="underline"></div>
-                </div>
-
-                <div class="form-footer">
-                    <p class="gdpr-text">
-                        Odesláním souhlasíte se zpracováním osobních údajů GDPR.
-                    </p>
-                    <button class="contact-button">
-                        odeslat zprávu
-                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                            <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+<header>
+    <nav>
+        <div class="nav-btn">
+            <button class="first-button">
+                poptávka
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                    <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                    <g>
+                        <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
                             <g>
-                                <g id="Vrstva_1">
-                                    <path d="M-447.1,350.4h0Z"/>
-                                    <g>
-                                        <path
-                                            d="M297.8,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM174.4,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
-                                        <path
-                                            d="M702.2,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM578.9,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
-                                        <path
-                                            d="M500,474.5c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM376.6,284.6l123.3,123.3,123.4-123.4-123.3-123.3-123.4,123.4Z"/>
-                                        <path
-                                            d="M500,904.9c-15.2,0-27.6-12.3-27.6-27.5v-140.7c0-15.2,12.3-27.5,27.6-27.5s27.6,12.3,27.6,27.5v140.7c0,15.2-12.3,27.5-27.6,27.5Z"/>
-                                    </g>
+                                <path d="M297.8,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM174.4,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                                <path d="M702.2,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM578.9,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                                <path d="M500,474.5c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM376.6,284.6l123.3,123.3,123.4-123.4-123.3-123.3-123.4,123.4Z"/>
+                                <path d="M500,904.9c-15.2,0-27.6-12.3-27.6-27.5v-140.7c0-15.2,12.3-27.5,27.6-27.5s27.6,12.3,27.6,27.5v140.7c0,15.2-12.3,27.5-27.6,27.5Z"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </button>
+        </div>
+        <div class="nav-logo">
+            <div class="logo-wrapper">
+                <img src="{{ asset('images/kouzelnik-martin-kellman-symbol.svg') }}" alt="Symbol loga Martin Kellman" class="logo-symbol">
+
+                <img src="{{ asset('images/kouzelnik-martin-kellman-typograficke-logo.svg') }}" alt="Text loga Martin Kellman" class="logo-text">
+            </div>
+        </div>
+        <div class="hamburger-menu">
+            <img src="images/" alt="">
+            menu
+        </div>
+    </nav>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="main-menu" id="mainMenu">
+        <ul class="menu-list">
+            <li><a href="{{ route('index') }}">úvod</a></li>
+            <li><a href="#">nabídka</a></li>
+            <li><a href="{{ route('fotogalery') }}">galerie</a></li>
+            <li><a href="{{ route('references') }}">reference</a></li>
+            <li><a href="{{ route('contact') }}">kontakt</a></li>
+        </ul>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+    <div class="main-menu" id="mainMenu">
+        <ul class="menu-list">
+            <li><a href="{{ route('index') }}">úvod</a></li>
+            <li><a href="#">nabídka</a></li>
+            <li><a href="{{ route('fotogalery') }}">galerie</a></li>
+            <li><a href="{{ route('references') }}">reference</a></li>
+            <li><a href="{{ route('contact') }}">kontakt</a></li>
+        </ul>
+    </div>
+</header>
+<div class="quote-container">
+    <div class="quote-content-wrapper">
+        <div class="quote-content">
+            <p>Zde je text, který se má zobrazit po kliknutí. Může být libovolně dlouhý a obsahovat cokoliv, co potřebujete.</p>
+        </div>
+    </div>
+    <img class="quote-toggle-image-left" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
+</div>
+</div>
+<section class="contactus">
+    <div class="vertical-text-l left-side-text">
+        <p>Děkuji všem svým klientům, že mohu být kouzelníkem na plný úvazek.</p>
+    </div>
+
+    <div class="contactus-image">
+        <img src="{{ asset('images/DSC00017-2-Enhanced-NR.jpg') }}" alt="">
+    </div>
+    <div class="contactus-form">
+        <h2>Kouzlo na vaši akci, nebo jen tak?</h2>
+        <h4>Těším se na naší budoucí spolupráci!</h4>
+
+        <div class="contactus-tel">
+            <a href="tel:+420777879704">+420 777 879 704</a>
+            <a href="mailto:martin@vaskouzelnik.cz">martin@vaskouzelnik.cz</a>
+        </div>
+
+        <form action="" method="post">
+            <div class="form-group">
+                <input type="text" name="name" placeholder="jméno a příjmení" />
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="email" name="email" placeholder="e-mailová adresa" />
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="tel" name="phone" placeholder="telefonní číslo" />
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" name="magic" placeholder="chcete čarovat?" />
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-group full-width">
+                <textarea name="message" placeholder="okouzlete mě vaší zprávou!" rows="4"></textarea>
+                <div class="underline"></div>
+            </div>
+
+            <div class="form-footer">
+                <p class="gdpr-text">
+                    Odesláním souhlasíte se zpracováním osobních údajů GDPR.
+                </p>
+                <button class="first-button">
+                    odeslat zprávu
+                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                            <g id="Vrstva_1">
+                                <path d="M-447.1,350.4h0Z"/>
+                                <g>
+                                    <path d="M297.8,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM174.4,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                                    <path d="M702.2,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM578.9,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                                    <path d="M500,474.5c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM376.6,284.6l123.3,123.3,123.4-123.4-123.3-123.3-123.4,123.4Z"/>
+                                    <path d="M500,904.9c-15.2,0-27.6-12.3-27.6-27.5v-140.7c0-15.2,12.3-27.5,27.6-27.5s27.6,12.3,27.6,27.5v140.7c0,15.2-12.3,27.5-27.6,27.5Z"/>
                                 </g>
                             </g>
-                        </svg>
-                    </button>
-                </div>
-
-            </form>
-        </div>
-
-        <!-- Nový textový sloupec vpravo -->
-        <div class="vertical-text right-side-text">
-            <p>#MARTINKELLMAN</p>
-        </div>
-    </section>
-    <section class="towns">
-        <div class="towns-text">
-            <h2>města, ve kterých jsem často kouzelníkem</h2>
-        </div>
-        <div class="towns-item">
-            <div class="towns-top">
-                <div class="towns-text">
-                    <span class="towns-city">Praha</span>
-                    <div class="towns-answer">
-                        <p>Hledáe originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými
-                            zkušenostmi z dětsk...</p>
-                    </div>
-                </div>
-                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+                        </g>
+                    </svg>
+                </button>
             </div>
-        </div>
 
-        <div class="towns-item">
-            <div class="towns-top">
-                <div class="towns-text">
-                    <span class="towns-city">Praha</span>
-                    <div class="towns-answer">
-                        <p>Hledáe originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými
-                            zkušenostmi z dětsk...</p>
-                    </div>
+        </form>
+    </div>
+
+    <div class="vertical-text-l right-side-text">
+        <p>#MARTINKELLMAN</p>
+    </div>
+</section>
+
+<section class="contact-con-towns">
+    <div class="contact-con-text">
+        <h2>města, ve kterých jsem často kouzelníkem</h2>
+    </div>
+    <div class="contact-con-item">
+        <div class="contact-con-top">
+            <div class="contact-con-text">
+                <span class="contact-con-city">Praha
+
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                        <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                      </svg>
+                </span>
+                <div class="contact-con-answer">
+                    <p>Hledáe originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z dětsk...</p>
                 </div>
-                <img src="{{ asset('images/KA987.jpg') }}" alt="">
             </div>
+            <img src="{{ asset('images/KA987.jpg') }}" alt="">
         </div>
+    </div>
+    <div class="contact-con-item">
+        <div class="contact-con-top">
+            <div class="contact-con-text">
+                <span class="contact-con-city">Praha
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                        <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                      </svg>
+                </span>
+                <div class="contact-con-answer">
+                    <p>Hledáe originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z dětsk...</p>
+                </div>
+            </div>
+            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+        </div>
+    </div>
+</section>
 
-
-    </section>
 
     @include('_partials.main.footer')
+    <script src="{{ asset('js/javascript.js') }}" defer></script>
 </body>

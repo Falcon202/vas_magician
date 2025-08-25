@@ -1,4 +1,3 @@
-
 document.addEventListener('DOMContentLoaded', function() {
     // ---- KÓD PRO FAQ SEKCI A LOGA ----
 
@@ -40,9 +39,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (sliderContent && leftArrow && rightArrow) {
         const logoImage = document.querySelector('.logo-image');
+        // Získání skutečné vypočítané šířky loga
         const logoWidth = logoImage.offsetWidth;
         const gap = 20; // Stejná hodnota jako v CSS
-        const scrollAmount = logoWidth + gap;
+
+        // Nový výpočet scrollAmount pro posun o 3 loga najednou
+        const scrollAmount = (logoWidth * 3) + (gap * 2);
 
         rightArrow.addEventListener('click', () => {
             sliderContent.scrollBy({
@@ -75,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const sliderData = [
         {
-            image: "/images/firemní-akce-kouzelník-martin-kellman.webp",
+            image: "/images/firemni-akce-kouzelnik-martin-kellman.webp",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "firemní akce"
@@ -87,13 +89,13 @@ document.addEventListener('DOMContentLoaded', function() {
             eventType: "akce pro děti"
         },
         {
-            image: "/images/firemní-akce-kouzelník-martin-kellman.webp",
+            image: "/images/firemni-akce-kouzelnik-martin-kellman.webp",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "akce pro dospělé"
         },
         {
-            image: "/images/akce-pro-deti-kouzelník-martin-kellman.webp",
+            image: "/images/akce-pro-deti-kouzelnik-martin-kellman.webp",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "svatby"

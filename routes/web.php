@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogContr;
 use App\Http\Controllers\GaleriesContr;
 use App\Http\Controllers\HomeContr;
 use App\Http\Controllers\InfoContr;
+use App\Http\Controllers\TownContr;
 use App\Http\Middleware\IsLoggedIn;
 use Illuminate\Support\Facades\Route;
 
@@ -19,6 +20,10 @@ Route::get('/contact', [HomeContr::class, 'contact'])->name('contact');
 Route::get('/references', [HomeContr::class, 'references'])->name('references');
 Route::get('/fotogalery', [GaleriesContr::class, 'fotogalery'])->name('fotogalery');
 Route::get('/videogalery', [GaleriesContr::class, 'videogalery'])->name('videogalery');
+
+Route::get('/akceprodeti', [HomeContr::class, 'akceprodeti'])->name('akceprodeti');
+Route::get('/kouzelnikprodeti', [HomeContr::class, 'kouzelnikprodeti'])->name('kouzelnikprodeti');
+Route::get('/town/{id}', [TownContr::class, 'town'])->name('town');
 
 Route::get('/blog', [BlogContr::class, 'blog'])->name('blog');
 Route::get('/category/{id}', [BlogContr::class, 'category'])->name('category');
