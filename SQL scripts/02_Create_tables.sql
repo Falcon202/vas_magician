@@ -8,6 +8,9 @@ SET foreign_key_checks = 0;
 DROP TABLE IF EXISTS `User` CASCADE;
 DROP TABLE IF EXISTS `Blog` CASCADE;
 DROP TABLE IF EXISTS `BlogPhoto` CASCADE;
+DROP TABLE IF EXISTS `Category` CASCADE;
+DROP TABLE IF EXISTS `City` CASCADE;
+DROP TABLE IF EXISTS `InstagramPost` CASCADE;
 
 
 
@@ -30,8 +33,9 @@ CREATE TABLE `Blog` (
     `id` INT NOT NULL AUTO_INCREMENT,
     `name` NVARCHAR(100) NOT NULL UNIQUE,
     `category_id` INT NOT NULL,
+    `city_id` INT NOT NULL,
     `date` DATE NOT NULL,
-    `location` NVARCHAR(100) NOT NULL,
+    /*`location` NVARCHAR(100) NOT NULL,*/
     `location2` NVARCHAR(100) NOT NULL,
     `text` BLOB NOT NULL,
     `is_disabled` BOOL NOT NULL,
@@ -39,7 +43,8 @@ CREATE TABLE `Blog` (
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` DATETIME NULL,
     CONSTRAINT `PK_Blog` PRIMARY KEY (`id`),
-    CONSTRAINT `FK_Blog_category_id` FOREIGN KEY (`category_id`) REFERENCES `Category`(`id`) ON DELETE No Action ON UPDATE No Action
+    CONSTRAINT `FK_Blog_category_id` FOREIGN KEY (`category_id`) REFERENCES `Category`(`id`) ON DELETE No Action ON UPDATE No Action,
+    CONSTRAINT `FK_Blog_city_id` FOREIGN KEY (`city_id`) REFERENCES `City`(`id`) ON DELETE No Action ON UPDATE No Action
 );
 
 CREATE TABLE `BlogPhoto` (
@@ -67,6 +72,30 @@ CREATE TABLE `Category` (
 
     `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
     `updated_at` DATETIME NULL,
+    CONSTRAINT `PK_Category` PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `City` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `name` NVARCHAR(100) NOT NULL UNIQUE,
+
+    `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` DATETIME NULL,
+    CONSTRAINT `PK_Category` PRIMARY KEY (`id`)
+);
+
+CREATE TABLE `InstagramPost` (
+    `id` INT NOT NULL AUTO_INCREMENT,
+    `instagram_id` NVARCHAR(255) NOT NULL UNIQUE,
+    `caption` NVARCHAR(100) NOT NULL,
+    `media_url` NVARCHAR(100) NULL,
+    `media_type` NVARCHAR(100) NULL,
+    `posted_at` timestamp NULL,
+    `permalink` NVARCHAR(100) NULL,
+
+    `created_at` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` DATETIME NULL,
+
     CONSTRAINT `PK_Category` PRIMARY KEY (`id`)
 );
 
