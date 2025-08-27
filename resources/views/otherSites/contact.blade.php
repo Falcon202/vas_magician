@@ -17,12 +17,13 @@
     @include('_partials.main.navMenu')
 </header>
 <div class="quote-container">
+    <img class="quote-toggle-image-left" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
+
     <div class="quote-content-wrapper">
         <div class="quote-content">
             <p>Zde je text, který se má zobrazit po kliknutí. Může být libovolně dlouhý a obsahovat cokoliv, co potřebujete.</p>
         </div>
     </div>
-    <img class="quote-toggle-image-left" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
 </div>
 </div>
 <section class="contactus">
@@ -103,37 +104,329 @@
     <div class="contact-con-text">
         <h2>města, ve kterých jsem často kouzelníkem</h2>
     </div>
-    <div class="contact-con-item">
-        <div class="contact-con-top">
-            <div class="contact-con-text">
-                <span class="contact-con-city">Praha
-
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Praha
                     <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
-                        <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
-                      </svg>
-                </span>
-                <div class="contact-con-answer">
-                    <p>Hledáe originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z dětsk...</p>
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
                 </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
         </div>
-    </div>
-    <div class="contact-con-item">
-        <div class="contact-con-top">
-            <div class="contact-con-text">
-                <span class="contact-con-city">Praha
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Brno
                     <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
-                        <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
-                      </svg>
-                </span>
-                <div class="contact-con-answer">
-                    <p>Hledáe originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z dětsk...</p>
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
                 </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
         </div>
-    </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Plzeň
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Liberec
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Ústí nad Labem
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Hradec Králové
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Pardubice
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">České Budějjovice
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Tábor
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Písek
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Karlovy Vary
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Příbram
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Kutná Hora
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Mladá Boleslav
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Jihlava
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Chomutov
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Teplice
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Benešov
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
+    <a href="{{ route('town', ['id' => 1]) }}" class="contact-con-link">
+        <div class="contact-con-item">
+            <div class="contact-con-top">
+                <div class="contact-con-text">
+                  <span class="contact-con-city">Poděbrady
+                    <svg class="contact-con-svg" id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 649.8 333.98">
+                      <path d="M489.92,7.12c-9.49-9.49-24.86-9.49-34.34,0-9.49,9.48-9.49,24.86,0,34.34l101.23,101.23H24.29c-13.41,0-24.29,10.88-24.29,24.29s10.88,24.29,24.29,24.29h532.57l-101.27,101.27c-9.49,9.49-9.49,24.86,0,34.34,4.74,4.74,10.95,7.12,17.17,7.12s12.43-2.37,17.17-7.12l159.87-159.87L489.92,7.12Z"/>
+                    </svg>
+                  </span>
+                    <div class="contact-con-answer">
+                        <p>Hledáte originální zábavu pro vaši akci v Praze? Jsem profesionální kouzelník s bohatými zkušenostmi z děts...</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            </div>
+        </div>
+    </a>
 </section>
 
 

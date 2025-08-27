@@ -10,19 +10,10 @@ body {
     background: white;
     padding: 40px 80px;
     border: 1.5px solid black;
-    border-radius: 50px;
+    border-radius: 50px; 
     width: 100%;
     max-width: 550px;
     box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-}
-
-.login-container img {
-    width: 100px;
-    margin-bottom: 20px;
 }
 
 
@@ -33,7 +24,7 @@ form {
 }
 
 .input-group {
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
     text-align: left;
 }
 
@@ -60,13 +51,13 @@ button {
     background-color: black;
     color: white;
     border: none;
-    padding: 10px 20px;
+    padding: 13px 25px;
     border-radius: 50px;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     font-family: 'Inter', sans-serif;
     cursor: pointer;
-    margin: 10px auto 0 auto;
+    margin: 10px auto 0 auto; 
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 

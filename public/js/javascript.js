@@ -39,11 +39,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (sliderContent && leftArrow && rightArrow) {
         const logoImage = document.querySelector('.logo-image');
-        // Získání skutečné vypočítané šířky loga
         const logoWidth = logoImage.offsetWidth;
-        const gap = 20; // Stejná hodnota jako v CSS
-
-        // Nový výpočet scrollAmount pro posun o 3 loga najednou
+        const gap = 20;
         const scrollAmount = (logoWidth * 3) + (gap * 2);
 
         rightArrow.addEventListener('click', () => {
@@ -83,7 +80,7 @@ document.addEventListener('DOMContentLoaded', function() {
             eventType: "firemní akce"
         },
         {
-            image: "/images/akce-pro-deti-kouzelnik-martin-kellman.webp",
+            image: "/images/martin-kellman-kouzelnik-i-moderator-firemni-akce.jpg",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "akce pro děti"
@@ -95,7 +92,7 @@ document.addEventListener('DOMContentLoaded', function() {
             eventType: "akce pro dospělé"
         },
         {
-            image: "/images/akce-pro-deti-kouzelnik-martin-kellman.webp",
+            image: "/images/martin-kellman-kouzelnik-i-moderator-firemni-akce.jpg",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "svatby"
@@ -108,13 +105,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const eventType = document.querySelector('.event-type');
     const navItems = document.querySelectorAll('.nav-item');
 
-    // Selektory pro nové vrstvy pozadí
     const bgLayer1 = document.getElementById('bg-layer-1');
     const bgLayer2 = document.getElementById('bg-layer-2');
 
     let currentSlideIndex = 0;
     let isAnimating = false;
-    let activeLayer = bgLayer1; // Začínáme s první vrstvou jako aktivní
+    let activeLayer = bgLayer1;
 
     function updateContent(index) {
         if (isAnimating || index === currentSlideIndex) return;
@@ -122,18 +118,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const data = sliderData[index];
 
-        // Určíme, která vrstva je aktuální a která bude další
         const currentLayer = activeLayer;
         const nextLayer = (activeLayer === bgLayer1) ? bgLayer2 : bgLayer1;
 
-        // Nastavíme obrázek na pozadí další vrstvy
         nextLayer.style.backgroundImage = `url('${data.image}')`;
 
-        // Dáme další vrstvu do popředí a přidáme třídu 'active' pro spuštění animace
         nextLayer.style.zIndex = 3;
         nextLayer.classList.add('active');
 
-        // Aktualizujeme texty
         subtitle.textContent = data.subtitle;
         title.innerHTML = data.title;
         slideNumber.textContent = `${index + 1} / 4`;
@@ -142,21 +134,14 @@ document.addEventListener('DOMContentLoaded', function() {
             item.classList.toggle('active', i === index);
         });
 
-        // Po dokončení animace provedeme "úklid"
         setTimeout(() => {
-            // Skryjeme původní vrstvu
             currentLayer.classList.remove('active');
-
-            // Resetujeme z-indexy
             currentLayer.style.zIndex = 1;
             nextLayer.style.zIndex = 2;
-
-            // Další vrstva se stává aktivní pro příští cyklus
             activeLayer = nextLayer;
-
             currentSlideIndex = index;
             isAnimating = false;
-        }, 1000); // Musí odpovídat CSS transition
+        }, 1000);
     }
 
     function nextSlide() {
@@ -165,11 +150,9 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     function initSlider() {
-        // Nastavíme úvodní obrázek a zviditelníme první vrstvu bez animace
         bgLayer1.style.backgroundImage = `url('${sliderData[0].image}')`;
         bgLayer1.classList.add('active');
 
-        // Nastavíme úvodní texty
         const initialData = sliderData[0];
         subtitle.textContent = initialData.subtitle;
         title.innerHTML = initialData.title;
@@ -180,17 +163,15 @@ document.addEventListener('DOMContentLoaded', function() {
         setInterval(nextSlide, 5000);
     }
 
-    // Spustíme slider, jen pokud existují vrstvy
     if (bgLayer1 && bgLayer2) {
         initSlider();
     }
 
-    // ---- NOVÝ KÓD PRO VYSOUVACÍ MENU ----
+    // ---- KÓD PRO VYSOUVACÍ MENU (NOVÁ VERZE) ----
     const menuToggle = document.querySelector('.hamburger-menu');
     const mainMenu = document.getElementById('mainMenu');
     const menuOverlay = document.getElementById('menuOverlay');
 
-    // Selektory pro přepínání menu
     const submenuToggleNabidka = document.getElementById('submenuToggle-nabidka');
     const submenuToggleGalerie = document.getElementById('submenuToggle-galerie');
     const backButtons = document.querySelectorAll('.backButton');
@@ -198,9 +179,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const mainMenuList = document.querySelector('.menu-main');
     const nabidkaSubmenuList = document.getElementById('nabidka-submenu');
     const galerieSubmenuList = document.getElementById('galerie-submenu');
-    const allMenuLists = [mainMenuList, nabidkaSubmenuList, galerieSubmenuList];
 
-    // Funkce pro zobrazení podmenu
+    // Funkce pro otevření/zavření celého menu
+    function toggleMainMenu() {
+        menuToggle.classList.toggle('is-open');
+        mainMenu.classList.toggle('active');
+        menuOverlay.classList.toggle('active');
+
+        if (!mainMenu.classList.contains('active')) {
+            showMainMenu();
+        }
+    }
+
+    // Funkce pro zobrazení submenu
     function showSubmenu(targetSubmenu) {
         mainMenuList.classList.add('fade-out');
         document.querySelectorAll('.menu-submenu').forEach(submenu => {
@@ -209,7 +200,7 @@ document.addEventListener('DOMContentLoaded', function() {
         targetSubmenu.classList.add('visible');
     }
 
-    // Funkce pro návrat na hlavní menu
+    // Funkce pro návrat do hlavního menu
     function showMainMenu() {
         mainMenuList.classList.remove('fade-out');
         document.querySelectorAll('.menu-submenu').forEach(submenu => {
@@ -217,32 +208,10 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Přiřazení událostí
     if (menuToggle && mainMenu && menuOverlay) {
-        menuToggle.addEventListener('click', () => {
-            mainMenu.classList.toggle('active');
-            menuOverlay.classList.toggle('active');
-
-            if (mainMenu.classList.contains('active')) {
-                showMainMenu();
-            } else {
-                // Zajištění plynulého zavření po kliknutí na hamburger
-                mainMenu.classList.add('closing');
-                setTimeout(() => {
-                    mainMenu.classList.remove('closing');
-                }, 500);
-            }
-        });
-
-        menuOverlay.addEventListener('click', () => {
-            mainMenu.classList.remove('active');
-            menuOverlay.classList.remove('active');
-
-            // Zajištění plynulého zavření po kliknutí na overlay
-            mainMenu.classList.add('closing');
-            setTimeout(() => {
-                mainMenu.classList.remove('closing');
-            }, 500);
-        });
+        menuToggle.addEventListener('click', toggleMainMenu);
+        menuOverlay.addEventListener('click', toggleMainMenu);
     }
 
     if (submenuToggleNabidka) {
@@ -264,6 +233,32 @@ document.addEventListener('DOMContentLoaded', function() {
             button.addEventListener('click', (event) => {
                 event.preventDefault();
                 showMainMenu();
+            });
+        });
+    }
+
+    // ---- KÓD PRO POSUVNÍK BLOGU ----
+    const blogScrollContainer = document.querySelector('.another-blog-galery-wrapper');
+    const blogLeftArrow = document.querySelector('.blog-arrow-left');
+    const blogRightArrow = document.querySelector('.blog-arrow-right');
+
+    if (blogScrollContainer && blogLeftArrow && blogRightArrow) {
+        const blogItem = document.querySelector('.another-blog-container');
+        const blogItemWidth = blogItem.offsetWidth;
+        const gap = 50;
+        const scrollAmount = (blogItemWidth * 2) + gap;
+
+        blogLeftArrow.addEventListener('click', () => {
+            blogScrollContainer.scrollBy({
+                left: -scrollAmount,
+                behavior: 'smooth'
+            });
+        });
+
+        blogRightArrow.addEventListener('click', () => {
+            blogScrollContainer.scrollBy({
+                left: scrollAmount,
+                behavior: 'smooth'
             });
         });
     }

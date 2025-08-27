@@ -11,7 +11,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     height: 35px;
     overflow: hidden;
     transition: width 0.3s ease-in-out, padding 0.3s ease-in-out, gap 0.3s ease-in-out, justify-content 0.3s ease-in-out;
@@ -20,10 +20,10 @@
 }
 
 .first-button svg {
-    width: 0;
-    height: 25px;
-    fill: white;
-    flex-shrink: 0;
+    width: 0; 
+    height: 25px; 
+    fill: white; 
+    flex-shrink: 0; 
     opacity: 0;
     transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -109,9 +109,9 @@
     overflow: hidden;
     transition: color 0.5s ease;
     list-style-type: none;
-}
-
-.third-button::before {
+  }
+  
+  .third-button::before {
     content: '';
     position: absolute;
     top: 0;
@@ -121,23 +121,23 @@
     background-color: black;
     z-index: -1;
     transition: width 0.5s ease-in-out;
-}
-
-.third-button:hover::before {
+  }
+  
+  .third-button:hover::before {
     width: 100%;
-}
-
-.third-button:hover {
+  }
+  
+  .third-button:hover {
     color: white;
-}
-
-.third-button:hover svg {
+  }
+  
+  .third-button:hover svg {
     width: 18px;
     opacity: 1;
-}
+  }
 
 
-.contact-button {
+  .contact-button {
     background-color: black;
     color: white;
     border: none;
@@ -151,7 +151,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     height: 30px;
     overflow: hidden;
     transition: width 0.3s ease-in-out, padding 0.3s ease-in-out, gap 0.3s ease-in-out, justify-content 0.3s ease-in-out;
@@ -160,10 +160,10 @@
 }
 
 .contact-button svg {
-    width: 0;
-    height: 20px;
-    fill: white;
-    flex-shrink: 0;
+    width: 0; 
+    height: 20px; 
+    fill: white; 
+    flex-shrink: 0; 
     opacity: 0;
     transition: width 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
@@ -224,7 +224,7 @@
 
 /* Styly pro SVG ikonu */
 .rounded-button svg {
-    width: 30px;
+    width: 20px;
     fill: white;
     position: absolute;
     top: 0;
@@ -235,12 +235,12 @@
 
 /* Animace při najetí myši */
 .rounded-button:hover span {
-    transform: translateY(0px); /* Posune text dolů o 30px */
+    transform: translateY(50px); /* Posune text dolů o 30px */
     opacity: 0; /* Zneviditelní text */
 }
 
 .rounded-button:hover svg {
-    transform: translateY(-7px); /* Posune SVG shora dolů na původní pozici */
+    transform: translateY(0); /* Posune SVG shora dolů na původní pozici */
     opacity: 1; /* Zviditelní SVG */
 }
 
@@ -255,12 +255,12 @@
     transform: translateY(-100%);
     opacity: 0;
 }
-
+  
 .faq-toggle-image-left {
     width: 70px;
     margin-top: 30px;
     margin-left: -5px;
-}
+  }
 
 
 .faq-toggle-image-left {
@@ -282,7 +282,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; 
     height: 50px;
     overflow: hidden;
     transition: width 0.3s ease-in-out, padding 0.3s ease-in-out, gap 0.3s ease-in-out, justify-content 0.3s ease-in-out;

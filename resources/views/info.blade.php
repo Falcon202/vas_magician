@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="{{ asset('/css/info/info.css') }}">
 
     <link rel="stylesheet" href="{{ asset('/css/styles/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('/css/styles/components.css') }}.">
+    <link rel="stylesheet" href="{{ asset('/css/styles/components.css') }}">
     <link rel="stylesheet" href="{{ asset('/css/styles/layout.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -63,7 +63,7 @@
 </head>
 <body>
     <header>
-        todo header
+        @include('_partials.main.navMenu')
     </header>
 
     <section>
@@ -150,8 +150,8 @@
                     <div class="item mid"
                          style=" cursor: pointer; background-image: url('{{ asset('/api/blog_photo/' . $blogView->main_photo_id) }}');"
                          onclick="window.location.href='{{ route('single_blog', ['id' => $blogView->id]) }}'">
-                        <h3>{{ $blogView->name }}</h3>
-                        <p>{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
+                        <h3 style="color: white;">{{ $blogView->name }}</h3>
+                        <p style="color: white;">{{ \Carbon\Carbon::parse($blogView->date)->format('j. n. Y') }} / {{ $blogView->location }} / {{ $blogView->location2 }}</p>
                     </div>
                 @endforeach
             </div>
@@ -178,6 +178,7 @@
     </section>
 
     @include('_partials.main.footer')
+    <script src="{{ asset('js/javascript.js') }}" defer></script>
 
 </body>
 </html>
