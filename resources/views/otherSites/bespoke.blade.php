@@ -182,7 +182,7 @@
 <section class="bespoke-sponsors">
     <div class="bespoke-container">
         <div class="be-sponsor">
-            <img src="" alt="">
+            <img src="{{ asset('images/kb_logo_uvodni_obrazek.png') }}" alt="logo-KB">
             <h4>
                 Komerční banka
             </h4>
@@ -190,7 +190,7 @@
                 Na akci pro Komerční banku jsem měl možnost vytvořit kouzelnou atmosféru pro jejich klienty i zaměstnance. Efekty jsem přizpůsobil tématu večera i hodnotám firmy - šlo mi o to, aby kouzla nejen bavila, ale i podpořila celkový zážitek z akce...
             </p>
 
-            <div class="FAQ-button">
+            <div class="bespoke-button">
                 <button id="show-more-faq" class="third-button">+ zobrazit více</button>
             </div>
         </div>
@@ -198,6 +198,91 @@
             <img src="{{ asset('images/akce-pro-deti-kouzelnik-martin-kellman.jpg') }}" alt="">
         </div>
     </div>
+
+    <div class="bespoke-container">
+        <div class="be-sponsor">
+            <img src="{{ asset('images/kb_logo_uvodni_obrazek.png') }}" alt="logo-KB">
+            <h4>
+                Komerční banka
+            </h4>
+            <p>
+                Na akci pro Komerční banku jsem měl možnost vytvořit kouzelnou atmosféru pro jejich klienty i zaměstnance. Efekty jsem přizpůsobil tématu večera i hodnotám firmy - šlo mi o to, aby kouzla nejen bavila, ale i podpořila celkový zážitek z akce...
+            </p>
+
+            <div class="bespoke-button">
+                <button id="show-more-faq" class="third-button">+ zobrazit více</button>
+            </div>
+        </div>
+        <div class="be-img">
+            <img src="{{ asset('images/akce-pro-deti-kouzelnik-martin-kellman.jpg') }}" alt="">
+        </div>
+    </div>
+
+</section>
+
+
+<div class="mid-button">
+    <button class="rounded-button">
+        <div class="button-content">
+            <span>objednat</span>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                <g>
+                    <g id="Vrstva_1">
+                        <path d="M-447.1,350.4h0Z"/>
+                        <g>
+                            <path d="M297.8,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM174.4,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                            <path d="M702.2,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM578.9,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                            <path d="M500,474.5c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM376.6,284.6l123.3,123.3,123.4-123.4-123.3-123.3-123.4,123.4Z"/>
+                            <path d="M500,904.9c-15.2,0-27.6-12.3-27.6-27.5v-140.7c0-15.2,12.3-27.5,27.6-27.5s27.6,12.3,27.6,27.5v140.7c0,15.2-12.3,27.5-27.6,27.5Z"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </div>
+    </button>
+</div>
+
+
+<section class="video-camera-akce">
+    <iframe width="93%" height="500" src="https://www.youtube.com/embed/d2rN8e4UbiY?si=NWIYS8pJe_oiZ7Gt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</section>
+
+
+<section class="promo-container">
+    <div class="mikromagie-info-container">
+        <div class="mikromagie-info-container-text">
+            <h2>my chceme taky to zvířátko</h2>
+        </div>
+        <button class="first-button">
+
+            <span>objednat Martina</span>
+            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                <g>
+                    <g id="Vrstva_1">
+                        <path d="M-447.1,350.4h0Z"/>
+                        <g>
+                            <path d="M297.8,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM174.4,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                            <path d="M702.2,757.2c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM578.9,567.3l123.3,123.3,123.3-123.3-123.3-123.3-123.3,123.3Z"/>
+                            <path d="M500,474.5c-7.3,0-14.3-2.9-19.5-8.1l-162.3-162.3c-10.8-10.8-10.8-28.2,0-39l162.3-162.3c10.3-10.3,28.6-10.3,39,0l162.3,162.3c10.8,10.8,10.8,28.2,0,39l-162.3,162.3c-5.2,5.2-12.2,8.1-19.5,8.1ZM376.6,284.6l123.3,123.3,123.4-123.4-123.3-123.3-123.4,123.4Z"/>
+                            <path d="M500,904.9c-15.2,0-27.6-12.3-27.6-27.5v-140.7c0-15.2,12.3-27.5,27.6-27.5s27.6,12.3,27.6,27.5v140.7c0,15.2-12.3,27.5-27.6,27.5Z"/>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
+    </div>
+    <div class="akceprodeti-text">
+        <p>"A hele co jsem dostal na vystoupení"
+
+            Zvířátka z balónků pro děti jsou vždy maximální radost z akce. Přinést si mazlíčka domu? Pejsek, kočička, lev, králík, motýlek, papoušek, beruška a mnoho dalších zvířátek, ze kterých si můžete vybrat - to určitě projde. Zvířatkova ZOO je pestrá, doma neškodná a radost probouzející.</p>
+    </div>
+</section>
+
+
+<section class="video-camera-akce">
+    <iframe width="93%" height="500" src="https://www.youtube.com/embed/d2rN8e4UbiY?si=NWIYS8pJe_oiZ7Gt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
 
 
@@ -317,6 +402,16 @@
             </svg>
         </div>
     </button>
+</div>
+
+<div class="quote-container">
+    <img class="quote-toggle-image-left" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
+
+    <div class="quote-content-wrapper">
+        <div class="quote-content">
+            <p><span class="quotation-marks">„</span>Nevěděl jsem, jakého kouzelníka zvolit, ale když <br> jsme si s Martinem zavolali, <span class="quotation-line"> měla jsem jasno!</span><span class="quotation-marks">“</span></p>
+        </div>
+    </div>
 </div>
 
     @include('_partials.main.footer')

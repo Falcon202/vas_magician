@@ -1711,11 +1711,33 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    position: relative;
+}
+
+.bespoke-container::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+
+    /* ZMĚNA: Posuneme začátek čáry o 50px zleva */
+    left: 50px;
+
+    /* ZMĚNA: Šířka bude 100 % mínus 100px (50px z každé strany) */
+    width: calc(100% - 100px);
+
+    height: 2px;
+    background: black;
+    z-index: 1;
 }
 
 .be-sponsor {
     width: 50%;
     margin-left: 50px;
+}
+
+.be-sponsor img {
+    width: 25%;
+    margin-left: -35px;
 }
 
 .be-sponsor h4 {
@@ -1725,8 +1747,8 @@ footer {
 
 .be-sponsor p {
     line-height: 1.1;
-    font-size: 18px;
-    width: 72%;
+    font-size: 20px;
+    width: 95%;
 }
 
 .be-img {
@@ -1737,7 +1759,12 @@ footer {
 }
 
 .be-img img {
-    width: 80%;
+    width: 100%;
+}
+
+.bespoke-button {
+    margin-top: 100px;
+    margin-bottom: 25px;
 }
 
 .another-blog {
