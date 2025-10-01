@@ -142,6 +142,16 @@
     </button>
 </section>
 
+<div class="quote-container-right">
+    <img class="quote-toggle-image-right" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
+
+    <div class="quote-content-wrapper-right">
+        <div class="quote-content-right">
+            <p><span class="quotation-marks-right">„</span>Kdybych věděl, že je Martin <span class="quotation-line-right"> takokvý sympaťák,</span> <br>tak jsem si ho objednal i na svoji akci<span class="quotation-marks-right">“</span></p>
+        </div>
+    </div>
+</div>
+
 <section class="ballons">
     <div class="ballons-container">
         <div class="ballon">
@@ -202,7 +212,22 @@
                     </g>
                 </svg>
             </div>
-            <h4>family day</h4>
+            <h4>města</h4>
+        </div>
+        <div class="ballon">
+            <div class="ballon-icon-wrapper">
+                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                    <g>
+                        <g id="Vrstva_1">
+                            <g>
+                                <path d="M232.8,862.4c-7,0-14.1-2.7-19.5-8.1l-68.4-68.4c-10.8-10.8-10.8-28.2,0-39,10.8-10.8,28.2-10.8,39,0l68.4,68.4c10.8,10.8,10.8,28.2,0,39-5.4,5.4-12.4,8.1-19.5,8.1Z"/>
+                                <path d="M433.2,806.3c-68,0-131.1-18.4-175.7-63-126.1-126.1-42.8-399,72.7-514.5,121.6-121.6,319.6-121.4,441.5.4,121.8,121.8,122,319.9.4,441.5-74.6,74.6-214.9,135.7-338.8,135.7ZM550.5,192.7c-65.7,0-131.4,25-181.4,75-52,52-95,137.7-112.2,223.6-18.4,91.9-4,169.5,39.5,213,43.5,43.5,121.1,57.9,213,39.5,85.9-17.2,171.6-60.1,223.6-112.2,100.1-100.1,99.9-263.2-.4-363.6-50.2-50.2-116.2-75.4-182.1-75.4Z"/>
+                            </g>
+                        </g>
+                    </g>
+                </svg>
+            </div>
+            <h4>Family day</h4>
         </div>
     </div>
 </section>
@@ -210,11 +235,11 @@
 <section class="promo-container">
     <div class="mikromagie-info-container">
         <div class="mikromagie-info-container-text">
-            <h2>děti čarují, Martin kouzlí</h2>
+            <h2>Kouzelnické vystoupení pro děti, které si zamilují i rodiče</h2>
         </div>
         <button class="first-button">
 
-            <span>objednat Martina</span>
+            <span>pozvat Martina</span>
             <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
                 <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
                 <g>
@@ -232,9 +257,10 @@
         </button>
     </div>
     <div class="akceprodeti-text">
-        <p>Kouzelnické vystoupení pro děti, kdy neodchází ani rodiče. Děti potřebují zažít, když jsou součástí vystoupení. I vás dospělé, kouzelník Martin vtáhne do programu tak, že nebudete moci odejít. Zažitek, kde se děly neuvěřitelné věci a skutečná kouzla, budou děti vyprávět svým kamarádům úsměvem.
-
-            Kouzelník Martin byl kamarád a už při příjezdu vykouzlil mince za uchem. "Přijeďte prosím ještě někdy"</p>
+        <p>Martin kouzlí, děti čarují- ať už jde o tisíc nadšených dětí na
+            festivalu, nebo pár přátel v obýváku. Děti potřebují zažít ten pocit – když
+            nejsou jen diváky, ale stávají se součástí kouzel. A právě to je moment,
+            kdy se v očích rozsvítí opravdová magie.</p>
     </div>
 </section>
 
@@ -242,9 +268,10 @@
     <div class="towns-item">
         <div class="towns-top">
             <div class="towns-text">
-                <span class="towns-city">zážitek spojený s Vaší značkou</span>
+                <span class="towns-city">Zapojení od první minuty</span>
                 <div class="towns-answer">
-                    <p>Originální kouzelnické vystoupení, ve kterém se magie propojuje s příběhem vaší značky. Nejde jen o triky - jde o zážitek, který si lidé spojí právě s vámi.</p>
+                    <p>Jsem kouzelník pro děti, který je do show zapojí hned od začátku. A rodiče si
+                        užívají, jak se jejich děti smějí a objevují kouzla doslova na dosah ruky.</p>
                 </div>
             </div>
             <img src="{{ asset('images/KA987.jpg') }}" alt="">
@@ -254,9 +281,85 @@
     <div class="towns-item">
         <div class="towns-top">
             <div class="towns-text">
-                <span class="towns-city">individuálně řešené vystoupení</span>
+                <span class="towns-city">Příběhy, které zůstanou</span>
                 <div class="towns-answer">
-                    <p>Originální kouzelnické vystoupení, ve kterém se magie propojuje s příběhem vaší značky. Nejde jen o triky - jde o zážitek, který si lidé spojí právě s vámi.</p>
+                    <p>Když jako kouzelník pro děti odjíždím, slyším tu nejkrásnější větu: „Přijeďte
+                        prosím ještě někdy.“ Děti si pamatují, jak v jejich rukách zmizela mince nebo jak
+                        společně vykouzlily balónek. Tyhle kouzelné okamžiky se promění v příběhy, které
+                        budou doma i mezi kamarády znovu a znovu vyprávět.</p>
+                </div>
+            </div>
+            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+        </div>
+    </div>
+
+    <div class="towns-item">
+        <div class="towns-top">
+            <div class="towns-text">
+                <span class="towns-city">Hravost v každém kouzlu</span>
+                <div class="towns-answer">
+                    <p>Jako kouzelník věřím, že magie musí být hlavně zábava. Každý trik je hravý,
+                        veselý a přizpůsobený dětem tak, aby se smály, žasly a odcházely s pocitem, že
+                        zažily něco opravdu výjimečného.</p>
+                </div>
+            </div>
+            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+        </div>
+    </div>
+
+    <div class="towns-item">
+        <div class="towns-top">
+            <div class="towns-text">
+                <span class="towns-city">Magie, co spojuje</span>
+                <div class="towns-answer">
+                    <p>Mé představení je vždy pro všechny. Na veřejných akcích, narozeninách,
+                        rodinných oslavách se kouzla stávají mostem mezi generacemi. Děti se smějí,
+
+                        dospělí žasnou a společně prožíváme okamžiky, kdy se svět na chvíli zastaví a
+                        zůstane jen radost.</p>
+                </div>
+            </div>
+            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+        </div>
+    </div>
+
+    <div class="towns-item">
+        <div class="towns-top">
+            <div class="towns-text">
+                <span class="towns-city">Ladím se na dětský svět</span>
+                <div class="towns-answer">
+                    <p>Vím, že každé dítě je jiné, sám mám dvě =)) – někdo chce být středem pozornosti,
+                        jiný se nejdřív stydí. A právě proto tvořím show, kde se všichni cítí bezpečně,
+                        zapojeně a přirozeně hravě.</p>
+                </div>
+            </div>
+            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+        </div>
+    </div>
+
+
+    <div class="towns-item">
+        <div class="towns-top">
+            <div class="towns-text">
+                <span class="towns-city">Vztah je základ okouzlení</span>
+                <div class="towns-answer">
+                    <p>Žádný pán na pódiu. Hned při příjezdu s dětmi komunikuji trochu jinak, vykouzlím
+                        minci za uchem tvoříme důvěru a lehkost pro samotné vystoupení, kde se není
+                        čeho bát a lekat.</p>
+                </div>
+            </div>
+            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+        </div>
+    </div>
+
+    <div class="towns-item">
+        <div class="towns-top">
+            <div class="towns-text">
+                <span class="towns-city">Z obyčejné oslavy neobyčejný zážitek</span>
+                <div class="towns-answer">
+                    <p>Magie není jen v kouzlech, ale i v atmosféře. Vím, že dokážu udělat z obyčejné
+                        oslavy i akce neobyčejný zážitek. Přátelský, uvolněný a radostný. V takovém
+                        prostředí se děti smějí, dospělí baví a společně vznikají vzpomínky, které zůstanou</p>
                 </div>
             </div>
             <img src="{{ asset('images/KA987.jpg') }}" alt="">
@@ -287,21 +390,7 @@
 </div>
 
 <section class="video-camera-akce">
-    <div class="video-container">
-        <div class="video-pane video-levy">
-            <button id="play-video" class="play-button">
-                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-                <span>pusťte si video</span>
-            </button>
-        </div>
-
-        <div class="video-pane video-pravy">
-            <button id="play-video" class="play-button">
-                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-                <span>pusťte si video</span>
-            </button>
-        </div>
-    </div>
+    <iframe width="93%" height="500" src="https://www.youtube.com/embed/31t-k6SX_S8?si=FDNi31sRUOuVqAsv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
 
 <section class="promo-container">
@@ -336,21 +425,7 @@
 </section>
 
 <section class="video-camera-akce">
-    <div class="video-container">
-        <div class="video-pane video-levy">
-            <button id="play-video" class="play-button">
-                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-                <span>pusťte si video</span>
-            </button>
-        </div>
-
-        <div class="video-pane video-pravy">
-            <button id="play-video" class="play-button">
-                <svg class="play-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"></path></svg>
-                <span>pusťte si video</span>
-            </button>
-        </div>
-    </div>
+    <iframe width="93%" height="500" src="https://www.youtube.com/embed/d2rN8e4UbiY?si=NWIYS8pJe_oiZ7Gt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 </section>
 
 <div class="gallery">
@@ -454,6 +529,16 @@
             </svg>
         </div>
     </button>
+</div>
+
+<div class="quote-container">
+    <img class="quote-toggle-image-left" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
+
+    <div class="quote-content-wrapper">
+        <div class="quote-content">
+            <p><span class="quotation-marks">„</span>Nevěděl jsem, jakého kouzelníka zvolit, ale když <br> jsme si s Martinem zavolali, <span class="quotation-line"> měla jsem jasno!</span><span class="quotation-marks">“</span></p>
+        </div>
+    </div>
 </div>
 
     @include('_partials.main.footer')

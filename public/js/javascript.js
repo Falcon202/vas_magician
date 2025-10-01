@@ -22,6 +22,19 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // KÓD PRO PRAVOU STRANU (NOVĚ PŘIDANÉ)
+    document.querySelectorAll('.quote-toggle-image-right').forEach(toggleImage => {
+        toggleImage.addEventListener('click', function() {
+            const parentContainer = this.closest('.quote-container-right');
+            if (parentContainer) {
+                const contentWrapper = parentContainer.querySelector('.quote-content-wrapper-right');
+                if (contentWrapper) {
+                    contentWrapper.classList.toggle('open');
+                }
+            }
+        });
+    });
+
     // Kód pro přepínání textu (skrytí/zobrazení)
     const toggleImage = document.querySelector('.faq-toggle-image');
     const hiddenText = document.getElementById('myHiddenText');
@@ -246,7 +259,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const blogItem = document.querySelector('.another-blog-container');
         const blogItemWidth = blogItem.offsetWidth;
         const gap = 50;
-        const scrollAmount = (blogItemWidth * 2) + gap;
+        const scrollAmount = (blogItemWidth * 1.1) + gap;
 
         blogLeftArrow.addEventListener('click', () => {
             blogScrollContainer.scrollBy({

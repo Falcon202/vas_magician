@@ -38,13 +38,10 @@
 
                 <div class="bottom-nav">
                     <ul class="nav-list">
-                        <li class="nav-item active">firemní akce</li>
-                        /
-                        <li class="nav-item">akce pro děti</li>
-                        /
-                        <li class="nav-item">akce pro dospělé</li>
-                        /
-                        <li class="nav-item">svatby</li>
+                        <li class="nav-item active">firemní akce</li> |
+                        <li class="nav-item">dětské akce</li> |
+                        <li class="nav-item">svatby</li> |
+                        <li class="nav-item">moderace</li>
                     </ul>
                 </div>
             </div>
@@ -198,29 +195,18 @@
                     </g>
                 </svg>
                 <h3 class="magic-h">Bespoke Magic</h3>
-                <p class="magic-p">Na míru vytvořená kouzla, která jsou přizpůsobena konkrétnímu publiku, události nebo
-                    tématu.</p>
+                <p class="magic-p">magii propojím s příběhem vaší značky, do kouzel
+                    vložím Vaše produkty.</p>
             </div>
             <div class="magic-box-white">
-                <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                    <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                    <g>
-                        <g id="Vrstva_1">
-                            <path d="M-447.1,350.4h0Z"/>
-                            <g>
-                                <path
-                                    d="M936.7,323h-215.9c-15.2,0-27.6-12.3-27.6-27.5s12.3-27.5,27.6-27.5h215.9c15.2,0,27.6,12.3,27.6,27.5s-12.3,27.5-27.6,27.5Z"/>
-                                <path
-                                    d="M677.1,529H55c-15.2,0-27.6-12.3-27.6-27.5s12.3-27.5,27.6-27.5h622.1c15.2,0,27.6,12.3,27.6,27.5s-12.3,27.5-27.6,27.5Z"/>
-                                <path
-                                    d="M945,732.1H322.9c-15.2,0-27.6-12.3-27.6-27.5s12.3-27.5,27.6-27.5h622.1c15.2,0,27.6,12.3,27.6,27.5s-12.3,27.5-27.6,27.5Z"/>
-                            </g>
-                        </g>
+                <svg id="Vrstva_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100.79 1244.43">
+                    <g id="Group_141">
+                        <path id="Path_764" d="M841.72,0c-143.07.14-259.02,116.09-259.16,259.16,0,4.78,0,9.48.42,14.15-7.24,6.71-13.88,14.03-19.84,21.89L70.56,941.54l-.21.21c-9.79,12.8-14.31,28.86-12.63,44.89-33.94,37.5-54.28,85.33-57.72,135.79.85,35.46,17.32,68.73,44.99,90.9,24.99,20.86,56.71,31.89,89.25,31.05,141.75,0,342.43-169.99,492.76-310.98l9.66-9.06c13.25-11.8,14.44-32.11,2.64-45.36-11.8-13.25-32.11-14.44-45.36-2.64-.39.35-.77.7-1.14,1.06l-9.76,9.06c-340.46,319.12-457.19,310.98-496.4,277.69-13.61-10.1-21.79-25.92-22.18-42.87v-1.23c3.13-29.72,15.01-57.85,34.12-80.82,7.09,2.82,14.65,4.27,22.29,4.28,13.91-.1,27.41-4.71,38.48-13.12l646.53-492.76c7.72-5.98,14.93-12.58,21.58-19.74,4.67.31,9.48.42,14.25.42,143.13-.03,259.14-116.09,259.1-259.22C1100.76,116.03,984.79.05,841.72,0M144.77,960.58l-18.82,14.36,15.75-20.45h0l458.37-601.8c26.41,67.92,80.13,121.62,148.05,148.02L144.77,960.58ZM865.63,452.54c-7.93,1.02-15.92,1.53-23.91,1.52-107.61.04-194.89-87.16-194.93-194.77v-.13c0-7.96.5-15.91,1.52-23.81,13.13-106.84,110.39-182.8,217.23-169.67,106.84,13.13,182.8,110.39,169.67,217.23-10.91,88.76-80.82,158.7-169.57,169.66"/>
                     </g>
                 </svg>
-                <h3 class="magic-h">Poptávám moderátora</h3>
-                <p class="magic-p">Na míru vytvořená kouzla, která jsou přizpůsobena konkrétnímu publiku, události nebo
-                    tématu.</p>
+                <h3 class="magic-h">Moderování</h3>
+                <p class="magic-p">Moderátor, který čaruje slovy - i na Vaší akci slovy
+                    vykouzlím emoce, zábavu i zamyšlení.</p>
             </div>
         </div>
     </section>
@@ -229,14 +215,14 @@
         <div class="photogalery-title">
             <div class="photogalery-title-row">
                 <h2>fotografie ze společných akcí</h2>
-                <div class="quote-container">
-                    <div class="quote-content-wrapper">
-                        <div class="quote-content">
-                            <p>Zde je text, který se má zobrazit po kliknutí. Může být libovolně dlouhý a obsahovat cokoliv,
-                                co potřebujete.</p>
+                <div class="quote-container-right">
+                    <img class="quote-toggle-image-right" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
+
+                    <div class="quote-content-wrapper-right">
+                        <div class="quote-content-right">
+                            <p><span class="quotation-marks-right">„</span>Báli jsme se objednat Martina na svatbu,<br> ale nakonec jsme byli <span class="quotation-line-right"> nadmíru spokojeni!</span><span class="quotation-marks-right">“</span></p>
                         </div>
                     </div>
-                    <img class="quote-toggle-image-left" src="{{ asset('images/citace.svg') }}" alt="Zobrazit více informací">
                 </div>
             </div>
             <div class="photogalery-container">
@@ -532,8 +518,7 @@
 
         <div class="quote-content-wrapper">
             <div class="quote-content">
-                <p>Zde je text, který se má zobrazit po kliknutí. Může být libovolně dlouhý a obsahovat cokoliv, co
-                    potřebujete.</p>
+                <p><span class="quotation-marks">„</span>Nevěděl jsem, jakého kouzelníka zvolit, ale když <br> jsme si s Martinem zavolali, <span class="quotation-line"> měla jsem jasno!</span><span class="quotation-marks">“</span></p>
             </div>
         </div>
     </div>
@@ -546,108 +531,264 @@
             <div class="faq-item">
                 <div class="faq-question">
                     <span class="faq-number">1.</span>
-                    <span class="faq-text">Kouzlíte po celé České republice nebo pouze v konkrétních městech?</span>
+                    <span class="faq-text">Jezdíte s kouzelnickým vystoupením po celé ČR?</span>
                     <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                  <g>
-                    <g id="Vrstva_1">
-                      <path d="M-447.1,350.4h0Z"/>
-                      <path
-                          d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
-                    </g>
-                  </g>
-                </svg>
-              </span>
+                      <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                      <g>
+                        <g id="Vrstva_1">
+                          <path d="M-447.1,350.4h0Z"/>
+                          <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
                 </div>
                 <div class="faq-answer">
-                    Ano, vystupuji po celé České republice – nezáleží, zda jste z města nebo vesnice.
+                    Rád se vydám kamkoliv! Ať už hledáte kouzelníka na večírek v srdci Prahy, na
+                    svatbu v Brně, nebo třeba kouzelnické vystoupení pro děti v Českých
+                    Budějovicích. Magie si cestu k vám vždy najde. Stačí mi napsat, kam za vámi
+                    přijet – kufr je sbalený, karty zamíchané a kouzla vždy připravená.
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    <span class="faq-number">1.</span>
-                    <span class="faq-text">Kouzlíte po celé České republice nebo pouze v konkrétních městech?</span>
+                    <span class="faq-number">2.</span>
+                    <span class="faq-text">Umíte nechat zmizet mojí manželku/manžela?</span>
                     <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                  <g>
-                    <g id="Vrstva_1">
-                      <path d="M-447.1,350.4h0Z"/>
-                      <path
-                          d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
-                    </g>
-                  </g>
-                </svg>
-              </span>
+                      <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                      <g>
+                        <g id="Vrstva_1">
+                          <path d="M-447.1,350.4h0Z"/>
+                          <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                        </g>
+                      </g>
+                    </svg>
+                  </span>
                 </div>
                 <div class="faq-answer">
-                    Ano, vystupuji po celé České republice – nezáleží, zda jste z města nebo vesnice.
+                    Jistě. Ale upozorňuji, že kouzlo funguje jen do konce večera – pak se manžel/
+                    manželka zase objeví. Zatím. 😉
                 </div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span class="faq-number">3.</span>
+                <span class="faq-text">Jaká je cena kouzelnického vystoupení?</span>
+                <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                    <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                    <g>
+                      <g id="Vrstva_1">
+                        <path d="M-447.1,350.4h0Z"/>
+                        <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+            </div>
+            <div class="faq-answer">
+                <p>Cena závisí na typu akce, délce programu a vzdálenosti. <br>
+                    • Dětské oslavy začínají už od částky, která potěší i rodičovský rozpočet. <br>
+                    • Svatby a firemní akce mají individuální kalkulaci podle rozsahu programu
+                    a počtu hostů. </p>
+
+                Napište mi pár detailů o vaší akci a já připravím cenovou nabídku kouzelnického
+                vystoupení na míru - bez kouzelnických triků v kalkulaci.
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                <span class="faq-number">4.</span>
+                <span class="faq-text">Máte zkušenosti s vystupováním na firemních akcích?</span>
+                <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                    <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                    <g>
+                      <g id="Vrstva_1">
+                        <path d="M-447.1,350.4h0Z"/>
+                        <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+            </div>
+            <div class="faq-answer">
+                <p>Rozhodně ano! Jako kouzelník na firemní akce mám za sebou desítky večírků,
+                    teambuildingů i konferencí. Vím, jak vytvořit elegantní zábavu, která zapadne do
+                    programu – ať už jde o krátké vystoupení na pódiu, nebo o mikromagii, kdy se
+                    kouzla odehrávají přímo u stolů mezi hosty.
+                    A nebojte, moje magie je společenská – žádné trapné momenty, jen spousta
+                    smíchu, úžasu a zážitků, o kterých se v práci mluví ještě týdny.</p>
             </div>
         </div>
 
         <div class="faq-hidden-items">
             <div class="faq-item">
                 <div class="faq-question">
-                    <span class="faq-number">4.</span>
-                    <span class="faq-text">Jak dlouho trvá příprava na akci?</span>
-                    <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                  <g>
-                    <g id="Vrstva_1">
-                      <path d="M-447.1,350.4h0Z"/>
-                      <path
-                          d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
-                    </g>
-                  </g>
-                </svg>
-              </span>
-                </div>
-                <div class="faq-answer">
-                    <p>Délka přípravy závisí na typu a rozsahu akce. Obvykle začínáme plánovat 1-2 měsíce předem, ale jsme
-                        flexibilní a zvládneme i rychlé akce.</p>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question">
                     <span class="faq-number">5.</span>
-                    <span class="faq-text">Jaké jsou vaše reference?</span>
-                    <span class="faq-toggle"><svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                  <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                  <g>
-                    <g id="Vrstva_1">
-                      <path d="M-447.1,350.4h0Z"/>
-                      <path
-                          d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
-                    </g>
-                  </g>
-                </svg>
-              </span>
+                    <span class="faq-text">Jak dlouho trvá kouzelnické vystoupení?</span>
+                    <span class="faq-toggle">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                          <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
+                            <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
                 </div>
                 <div class="faq-answer">
-                    <p>Máme bohaté zkušenosti s akcemi pro děti, firemními večírky i svatbami. Na našem webu najdete sekci s
-                        referencemi a hodnoceními od našich spokojených klientů.</p>
+                    <p>Moje kouzelnická show je pružná – přizpůsobím ji publiku i typu akce. <br>
+                        • Pro děti: 35 až 60 minut čisté magie. Hravé, veselé, interaktivní – děti nejsou
+                        jen diváci, ale přímo součástí kouzel. Smějí se, žasnou a kouzlí se mnou. <br>
+
+                        • Pro dospělé: Hlavní show trvá kolem 20 minut – dost na to, aby všechny vtáhla
+                        a aby si vzpomněli, že věřit na nemožné je vlastně docela fajn. A pak přichází na
+                        řadu mikromagie – kouzla zblízka, přímo mezi hosty. Karty mizí, mince se
+                        objevují a vy cítíte, jak se magie doslova děje ve vašich rukách. Ideální pro
+                        večírky, svatby i firemní akce.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
                     <span class="faq-number">6.</span>
-                    <span class="faq-text">Je možné si objednat kouzelnickou show i pro soukromou oslavu?</span>
+                    <span class="faq-text">Je vaše kouzelnické vystoupení vhodné i pro děti?</span>
                     <span class="faq-toggle">
-                  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                    <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                    <g>
-                      <g id="Vrstva_1">
-                        <path d="M-447.1,350.4h0Z"/>
-                        <path
-                            d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
-                      </g>
-                    </g>
-                  </svg>
-                </span>
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                          <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
+                            <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
                 </div>
                 <div class="faq-answer">
-                    <p>Ano, samozřejmě. Nabízíme individuální kouzelnické show pro narozeninové oslavy, svatby a jiné
-                        soukromé události. Stačí nás kontaktovat s vašimi požadavky.</p>
+                    <p>Ano! A nejen že vhodné – děti se stávají součástí show. Jako kouzelník pro děti
+                        vím, jak udržet pozornost i těch nejmenších a vždy si pohlídám, aby show byla
+                        hravá, veselá a bezpečná. A dospělí se přistihnou, že se smějí a tleskají stejně
+                        nadšeně jako jejich děti.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-number">7.</span>
+                    <span class="faq-text">Potřebujete pro vaše vystoupení speciální podmínky?</span>
+                    <span class="faq-toggle">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                          <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
+                            <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Nic složitého – stačí mi kousek místa, kde se vejde kouzelník a trocha magie. <br>
+                        • na dětskou oslavu: stačí roh obýváku nebo zahrada, zásuvka na 230V. <br>
+                        • Svatba nebo firemní akce? Klidný prostor, kde mě všichni dobře uvidí, je ideál.</p>
+                    <p>Umím se vejít i do malého sálu... a v případě nouze i do skříně na stojáka. (Ale
+                        jen když se opravdu snažím.)</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-number">8.</span>
+                    <span class="faq-text">Přizpůsobíte show našemu tématu?</span>
+                    <span class="faq-toggle">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                          <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
+                            <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Magie je tvárná – stejně jako vaše představa, takže ROZHODNĚ. Firemní barvy,
+                        svatební téma, nebo dokonce kouzelnická show ve stylu Harry Potter. Žádný
+                        problém. Magie má být osobní a originální – přesně jako vaše událost.
+                        kouzelnické vystoupení na svatbu, tematická show pro firemní večírek, nebo
+                        dokonce dětskou oslavu s kouzelníkem. Stačí mi dát vědět a společně vytvoříme
+                        show, která k vaší akci dokonale sedne.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-number">9.</span>
+                    <span class="faq-text">Jak dlouho dopředu musím rezervovat termín?</span>
+                    <span class="faq-toggle">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                          <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
+                            <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Co nejdřív, minimálně si domluvit rezervaci termínu. Populární termíny mizí rychleji
+                        než kapesník v kouzelnické ruce. Pokud plánujete velkou akci, doporučuji
+                        rezervovat klidně několik měsíců dopředu.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-number">10.</span>
+                    <span class="faq-text">Co když někdo v publiku „prokoukne trik“?</span>
+                    <span class="faq-toggle">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                          <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
+                            <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Úsměv, vtip a pokračujeme dál. Můj cíl není jen „ukázat kouzlo“, ale vytvořit
+                        atmosféru, kde se všichni baví. A i ti největší skeptici se obvykle chytí do sítě iluze
+                        – stačí trocha šarmu a magie. A pak zjistí, že vlastně nic neprokoukli, jen se zapojili
+                        do této hry na realitu.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span class="faq-number">11.</span>
+                    <span class="faq-text">Co vás na kouzlení baví nejvíc?</span>
+                    <span class="faq-toggle">
+                      <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
+                        <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
+                        <g>
+                          <g id="Vrstva_1">
+                            <path d="M-447.1,350.4h0Z"/>
+                            <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
+                          </g>
+                        </g>
+                      </svg>
+                    </span>
+                </div>
+                <div class="faq-answer">
+                    <p>Ten moment, kdy se lidem rozsvítí oči. Když dospělí zapomenou na všední den a
+                        děti věří, že magie je skutečná. Proto jsem kouzelník - protože společně dokážeme
+                        na chvíli zapomenout na realitu a věřit na nemožné.</p>
                 </div>
             </div>
         </div>

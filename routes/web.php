@@ -26,6 +26,8 @@ Route::get('/akceprodeti', [HomeContr::class, 'akceprodeti'])->name('akceprodeti
 Route::get('/kouzelnikprodeti', [HomeContr::class, 'kouzelnikprodeti'])->name('kouzelnikprodeti');
 Route::get('/town/{id}', [TownContr::class, 'town'])->name('town');
 
+Route::get('/bespoke', [HomeContr::class, 'bespoke'])->name('bespoke');
+
 Route::get('/blog', [BlogContr::class, 'blog'])->name('blog');
 Route::get('/category/{id}', [BlogContr::class, 'category'])->name('category');
 Route::get('/single_blog/{id}', [BlogContr::class, 'single_blog'])->name('single_blog');
@@ -58,14 +60,14 @@ Route::middleware([IsLoggedIn::class])->prefix('/admin_panel')->group(function (
     });
 
     // City
-    Route::prefix('/city')->group(function () {
-        Route::get('', [AdminPCityContr::class, 'city'])->name('ap_city');
-        Route::get('/create', [AdminPCityContr::class, 'create'])->name('ap_city_create');
-        Route::post('/do_create', [AdminPCityContr::class, 'do_create'])->name('ap_city_do_create');
-        Route::get('/edit/{id}', [AdminPCityContr::class, 'edit'])->name('ap_city_edit');
-        Route::post('/do_edit', [AdminPCityContr::class, 'do_edit'])->name('ap_city_do_edit');
-        Route::post('/do_delete', [AdminPCityContr::class, 'do_delete'])->name('ap_city_do_delete');
-    });
+//    Route::prefix('/city')->group(function () {
+//        Route::get('', [AdminPCityContr::class, 'city'])->name('ap_city');
+//        Route::get('/create', [AdminPCityContr::class, 'create'])->name('ap_city_create');
+//        Route::post('/do_create', [AdminPCityContr::class, 'do_create'])->name('ap_city_do_create');
+//        Route::get('/edit/{id}', [AdminPCityContr::class, 'edit'])->name('ap_city_edit');
+//        Route::post('/do_edit', [AdminPCityContr::class, 'do_edit'])->name('ap_city_do_edit');
+//        Route::post('/do_delete', [AdminPCityContr::class, 'do_delete'])->name('ap_city_do_delete');
+//    });
 });
 
 // Change password ???

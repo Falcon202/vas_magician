@@ -41,4 +41,10 @@ class HomeContr extends Controller
 
         ]);
     }
+    public function bespoke(): View
+    {
+        return view('otherSites.bespoke', [
+
+        ]);
+    }
 }
