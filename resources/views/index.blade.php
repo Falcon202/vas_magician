@@ -227,7 +227,7 @@
             </div>
             <div class="photogalery-container">
                 <div class="photogalery-container-image">
-                    <img src="{{ asset('images/KA987.jpg') }}" alt="">
+                    <img src="{{ asset('images/KA977.jpg') }}" alt="">
                 </div>
 
                 <div class="photogalery-container-title">
@@ -453,41 +453,54 @@
 
     <div class="logo-slider">
         <button class="slider-arrow logo-arrow-left">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                <g>
-                    <g id="Vrstva_1">
-                        <path d="M-447.1,350.4h0Z"/>
-                        <path
-                            d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
-                    </g>
-                </g>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+                <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
             </svg>
         </button>
 
         <div class="slider-content-wrapper">
             <div class="slider-content">
-                <img src="{{ asset('images/logo-tesco.png') }}" alt="Logo 1" class="logo-image">
-                <img src="{{ asset('images/logo-letnany-obchodni-centrum.png') }}" alt="Logo 2" class="logo-image">
-                <img src="{{ asset('images/logo-tesco.png') }}" alt="Logo 3" class="logo-image">
-                <img src="{{ asset('images/logo-letnany-obchodni-centrum.png') }}" alt="Logo 4" class="logo-image">
-                <img src="{{ asset('images/logo-tesco.png') }}" alt="Logo 5" class="logo-image">
-                <img src="{{ asset('images/logo-letnany-obchodni-centrum.png') }}" alt="Logo 6" class="logo-image">
-                <img src="{{ asset('images/logo-tesco.png') }}" alt="Logo 7" class="logo-image">
-                <img src="{{ asset('images/logo-letnany-obchodni-centrum.png') }}" alt="Logo 8" class="logo-image">
+                <!-- Všechna vaše loga -->
+                <img src="{{ asset('images/loga/logo-abs-jets.png') }}" alt="logo-absjets" class="logo-image">
+                <img src="{{ asset('images/loga/logo-aquapalace-praha.png') }}" alt="logo-aquapalace" class="logo-image">
+                <img src="{{ asset('images/loga/logo-bambule.png') }}" alt="logo-bambule" class="logo-image">
+                <img src="{{ asset('images/loga/logo-bosch.png') }}" alt="logo-bosch" class="logo-image">
+                <img src="{{ asset('images/loga/logo-chateau-mcely-spa-hotel-and-forest-retreat.png') }}" alt="logo-chateau-mcely-spa-hotel-and-forest-retreat" class="logo-image">
+                <img src="{{ asset('images/loga/logo-chateau-trnova-hotel-and-restaurant.png') }}" alt="logo-chateau-mcely-spa-hotel-and-forest-retreat" class="logo-image">
+                <img src="{{ asset('images/loga/logo-cloud-9-sky-bar-and-lounge.png') }}" alt="logo-cloud-9-sky-bar-and-lounge" class="logo-image">
+                <img src="{{ asset('images/loga/logo-CPP-vienna-insurance-group.png') }}" alt="logo-CPP-vienna-insurance-group" class="logo-image">
+
+                <img src="{{ asset('images/loga/logo-deloitte.png') }}" alt="logo-deloitte" class="logo-image">
+                <img src="{{ asset('images/loga/logo-event-arena.png') }}" alt="logo-event-arena" class="logo-image">
+                <img src="{{ asset('images/loga/logo-finep-developerska-spolecnost.png') }}" alt="logo-finep-developerska-spolecnost" class="logo-image">
+                <img src="{{ asset('images/loga/logo-fischer.png') }}" alt="logo-fischer" class="logo-image">
+                <img src="{{ asset('images/loga/logo-forum-karlin.png') }}" alt="logo-forum-karlin" class="logo-image">
+                <img src="{{ asset('images/loga/logo-four-seasons.png') }}" alt="logo-four-seasons" class="logo-image">
+                <img src="{{ asset('images/loga/logo-hasbro.png') }}" alt="logo-hasbro" class="logo-image">
+                <img src="{{ asset('images/loga/logo-hermes-paris.png') }}" alt="logo-hermes-paris" class="logo-image">
+
+                <img src="{{ asset('images/loga/logo-hilton-hotels-and-resorts.png') }}" alt="logo-hilton-hotels-and-resorts" class="logo-image">
+                <img src="{{ asset('images/loga/logo-honor.png') }}" alt="logo-honor" class="logo-image">
+                <img src="{{ asset('images/loga/logo-KB-pojistovna.png') }}" alt="logo-KB-pojistovna" class="logo-image">
+                <img src="{{ asset('images/loga/logo-little-shoes.png') }}" alt="logo-little-shoes" class="logo-image">
+                <img src="{{ asset('images/loga/logo-louis-vuitton.png') }}" alt="logo-louis-vuitton" class="logo-image">
+                <img src="{{ asset('images/loga/logo-marriott-hotels-resorts-suites.png') }}" alt="logo-marriott-hotels-resorts-suites" class="logo-image">
+                <img src="{{ asset('images/loga/logo-metlife.png') }}" alt="logo-metlife" class="logo-image">
+                <img src="{{ asset('images/loga/logo-obecni-dum.png') }}" alt="logo-obecni-dum" class="logo-image">
+
+                <img src="{{ asset('images/loga/logo-pepsi.png') }}" alt="logo-pepsi" class="logo-image">
+                <img src="{{ asset('images/loga/logo-quix-art-of-inspiration.png') }}" alt="logo-quix-art-of-inspiration" class="logo-image">
+                <img src="{{ asset('images/loga/logo-samsung.png') }}" alt="logo-samsung" class="logo-image">
+                <img src="{{ asset('images/loga/logo-sportisimo.png') }}" alt="logo-sportisimo" class="logo-image">
+                <img src="{{ asset('images/loga/logo-uniqa.png') }}" alt="logo-uniqa" class="logo-image">
+                <img src="{{ asset('images/loga/logo-villa-richter.png') }}" alt="logo-villa-richter" class="logo-image">
+                <img src="{{ asset('images/loga/logo-vodafone.png') }}" alt="logo-vodafone" class="logo-image">
             </div>
         </div>
 
         <button class="slider-arrow logo-arrow-right">
-            <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 1000 1000">
-                <!-- Generator: Adobe Illustrator 28.6.0, SVG Export Plug-In . SVG Version: 1.2.0 Build 709)  -->
-                <g>
-                    <g id="Vrstva_1">
-                        <path d="M-447.1,350.4h0Z"/>
-                        <path
-                            d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
-                    </g>
-                </g>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000">
+                <path d="M721.7,73.9c-9.6-9.6-25.1-9.6-34.7,0l-408.3,408.3c-.2,0-.3.2-.5.4h0c-9.6,9.7-9.6,25.2,0,34.8l408.8,408.7c4.8,4.8,11.1,7.2,17.4,7.2s12.5-2.4,17.3-7.2c9.6-9.6,9.6-25.2,0-34.7l-391.3-391.4L721.7,108.6c9.6-9.6,9.6-25.1,0-34.7Z"/>
             </svg>
         </button>
     </div>

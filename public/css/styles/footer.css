@@ -1,0 +1,135 @@
+footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-image: url("/images/pattern-do-paticky-kouzelnik-martin-kellman.svg");
+    background-color: black;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer-headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    box-sizing: border-box;
+    padding-bottom: 25px;
+    position: relative;
+    align-items: center;
+}
+
+.footer-headline::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50px;
+    right: 50px;
+    height: 1px;
+    background-color: white;
+}
+
+.footer-button {
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+    height: auto;
+    align-items: center;
+  }
+
+.footer-headline h3 {
+    font-size: 72px;
+    font-weight: 300;
+    color: white;
+    width: 60%;
+    margin-bottom: 0;
+}
+
+.footer-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 150px;
+    padding: 50px 0;
+}
+
+.footer-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.footer-logo img {
+    width: 50%;
+}
+
+.footer-offer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.offer-headline h4 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.offers {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.offers a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+    font-size: 22px;
+    transition: opacity 0.3s ease;
+}
+
+.offers:hover a {
+    opacity: 0.2;
+}
+
+.offers a:hover {
+    opacity: 1;
+}
+
+
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-contact a {
+    color: white;
+    list-style-type: none;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+.copyright {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.copyright p {
+    color: white;
+    font-size: 12px;
+    margin: 10px 50px 75px 50px;
+}
+
+.copyright a {
+    color: white;
+    text-decoration: none;
+    list-style-type: none;
+}

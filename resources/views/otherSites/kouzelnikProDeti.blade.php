@@ -139,8 +139,13 @@
 
     <div class="mikromagie-info-container">
         <div class="mikromagie-info-container-text">
-            <h2>magie nejen pro <br> firemní akce</h2>
-            <p>Kouzla přímo u diváků, interakce, překvapení, zážitky i nepochopitelné efekty. Takto by se dala přiblížit "královnna kouzel", kde se mění karty v rukách diváků, mizejí předměty, objevují se mince i letájící prstýnky (vypůjčené předměty =)).</p>
+            <h2>NOVÁ MAGIE opřena o skutečné řemeslo</h2>
+            <h3>
+                ÚŽAS | PSYCHOLOGIE | JEDINEČNOST | ELEGANCE
+            </h3>
+            <p>Mistrovství iluze, která nešokuje – ale spojuje. Hraniční prostor mezi
+                realitou a snem, kde smích, úžas a vnitřní dítě znovu dostávají slovo.
+                Mistrovství iluze, která nadchne a propojí. Bez hraniční prostor mezi snem a realitou, kde smích, úžas a vnitřní dítě znovu dostávají slovo.</p>
         </div>
 
         <button class="first-button">
@@ -167,24 +172,87 @@
         <div class="towns-item">
             <div class="towns-top">
                 <div class="towns-text">
-                    <span class="towns-city">zážitek spojený s Vaší značkou</span>
+                    <span class="towns-city">SVĚT SE PROMĚNÍ</span>
                     <div class="towns-answer">
-                        <p>Originální kouzelnické vystoupení, ve kterém se magie propojuje s příběhem vaší značky. Nejde jen o triky - jde o zážitek, který si lidé spojí právě s vámi.</p>
+                        <p>Okamžik, kdy se zastaví čas. Kouzlo se odehraje jen pár centimetrů od vás a realita se najednou rozšíří. Síla iluze posune hranice vašeho vnímání a vy uvěříte, že nemožné se skutečně děje.</p>
                     </div>
                 </div>
-                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+                <img src="{{ asset('images/mikromagie/01.jpg') }}" alt="">
             </div>
         </div>
 
         <div class="towns-item">
             <div class="towns-top">
                 <div class="towns-text">
-                    <span class="towns-city">individuálně řešené vystoupení</span>
+                    <span class="towns-city">Účast, která fascinuje</span>
                     <div class="towns-answer">
-                        <p>Originální kouzelnické vystoupení, ve kterém se magie propojuje s příběhem vaší značky. Nejde jen o triky - jde o zážitek, který si lidé spojí právě s vámi.</p>
+                        <p>Nechci, abyste koukali – chci, abyste byli součástí. Karty se mění vašich rukách, mince objevujete vy. Jste svědky nemožného. Je to prožitek, kdy se skutečnost a iluze dotknou – a v tom doteku vzniká kouzlo, které si zapamatujete.</p>
                     </div>
                 </div>
-                <img src="{{ asset('images/KA987.jpg') }}" alt="">
+                <img src="{{ asset('images/mikromagie/02.jpg') }}" alt="">
+            </div>
+        </div>
+
+        <div class="towns-item">
+            <div class="towns-top">
+                <div class="towns-text">
+                    <span class="towns-city">NOVÁ MAGIE</span>
+                    <div class="towns-answer">
+                        <p>Kouzlo začíná v okamžiku, kdy začnete věřit, že to není trik.V ten moment se čas zastaví. Rozum říká „to není možné“, ale srdce ví, že právě pro tohle jste si přišli.</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/mikromagie/03.jpg') }}" alt="">
+            </div>
+        </div>
+
+        <div class="towns-item">
+            <div class="towns-top">
+                <div class="towns-text">
+                    <span class="towns-city">Elegance ve všedním večeru</span>
+                    <div class="towns-answer">
+                        <p>Mikromagie nevyžaduje velká jeviště ani pompézní efekty. Je to jemná elegance a osobní kontakt. A co divákům zůstane? Pocit, že prožili něco výjimečného.</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/mikromagie/04.jpg') }}" alt="">
+            </div>
+        </div>
+
+        <div class="towns-item">
+            <div class="towns-top">
+                <div class="towns-text">
+                    <span class="towns-city">Vytvořím vzpomínku, která s hosty zůstane.</span>
+                    <div class="towns-answer">
+                        <p>Moje kouzla nejsou jen triky. Jsou to okamžiky, které se hostům zapíšou do paměti – chvíle, o kterých budou ještě dlouho vyprávět, i když večírek dávno skončí.</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/mikromagie/05.jpg') }}" alt="">
+            </div>
+        </div>
+
+
+        <div class="towns-item">
+            <div class="towns-top">
+                <div class="towns-text">
+                    <span class="towns-city">Vzrušení z tajemství.</span>
+                    <div class="towns-answer">
+                        <p>Všichni chtějí vědět jak... a nikdo to nezjistí. Prožijete něco, co popírá realitu.</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/mikromagie/06.jpg') }}" alt="">
+            </div>
+        </div>
+
+        <div class="towns-item">
+            <div class="towns-top">
+                <div class="towns-text">
+                    <span class="towns-city">Mistrovství ve vašich rukou</span>
+                    <div class="towns-answer">
+                        <p>
+                            Každý pohyb, každý trik je výsledkem dovednosti a pečlivého výběru. Viděl jsem, jak znalci, kteří jsou zvyklí analyzovat, ztichnou – nechtějí pochopit, a přesto obdivují. To je síla precizně podané mikromagie.
+                            prožitek, kdy se skutečnost a iluze dotknou – a v tom doteku vzniká kouzlo</p>
+                    </div>
+                </div>
+                <img src="{{ asset('images/mikromagie/07.jpg') }}" alt="">
             </div>
         </div>
     </section>

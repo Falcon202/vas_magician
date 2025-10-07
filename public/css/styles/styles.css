@@ -1244,14 +1244,20 @@ nav {
 }
 
 .slider-content-wrapper {
-    overflow: hidden;
+    overflow-x: auto; /* ZMĚNA: Povolí horizontální scrollování */
     flex-grow: 1;
-    white-space: nowrap;
+    scroll-behavior: smooth; /* Zajistí plynulé scrollování při kliknutí na šipky */
+    /* Skrytí scrollbaru pro různé prohlížeče */
+    -ms-overflow-style: none;  /* IE a Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.slider-content-wrapper::-webkit-scrollbar {
+    display: none; /* Chrome, Safari a Opera */
 }
 
 .slider-content {
     display: flex;
-    transition: transform 0.5s ease-in-out;
     gap: 20px;
 }
 
@@ -1277,7 +1283,7 @@ nav {
     z-index: 10;
     padding: 8px;
     border-radius: 50%;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
     overflow: hidden;
 }
 
@@ -1320,6 +1326,9 @@ nav {
 
 .logo-arrow-right {
     right: -50px;
+}
+
+.logo-arrow-right svg {
     transform: rotate(180deg);
 }
 
@@ -1331,6 +1340,11 @@ nav {
     width: 100%;
 }
 
+.slider-arrow.disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+    pointer-events: none;
+}
 
 
 
@@ -1421,86 +1435,6 @@ nav {
 
 
 
-
-
-
-
-
-
-
-/* Patička */
-
-footer {
-    width: 100%;
-    background-image: url("/images/pattern_ikony_footer_martin_kellman.svg");
-    background-size: cover;
-    background-position: center;
-    border-radius: 75px 75px 0px 0px;
-    text-align: left;
-    box-shadow: 0 -30px 30px -20px rgba(0, 0, 0, 0.2);
-    margin-top: 20px;
-}
-
-.contact {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 20px;
-
-}
-
-
-.contact-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    width: 30%;
-    padding: 50px;
-}
-
-.contact-text h2 {
-    font-family: 'DM Sans';
-    font-size: 42px;
-    font-weight: 700;
-    line-height: 1;
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
-.contact-text p {
-    margin-top: 0;
-    margin-bottom: 20px; /* Nebo podle potřeby */
-}
-
-.contact-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    text-align: right;
-    padding: 75px;
-}
-
-.contact-info a {
-    color: black;
-    font-size: 24px;
-    font-weight: 500;
-    text-align: right;
-    list-style-type: none;
-    text-decoration: none;
-    line-height: 1;
-}
-
-.contact-info button {
-    margin-left: auto;
-}
-
-
-.copyright {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 5px;
-}
 
 
 
@@ -2592,6 +2526,7 @@ textarea::placeholder {
     width: 500px;      /* Všechny obrázky budou široké přesně 180px */
     height: 150px;     /* Všechny obrázky budou vysoké přesně 120px */
     object-fit: cover; /* Nejdůležitější vlastnost: Vyplní prostor a ořízne přebytky */
+    object-position: top;
 }
 
 .towns-item:hover .towns-top img {
@@ -2880,7 +2815,7 @@ textarea::placeholder {
 
 .fotogalery-title {
     background-image: linear-gradient(to top, rgba(0,0,0,0.6), transparent),
-    url('/images/akce-pro-deti-kouzelnik-martin-kellman.webp');
+    url('/images/fotogalerie/F1a.jpg');
     background-size: cover;
     background-position: center;
     width: 92.5%;
@@ -2949,39 +2884,42 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/akce-pro-deti-kouzelnik-martin-kellman.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/mikromagie/F1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: 50% 15%;
     height: 90vh;
     margin: 0px auto;
     line-height: 1;
     padding-top: 200px;
 }
 
-.mikromagie-main h4 {
-    color: white;
-    font-size: 28px;
-    margin: 0px;
-    padding-left: 150px;
-    font-stretch: 250%;
-    font-weight: 400;
-}
-
 .mikromagie-main h2 {
     color: white;
     font-size: 140px;
-    width: 10%;
-    margin: 0px;
+    width: 100%;
     padding-left: 150px;
     line-height: 0.9;
     font-stretch: 250%;
+    margin-top: 0;
+    margin-bottom: -200px;
 }
+
+.mikromagie-main h4 {
+    color: white;
+    font-size: 28px;
+    padding-left: 150px;
+    font-stretch: 250%;
+    font-weight: 400;
+
+}
+
 
 .mikromagie-info-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
     text-align: left;
     width: 100%;
     margin: 30px 50px;
@@ -3003,9 +2941,13 @@ textarea::placeholder {
     font-family: 'DM Sans';
 }
 
-.mikromagie-info-container-text p {
-    margin-left: 50px;
+.mikromagie-info-container-text h3 {
+    font-weight: 500;
+    font-size: 22px;
+    margin-top: 10px;
+}
 
+.mikromagie-info-container-text p {
     font-weight: 500;
     font-size: 20px;
 }
@@ -3016,7 +2958,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/akce-pro-deti-kouzelnik-martin-kellman.webp');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/images/kouzelnikprodeti/F1.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     height: 90vh;

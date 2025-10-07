@@ -45,30 +45,44 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Kód pro posuvník s logy
-    const sliderContent = document.querySelector('.slider-content');
+    // Kód pro posuvník s logy - NOVÁ VERZE S PODPOROU SCROLLOVÁNÍ MYŠÍ
     const leftArrow = document.querySelector('.logo-arrow-left');
     const rightArrow = document.querySelector('.logo-arrow-right');
+    const sliderWrapper = document.querySelector('.slider-content-wrapper');
 
-    if (sliderContent && leftArrow && rightArrow) {
-        const logoImage = document.querySelector('.logo-image');
-        const logoWidth = logoImage.offsetWidth;
-        const gap = 20;
-        const scrollAmount = (logoWidth * 3) + (gap * 2);
+    if (leftArrow && rightArrow && sliderWrapper) {
+        const updateArrows = () => {
+            // Deaktivuje levou šipku, pokud jsme úplně vlevo
+            if (sliderWrapper.scrollLeft <= 0) {
+                leftArrow.classList.add('disabled');
+            } else {
+                leftArrow.classList.remove('disabled');
+            }
 
+            // Deaktivuje pravou šipku, pokud jsme úplně vpravo
+            // Přidáme malou toleranci 1px pro případné desetinné chyby při výpočtu
+            if (sliderWrapper.scrollLeft + sliderWrapper.clientWidth >= sliderWrapper.scrollWidth - 1) {
+                rightArrow.classList.add('disabled');
+            } else {
+                rightArrow.classList.remove('disabled');
+            }
+        };
+
+        // Kliknutí na pravou šipku posune obsah
         rightArrow.addEventListener('click', () => {
-            sliderContent.scrollBy({
-                left: scrollAmount,
-                behavior: 'smooth'
-            });
+            sliderWrapper.scrollLeft += sliderWrapper.clientWidth;
         });
 
+        // Kliknutí na levou šipku posune obsah
         leftArrow.addEventListener('click', () => {
-            sliderContent.scrollBy({
-                left: -scrollAmount,
-                behavior: 'smooth'
-            });
+            sliderWrapper.scrollLeft -= sliderWrapper.clientWidth;
         });
+
+        // Aktualizujeme stav šipek při každém scrollování (včetně toho myší)
+        sliderWrapper.addEventListener('scroll', updateArrows);
+
+        // Počáteční kontrola stavu šipek při načtení stránky
+        updateArrows();
     }
 
     const showMoreButton = document.getElementById('show-more-faq');
@@ -87,25 +101,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const sliderData = [
         {
-            image: "/images/firemni-akce-kouzelnik-martin-kellman.webp",
+            image: "/images/F1a.jpg",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "firemní akce"
         },
         {
-            image: "/images/martin-kellman-kouzelnik-i-moderator-firemni-akce.jpg",
+            image: "/images/F1b.jpg",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "akce pro děti"
         },
         {
-            image: "/images/firemni-akce-kouzelnik-martin-kellman.webp",
+            image: "/images/F1c.jpg",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "akce pro dospělé"
         },
         {
-            image: "/images/martin-kellman-kouzelnik-i-moderator-firemni-akce.jpg",
+            image: "/images/F1d.png",
             subtitle: "kouzelník I moderátor",
             title: "MARTIN<br>KELLMAN",
             eventType: "svatby"

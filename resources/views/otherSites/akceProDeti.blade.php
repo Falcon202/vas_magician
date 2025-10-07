@@ -274,7 +274,7 @@
                         užívají, jak se jejich děti smějí a objevují kouzla doslova na dosah ruky.</p>
                 </div>
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            <img src="{{ asset('images/kouzelnikprodeti/01.jpg') }}" alt="">
         </div>
     </div>
 
@@ -289,7 +289,7 @@
                         budou doma i mezi kamarády znovu a znovu vyprávět.</p>
                 </div>
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            <img src="{{ asset('images/kouzelnikprodeti/02.jpg') }}" alt="">
         </div>
     </div>
 
@@ -303,7 +303,7 @@
                         zažily něco opravdu výjimečného.</p>
                 </div>
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            <img src="{{ asset('images/kouzelnikprodeti/03.jpg') }}" alt="">
         </div>
     </div>
 
@@ -319,7 +319,7 @@
                         zůstane jen radost.</p>
                 </div>
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            <img src="{{ asset('images/kouzelnikprodeti/04.jpg') }}" alt="">
         </div>
     </div>
 
@@ -333,7 +333,7 @@
                         zapojeně a přirozeně hravě.</p>
                 </div>
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            <img src="{{ asset('images/kouzelnikprodeti/05.jpg') }}" alt="">
         </div>
     </div>
 
@@ -348,7 +348,7 @@
                         čeho bát a lekat.</p>
                 </div>
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            <img src="{{ asset('images/kouzelnikprodeti/06.jpg') }}" alt="">
         </div>
     </div>
 
@@ -362,7 +362,7 @@
                         prostředí se děti smějí, dospělí baví a společně vznikají vzpomínky, které zůstanou</p>
                 </div>
             </div>
-            <img src="{{ asset('images/KA987.jpg') }}" alt="">
+            <img src="{{ asset('images/kouzelnikprodeti/07.jpg') }}" alt="">
         </div>
     </div>
 </section>
