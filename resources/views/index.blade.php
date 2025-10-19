@@ -174,6 +174,7 @@
                 </svg>
                 <h3>Dospělá oslava narozenin</h3>
             </div>
+
         </div>
 
         <div class="magic-container">
